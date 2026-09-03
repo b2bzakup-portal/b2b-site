@@ -1001,6 +1001,83 @@ code, .mono {
   font-size: 11px;
 }
 
+/* Схемы раскладок: блоки страницы, разложенные по колонкам */
+
+.cols {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 12), minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cols + .cols {
+  margin-top: 8px;
+}
+
+.col-block {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 3px;
+  grid-column: span var(--span);
+  min-height: 64px;
+  padding: 8px;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+  background: var(--primary-soft);
+  color: var(--primary);
+  text-align: center;
+}
+
+.col-block b {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.col-block i {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-style: normal;
+}
+
+.col-block--aux {
+  border-color: var(--border);
+  background: var(--neutral);
+  color: var(--text-muted);
+}
+
+.col-block--sm {
+  min-height: 56px;
+}
+
+.layout-demo + .layout-demo {
+  margin-top: 24px;
+}
+
+.layout-demo__cap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.layout-demo__cap strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.layout-demo__cap .mono {
+  color: var(--text-muted);
+}
+
+.layout-demo__cap em {
+  margin-inline-start: auto;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-style: normal;
+}
+
 .rule-list {
   display: grid;
   gap: 14px;
@@ -1236,6 +1313,11 @@ code, .mono {
 
 @media (width < 768px) {
   :root { --container-pad: 16px; }
+  /* Схемы раскладок на узком экране нечитаемы: раскрываем в столбик,
+   * цифра колонки остаётся — она и есть смысл схемы */
+  .cols { grid-template-columns: minmax(0, 1fr); }
+  .col-block { grid-column: auto; min-height: 48px; }
+  .layout-demo__cap em { margin-inline-start: 0; flex-basis: 100%; }
   .grid--2, .grid--3, .grid--4 { grid-template-columns: minmax(0, 1fr); }
   .ref-grid { grid-template-columns: minmax(0, 1fr); }
   .topnav { gap: 0; }

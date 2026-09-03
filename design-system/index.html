@@ -65,12 +65,13 @@
       <a href="#type"><span>02</span>Типографика</a>
       <a href="#shape"><span>03</span>Форма и ритм</a>
       <a href="#grid"><span>04</span>Сетка и контейнер</a>
-      <a href="#buttons"><span>05</span>Кнопки</a>
-      <a href="#badges"><span>06</span>Бейджи и статусы</a>
-      <a href="#forms"><span>07</span>Поля и формы</a>
-      <a href="#table"><span>08</span>Таблица каталога</a>
-      <a href="#alerts"><span>09</span>Плашки и пустые состояния</a>
-      <a href="#hierarchy"><span>10</span>Иерархия и запреты</a>
+      <a href="#layouts"><span>05</span>Раскладки на сетке</a>
+      <a href="#buttons"><span>06</span>Кнопки</a>
+      <a href="#badges"><span>07</span>Бейджи и статусы</a>
+      <a href="#forms"><span>08</span>Поля и формы</a>
+      <a href="#table"><span>09</span>Таблица каталога</a>
+      <a href="#alerts"><span>10</span>Плашки и пустые состояния</a>
+      <a href="#hierarchy"><span>11</span>Иерархия и запреты</a>
     </nav>
   </aside>
 
@@ -228,10 +229,142 @@
       </div>
     </section>
 
-    <!-- 05 КНОПКИ -->
-    <section class="section" id="buttons">
+    <!-- 05 РАСКЛАДКИ -->
+    <section class="section" id="layouts">
       <div class="section__head">
         <p class="section__num">05</p>
+        <h2>Раскладки на сетке</h2>
+        <p>Как реальные экраны портала ложатся на 12 колонок. Числа сняты с ваших макетов: пропорции блоков сохранены, ширина приведена к контейнеру 1440&nbsp;px. Раскладка страницы задаётся один раз и дальше не пересобирается под каждый экран.</p>
+      </div>
+
+      <h3>Раскладки страниц</h3>
+
+      <div class="card">
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Каталог · таблица</strong><span class="mono">12 · 12</span><em>Таблица работает во всю ширину контейнера, фильтры — рядом сверху</em></p>
+          <div class="cols"><span class="col-block" style="--span:12"><b>Фильтры</b><i>12</i></span></div>
+          <div class="cols"><span class="col-block" style="--span:12"><b>Таблица каталога</b><i>12</i></span></div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Карточка товара</strong><span class="mono">5 · 4 · 3</span><em>Панель покупки не уезжает вниз при прокрутке характеристик</em></p>
+          <div class="cols">
+            <span class="col-block" style="--span:5"><b>Галерея</b><i>5</i></span>
+            <span class="col-block" style="--span:4"><b>Данные и характеристики</b><i>4</i></span>
+            <span class="col-block" style="--span:3"><b>Панель покупки</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Корзина и оформление заказа</strong><span class="mono">9 · 3</span><em>Состав, способ получения и итог — на одной странице</em></p>
+          <div class="cols">
+            <span class="col-block" style="--span:9"><b>Состав заказа и способ получения</b><i>9</i></span>
+            <span class="col-block" style="--span:3"><b>Панель заказа</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Личный кабинет</strong><span class="mono">3 · 9</span><em>Меню одинаковое во всех разделах кабинета</em></p>
+          <div class="cols">
+            <span class="col-block col-block--aux" style="--span:3"><b>Меню ЛК</b><i>3</i></span>
+            <span class="col-block" style="--span:9"><b>Контент раздела</b><i>9</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Вход и регистрация</strong><span class="mono">5 · 7</span><em>Промо-колонка объясняет, зачем подключаться</em></p>
+          <div class="cols">
+            <span class="col-block col-block--aux" style="--span:5"><b>Промо-колонка</b><i>5</i></span>
+            <span class="col-block" style="--span:7"><b>Форма</b><i>7</i></span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Ряды карточек</h3>
+      <p class="note">Сколько карточек помещается в ряд и какая ширина колонки за этим стоит. Других вариантов не вводим: ряд из пяти или семи карточек ломает сетку.</p>
+
+      <div class="card" style="margin-top:16px">
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>6 карточек в ряд</strong><span class="mono">по 2 колонки</span><em>Категории каталога, товарные карточки, «Для кого наш портал»</em></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>4 карточки в ряд</strong><span class="mono">по 3 колонки</span><em>Преимущества, документы, статьи, быстрые действия в ЛК</em></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:3"><b>Карточка</b><i>3</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Карточка</b><i>3</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Карточка</b><i>3</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Карточка</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>3 карточки в ряд</strong><span class="mono">по 4 колонки</span><em>Пустые состояния, карточки условий, шаги «Что дальше»</em></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:4"><b>Карточка</b><i>4</i></span>
+            <span class="col-block col-block--sm" style="--span:4"><b>Карточка</b><i>4</i></span>
+            <span class="col-block col-block--sm" style="--span:4"><b>Карточка</b><i>4</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>2 карточки в ряд</strong><span class="mono">по 6 колонок</span><em>Крупные промо-блоки и парные сравнения</em></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:6"><b>Карточка</b><i>6</i></span>
+            <span class="col-block col-block--sm" style="--span:6"><b>Карточка</b><i>6</i></span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Поведение на брейкпоинтах</h3>
+      <p class="note">Одна и та же карточка товара на трёх ширинах. Блоки не исчезают и не меняются местами — только перестраиваются: сначала галерея занимает всю ширину, затем всё встаёт в одну колонку.</p>
+
+      <div class="card" style="margin-top:16px">
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Десктоп · от 1024 px</strong><span class="mono">12 колонок</span></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:5"><b>Галерея</b><i>5</i></span>
+            <span class="col-block col-block--sm" style="--span:4"><b>Данные и характеристики</b><i>4</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Панель покупки</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Планшет · 768–1023 px</strong><span class="mono">8 колонок</span></p>
+          <div class="cols" style="--cols:8"><span class="col-block col-block--sm" style="--span:8"><b>Галерея</b><i>8</i></span></div>
+          <div class="cols" style="--cols:8">
+            <span class="col-block col-block--sm" style="--span:5"><b>Данные и характеристики</b><i>5</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Панель покупки</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Мобильный · до 767 px</strong><span class="mono">4 колонки</span></p>
+          <div class="cols" style="--cols:4"><span class="col-block col-block--sm" style="--span:4"><b>Галерея</b><i>4</i></span></div>
+          <div class="cols" style="--cols:4"><span class="col-block col-block--sm" style="--span:4"><b>Данные и характеристики</b><i>4</i></span></div>
+          <div class="cols" style="--cols:4"><span class="col-block col-block--sm" style="--span:4"><b>Панель покупки · прилипает к низу экрана</b><i>4</i></span></div>
+        </div>
+      </div>
+
+      <div class="grid grid--3" style="margin-top:20px">
+        <div class="card"><p class="swatch__role">Раскладка одна на тип страницы</p><p class="swatch__use">Каталог, карточка, корзина, кабинет и авторизация — пять раскладок на весь портал. Новый экран берёт готовую, а не заводит шестую.</p></div>
+        <div class="card"><p class="swatch__role">Блоки не меняются местами</p><p class="swatch__use">При сужении окна порядок сохраняется: то, что было слева, окажется сверху. Иначе на планшете и десктопе получаются два разных продукта.</p></div>
+        <div class="card"><p class="swatch__role">Боковая панель не тоньше 3 колонок</p><p class="swatch__use">В 3 колонки (≈ 314 px) помещается цена, МЗП, степпер и кнопка. Уже — панель заказа перестаёт читаться и переносит слова.</p></div>
+      </div>
+    </section>
+
+    <!-- 06 КНОПКИ -->
+    <section class="section" id="buttons">
+      <div class="section__head">
+        <p class="section__num">06</p>
         <h2>Кнопки</h2>
         <p>Пять типов действий и четыре состояния каждого. Тип выбирается по смыслу действия, а не по месту на экране: зелёное — деньги и заказ, синее — информационное, красное — необратимое.</p>
       </div>
@@ -311,10 +444,10 @@
       </div>
     </section>
 
-    <!-- 06 БЕЙДЖИ -->
+    <!-- 07 БЕЙДЖИ -->
     <section class="section" id="badges">
       <div class="section__head">
-        <p class="section__num">06</p>
+        <p class="section__num">07</p>
         <h2>Бейджи, статусы и теги</h2>
         <p>Второй и третий уровни иерархии: ограничения — жёлтым, невыполнимые условия — красным. Форма одна (пилюля 26 px, радиус 6), различает только цвет и наличие обводки.</p>
       </div>
@@ -379,10 +512,10 @@
       </div>
     </section>
 
-    <!-- 07 ПОЛЯ -->
+    <!-- 08 ПОЛЯ -->
     <section class="section" id="forms">
       <div class="section__head">
-        <p class="section__num">07</p>
+        <p class="section__num">08</p>
         <h2>Поля и формы</h2>
         <p>Одна высота 40 px, радиус 8, обводка 1 px. Фокус — зелёная рамка 2 px, ошибка — красная рамка и подпись под полем. Плейсхолдер серый, введённое значение — основным текстом.</p>
       </div>
@@ -444,10 +577,10 @@
       </div>
     </section>
 
-    <!-- 08 ТАБЛИЦА -->
+    <!-- 09 ТАБЛИЦА -->
     <section class="section" id="table">
       <div class="section__head">
-        <p class="section__num">08</p>
+        <p class="section__num">09</p>
         <h2>Таблица каталога</h2>
         <p>Основной режим работы: плотная строка, выравнивание чисел по правому краю, действие в конце строки. Всё, что ограничивает заказ, видно до перехода в корзину.</p>
       </div>
@@ -527,10 +660,10 @@
       </div>
     </section>
 
-    <!-- 09 ПЛАШКИ -->
+    <!-- 10 ПЛАШКИ -->
     <section class="section" id="alerts">
       <div class="section__head">
-        <p class="section__num">09</p>
+        <p class="section__num">10</p>
         <h2>Плашки и пустые состояния</h2>
         <p>Плашка сообщает о результате действия, пустое состояние — о том, что делать дальше. Ни то, ни другое не оставляет пользователя без следующего шага.</p>
       </div>
@@ -564,10 +697,10 @@
       </div>
     </section>
 
-    <!-- 10 ИЕРАРХИЯ -->
+    <!-- 11 ИЕРАРХИЯ -->
     <section class="section" id="hierarchy">
       <div class="section__head">
-        <p class="section__num">10</p>
+        <p class="section__num">11</p>
         <h2>Иерархия и запреты</h2>
         <p>Четыре уровня важности задают, чему цвет вообще положен. Если элемент не относится ни к одному уровню — он серый.</p>
       </div>
