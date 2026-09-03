@@ -102,4 +102,19 @@
     else if (event.key === 'ArrowLeft') show(current - 1);
     else if (event.key === 'ArrowRight') show(current + 1);
   });
+
+  /* Свайп на тач-экранах: стрелки на телефоне мелкие, листать удобнее жестом */
+  var touchX = null;
+
+  lightbox.addEventListener('touchstart', function (event) {
+    touchX = event.changedTouches[0].clientX;
+  }, { passive: true });
+
+  lightbox.addEventListener('touchend', function (event) {
+    if (touchX === null) return;
+    var dx = event.changedTouches[0].clientX - touchX;
+    touchX = null;
+    if (Math.abs(dx) < 50) return;
+    show(dx < 0 ? current + 1 : current - 1);
+  });
 })();

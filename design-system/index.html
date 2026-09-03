@@ -44,9 +44,9 @@
 
 <header class="topbar">
   <div class="container topbar__inner">
-    <a class="brand" href="index.html">
+    <a class="brand" href="index.html" aria-label="B2B-портал агробизнеса">
       <span class="brand__mark"><svg><use href="#i-leaf"/></svg></span>
-      B2B-портал агробизнеса
+      <span class="brand__text">B2B-портал агробизнеса</span>
     </a>
     <nav class="topnav">
       <a href="index.html" aria-current="page">Дизайн-система</a>
@@ -96,7 +96,7 @@
         <p>Девять цветов, согласованных в переписке 21.08.2026. Каждый отвечает за смысл, а не за настроение: зелёный — действие и деньги, жёлтый — ограничение, красный — стоп, серый — всё остальное.</p>
       </div>
 
-      <div class="grid grid--3">
+      <div class="grid grid--3 grid--swatches">
         <div class="swatch"><div class="swatch__chip" style="background:#1F6F4A"></div><div class="swatch__body"><p class="swatch__role">Основной зелёный</p><p class="swatch__hex">#1F6F4A</p><p class="swatch__use">Кнопки действий, цены, статус «В наличии», ключевые B2B-действия</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="background:#1C1C1C"></div><div class="swatch__body"><p class="swatch__role">Текст основной</p><p class="swatch__hex">#1C1C1C</p><p class="swatch__use">Заголовки, основной текст, данные таблиц</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="background:#8A94A6"></div><div class="swatch__body"><p class="swatch__role">Второстепенный текст</p><p class="swatch__hex">#8A94A6</p><p class="swatch__use">Коды 1С, подсказки, метаданные</p></div></div>
@@ -110,7 +110,7 @@
 
       <h3>Производные оттенки</h3>
       <p class="note">Наведение, нажатие и мягкие подложки бейджей — затемнение и осветление тех же девяти цветов. Новых оттенков в палитру не вводится.</p>
-      <div class="grid grid--4" style="margin-top:16px">
+      <div class="grid grid--4 grid--swatches" style="margin-top:16px">
         <div class="swatch"><div class="swatch__chip" style="height:56px;background:#19593C"></div><div class="swatch__body"><p class="swatch__hex">#19593C</p><p class="swatch__use">Наведение на зелёную кнопку</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="height:56px;background:#12452E"></div><div class="swatch__body"><p class="swatch__hex">#12452E</p><p class="swatch__use">Нажатие зелёной кнопки</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="height:56px;background:#E9F3EE"></div><div class="swatch__body"><p class="swatch__hex">#E9F3EE</p><p class="swatch__use">Подложка «В наличии», выбранный чип</p></div></div>
@@ -206,7 +206,8 @@
         <p class="note">12 колонок по 94 px, промежуток 24 px, внутренние поля контейнера 24 px: 24 + 12×94 + 11×24 + 24 = 1440. Схема дана в масштабе. Эта страница свёрстана по тому же правилу — разверните окно шире 1440 px и увидите уши.</p>
       </div>
 
-      <div class="grid grid--2" style="margin-top:20px">
+      <div class="grid grid--2 grid--stack-md" style="margin-top:20px">
+        <div class="spec-scroll">
         <table class="spec">
           <thead><tr><th>Ширина окна</th><th>Контейнер</th><th class="num">Колонки</th><th>Поля</th></tr></thead>
           <tbody>
@@ -216,6 +217,7 @@
             <tr><td class="spec__label">до 767 px</td><td>тянется по окну</td><td class="num mono">4</td><td>16 px</td></tr>
           </tbody>
         </table>
+        </div>
 
         <div class="card">
           <p class="swatch__role" style="margin-bottom:14px">Что из этого следует</p>

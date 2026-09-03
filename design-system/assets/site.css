@@ -184,6 +184,7 @@ code, .mono {
   color: var(--text-muted);
   font-weight: 500;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .topnav a:hover {
@@ -487,6 +488,15 @@ code, .mono {
 .spec--buttons th, .spec--buttons td { padding-inline: 14px; }
 .spec--buttons th:first-child, .spec--buttons td:first-child { width: 124px; padding-left: 20px; }
 .spec--buttons th:last-child, .spec--buttons td:last-child { width: 230px; padding-right: 20px; color: var(--text-muted); }
+
+/* Внутри прокручиваемой обёртки скругление режет она сама; overflow у таблицы
+ * снят, иначе sticky-ячейка липнет к таблице, а не к обёртке */
+.spec-scroll .spec { overflow: visible; }
+
+/* Матрица прокручивается вбок — подпись строки остаётся на месте */
+.spec--buttons th:first-child,
+.spec--buttons td:first-child { position: sticky; left: 0; z-index: 1; background: var(--surface); border-right: 1px solid var(--border); }
+.spec--buttons th:first-child { background: var(--bg); }
 
 /* ==========================================================================
    Компоненты дизайн-системы (живые образцы)
@@ -796,6 +806,14 @@ code, .mono {
   min-width: 0;
   padding-inline: 16px;
   color: var(--text-muted);
+}
+
+/* Плейсхолдер длиннее поля на узком экране — обрезается многоточием, а не переносится */
+.search__field > span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .search__hotkey {
@@ -1300,12 +1318,25 @@ code, .mono {
 
 @media (width < 1180px) {
   .layout { grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .sidebar { display: none; }
+
+  /* Сайдбару рядом с контентом места нет: индекс разделов встаёт над
+   * обложкой компактным блоком с переносом строк, подсветка активного
+   * раздела продолжает работать */
+  .sidebar {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    margin-bottom: 32px;
+  }
+
+  .sidebar nav { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+  .sidebar a { display: inline-grid; grid-template-columns: 26px auto; padding-block: 4px; }
 }
 
 @media (width < 1024px) {
   .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .grid--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--stack-md { grid-template-columns: minmax(0, 1fr); }
   .ref-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .type-row__sample { width: 34%; }
   .type-row__spec { display: none; }
@@ -1313,19 +1344,50 @@ code, .mono {
 
 @media (width < 768px) {
   :root { --container-pad: 16px; }
+
+  /* Шапка: текст бренда не помещается рядом с навигацией, остаётся знак */
+  .topbar__inner { gap: 16px; }
+  .brand__text { display: none; }
+  .topnav { gap: 0; }
+  .topnav a { padding-inline: 10px; font-size: 13px; }
+  .version-chip { display: none; }
+
   /* Схемы раскладок на узком экране нечитаемы: раскрываем в столбик,
    * цифра колонки остаётся — она и есть смысл схемы */
   .cols { grid-template-columns: minmax(0, 1fr); }
   .col-block { grid-column: auto; min-height: 48px; }
   .layout-demo__cap em { margin-inline-start: 0; flex-basis: 100%; }
   .grid--2, .grid--3, .grid--4 { grid-template-columns: minmax(0, 1fr); }
+  .grid--swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
   .ref-grid { grid-template-columns: minmax(0, 1fr); }
-  .topnav { gap: 0; }
-  .topnav a { padding-inline: 10px; font-size: 13px; }
-  .version-chip { display: none; }
+  .card { padding: 20px; }
+
   .font-card { flex-direction: column; align-items: flex-start; gap: 16px; }
   .font-card__aa { font-size: 64px; }
-  .type-row { flex-wrap: wrap; gap: 8px 16px; }
-  .type-row__sample { width: auto; }
-  .card { padding: 20px; }
+  .type-row { flex-wrap: wrap; gap: 8px 16px; padding-inline: 20px; }
+  .type-row__sample { width: auto; max-width: 100%; min-width: 0; }
+
+  /* Схема контейнера: уши узкие, чтобы все 12 колонок остались видны */
+  .viewport { height: 150px; }
+  .viewport__ear { flex: 0 0 28px; }
+  .viewport__container { flex: 1; width: auto; gap: 4px; padding: 12px 8px; }
+  .viewport__col { min-width: 0; font-size: 9px; }
+
+  /* Таблицы спецификаций: заголовкам разрешён перенос, кегль и поля меньше,
+   * чтобы четыре колонки таблицы брейкпоинтов уместились без прокрутки */
+  .spec { font-size: 12px; }
+  .spec th { white-space: normal; }
+  .spec th, .spec td { padding-inline: 10px; }
+
+  .search__hotkey { display: none; }
+
+  /* Лайтбокс: стрелки уходят вниз к подписи и не закрывают макет; сверху
+   * оставлена полоса под крестик — на белом макете он был бы невидим */
+  .lightbox { padding: 60px 12px 84px; }
+  .lightbox__img { max-height: calc(100vh - 156px); max-height: calc(100dvh - 156px); }
+  .lightbox__close { top: 12px; right: 12px; }
+  .lightbox__nav { top: auto; bottom: 14px; translate: none; }
+  .lightbox__nav--prev { left: 12px; }
+  .lightbox__nav--next { right: 12px; }
+  .lightbox__bar { flex-direction: column; gap: 2px; min-height: 72px; padding: 14px 68px; text-align: center; }
 }
