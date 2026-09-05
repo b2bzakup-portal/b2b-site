@@ -40,6 +40,8 @@
 <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
 <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
 <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-paperclip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></symbol>
 </svg>
 
 <header class="topbar">
@@ -52,7 +54,7 @@
       <a href="../design-system/index.html" aria-current="page">Дизайн-система</a>
       <a href="../design-system/references.html">Референсы</a>
       <a href="../progress/index.html">Ход работ</a>
-      <span class="version-chip">v1.1 · 04.09.2026</span>
+      <span class="version-chip">v1.2 · 05.09.2026</span>
     </nav>
   </div>
 </header>
@@ -72,7 +74,8 @@
       <a href="#forms"><span>08</span>Поля и формы</a>
       <a href="#table"><span>09</span>Таблица каталога</a>
       <a href="#alerts"><span>10</span>Плашки и пустые состояния</a>
-      <a href="#hierarchy"><span>11</span>Иерархия и запреты</a>
+      <a href="#containers"><span>11</span>Контейнеры и наложения</a>
+      <a href="#hierarchy"><span>12</span>Иерархия и запреты</a>
     </nav>
   </aside>
 
@@ -85,7 +88,7 @@
       <div class="hero__meta">
         <span class="badge badge--success">Палитра и типографика согласованы</span>
         <span class="badge badge--tag">48 макетов разобрано</span>
-        <span class="badge badge--tag">Версия 1.0 · 02.09.2026</span>
+        <span class="badge badge--tag">Версия 1.1 · 05.09.2026</span>
       </div>
     </section>
 
@@ -520,7 +523,7 @@
       <div class="section__head">
         <p class="section__num">08</p>
         <h2>Поля и формы</h2>
-        <p>Одна высота 40 px, радиус 8, обводка 1 px. Фокус — зелёная рамка 2 px, ошибка — красная рамка и подпись под полем. Плейсхолдер серый, введённое значение — основным текстом.</p>
+        <p>Основная высота 40 px, радиус 8, обводка 1 px; компактная 32 px — только внутри фильтров и таблиц. Фокус — зелёная рамка 2 px, ошибка — красная рамка и подпись под полем. Плейсхолдер серый, введённое значение — основным текстом.</p>
       </div>
 
       <div class="grid grid--2">
@@ -545,8 +548,9 @@
           <div class="row row--lg">
             <div class="row" style="gap:8px"><div class="stepper"><button aria-label="Меньше"><svg><use href="#i-minus"/></svg></button><span class="stepper__value">10</span><button aria-label="Больше"><svg><use href="#i-plus"/></svg></button></div><span style="color:var(--text-muted);font-size:13px">уп.</span></div>
             <div class="row" style="gap:8px"><div class="stepper stepper--error"><button aria-label="Меньше"><svg><use href="#i-minus"/></svg></button><span class="stepper__value">5</span><button aria-label="Больше"><svg><use href="#i-plus"/></svg></button></div><span style="color:var(--text-muted);font-size:13px">уп.</span></div>
+            <div class="row" style="gap:8px"><div class="stepper stepper--disabled"><button aria-label="Меньше" disabled><svg><use href="#i-minus"/></svg></button><span class="stepper__value">0</span><button aria-label="Больше" disabled><svg><use href="#i-plus"/></svg></button></div><span style="color:var(--text-muted);font-size:13px">нет в наличии</span></div>
           </div>
-          <p class="note">Степпер — единственный способ менять количество: значение всегда кратно упаковке, ручной ввод округляется вверх до кратности при потере фокуса. Красная обводка — количество меньше минимальной партии или не кратно упаковке; кнопка «Оформить заказ» при этом неактивна.</p>
+          <p class="note">Степпер — единственный способ менять количество: значение всегда кратно упаковке, ручной ввод округляется вверх до кратности при потере фокуса. Красная обводка — количество меньше минимальной партии или не кратно упаковке; кнопка «Оформить заказ» при этом неактивна. Серый степпер — товара нет в наличии, количество менять нельзя.</p>
 
           <p class="swatch__role" style="margin:24px 0 14px">Поиск</p>
           <div class="search">
@@ -576,6 +580,61 @@
             <div><strong>Цвет не единственный носитель смысла</strong><p>Статус наличия дублируется текстом, ошибка строки — плашкой, нарушенный степпер — подписью, а не только красной обводкой.</p></div>
             <div><strong>Клавиатура</strong><p>Полный обход табом, видимый фокус зелёной рамкой 2 px, Ctrl + / — переход в поиск, Esc закрывает шторки и модальные окна.</p></div>
           </div>
+        </div>
+      </div>
+      <div class="grid grid--2" style="margin-top:20px">
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Выпадающий список</p>
+          <div class="grid grid--2" style="gap:16px;align-items:start">
+            <div>
+              <div class="field"><span class="field__label">Показать по</span><div class="field__box field__box--select"><span>10</span><svg><use href="#i-chevron-down"/></svg></div></div>
+              <div class="field field--open" style="margin-top:16px"><span class="field__label">Производитель</span><div class="field__box field__box--select"><span class="is-placeholder">Все производители</span><svg><use href="#i-chevron-down"/></svg></div>
+                <div class="menu" role="listbox" aria-label="Производитель">
+                  <div class="menu__item">Все производители</div>
+                  <div class="menu__item is-hover">БиоПро</div>
+                  <div class="menu__item menu__item--on">Кормовой стандарт<svg><use href="#i-check"/></svg></div>
+                  <div class="menu__item">Полесье-Агро</div>
+                  <div class="menu__item is-disabled">Северный корм</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p class="field__label">Excel-фильтр колонки «Наличие»</p>
+              <div class="menu menu--static">
+                <div class="menu__search"><svg><use href="#i-search"/></svg><span>Поиск по значениям</span></div>
+                <div class="menu__item"><span class="check check--on"><span class="check__box"><svg><use href="#i-check"/></svg></span>В наличии <span class="facet__count">(64)</span></span></div>
+                <div class="menu__item"><span class="check check--on"><span class="check__box"><svg><use href="#i-check"/></svg></span>Под заказ <span class="facet__count">(8)</span></span></div>
+                <div class="menu__item"><span class="check"><span class="check__box"></span>Нет в наличии <span class="facet__count">(4)</span></span></div>
+                <div class="menu__foot"><button class="btn btn--primary btn--sm">Применить</button><a class="link" href="#forms">Сбросить</a></div>
+              </div>
+            </div>
+          </div>
+          <p class="note">Один список для селектов фильтров, «Показать по», сортировки, меню профиля и Excel-фильтра в шапке колонки. Пункт 32 px: наведение — серая заливка, выбранный — зелёная подложка с галкой, недоступный — серый текст. Больше восьми пунктов — прокрутка внутри панели. Опасный пункт меню («Удалить») — красным.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Фасет фильтра и диапазон цены</p>
+          <div class="grid grid--2" style="gap:16px;align-items:start">
+            <div class="facet">
+              <div class="field field--sm field--placeholder"><div class="field__box"><svg><use href="#i-search"/></svg><span>Найти производителя</span></div></div>
+              <div class="facet__row"><span class="check check--on"><span class="check__box"><svg><use href="#i-check"/></svg></span>БиоПро <span class="facet__count">(12)</span></span></div>
+              <div class="facet__row"><span class="check"><span class="check__box"></span>Кормовой стандарт <span class="facet__count">(9)</span></span></div>
+              <div class="facet__row"><span class="check"><span class="check__box"></span>Полесье-Агро <span class="facet__count">(7)</span></span></div>
+              <div class="facet__row facet__row--empty"><span class="check"><span class="check__box"></span>Северный корм <span class="facet__count">(0)</span></span></div>
+              <a class="link" href="#forms">Показать ещё (5)</a>
+            </div>
+            <div>
+              <div class="row" style="gap:12px;flex-wrap:nowrap">
+                <div class="field" style="flex:1"><span class="field__label">от</span><div class="field__box"><span>1 200</span></div></div>
+                <div class="field" style="flex:1"><span class="field__label">до</span><div class="field__box"><span>18 500</span></div></div>
+              </div>
+              <div class="range" aria-hidden="true">
+                <div class="range__track"><div class="range__fill" style="left:8%;right:22%"></div><span class="range__thumb" style="left:8%"></span><span class="range__thumb" style="left:78%"></span></div>
+                <div class="range__caps"><span>450 ₽</span><span>24 000 ₽</span></div>
+              </div>
+            </div>
+          </div>
+          <p class="note">Счётчик в скобках стоит сразу за подписью; значения без товаров остаются в списке серыми и недоступными, шесть значений видны сразу, остальные — по ссылке. Компактное поле 32 px живёт только внутри фильтров и таблиц. Поля «от / до» и ручки слайдера связаны: ввод двигает ручку, ручка переписывает поле.</p>
         </div>
       </div>
     </section>
@@ -700,10 +759,96 @@
       </div>
     </section>
 
-    <!-- 11 ИЕРАРХИЯ -->
-    <section class="section" id="hierarchy">
+    <!-- 11 КОНТЕЙНЕРЫ -->
+    <section class="section" id="containers">
       <div class="section__head">
         <p class="section__num">11</p>
+        <h2>Контейнеры и наложения</h2>
+        <p>Вкладки и аккордеон делят содержимое страницы, поповер и тултип поясняют, модальное окно и шторка перекрывают страницу. Тень одна на всех — та же, что у выпадающих списков; полупрозрачная подложка под окном — единственное допустимое затемнение.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Вкладки</p>
+          <div class="tabs">
+            <a class="tab tab--on" href="#containers">Характеристики</a>
+            <a class="tab" href="#containers">Описание</a>
+            <a class="tab" href="#containers">Состав</a>
+            <a class="tab" href="#containers">Применение</a>
+            <a class="tab" href="#containers"><svg><use href="#i-paperclip"/></svg>Документы<span class="counter">3</span></a>
+          </div>
+          <div class="tabs" style="margin-top:20px">
+            <a class="tab tab--on" href="#containers">Все заказы<span class="counter">56</span></a>
+            <a class="tab" href="#containers">В работе<span class="counter">2</span></a>
+            <a class="tab" href="#containers">Выполненные</a>
+            <a class="tab" href="#containers">Отменённые</a>
+          </div>
+          <p class="note">Активная вкладка подчёркнута зелёным на 2 px поверх серой линии ряда, неактивные — серым текстом, при наведении — чёрным. Счётчик — тот же круглый бейдж, что в шапке. На узком экране ряд прокручивается по горизонтали.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Аккордеон</p>
+          <div class="acc">
+            <div class="acc__item acc__item--open"><div class="acc__head">Производитель<svg><use href="#i-chevron-down"/></svg></div><div class="acc__body"><span class="check check--on"><span class="check__box"><svg><use href="#i-check"/></svg></span>БиоПро <span class="facet__count">(12)</span></span><span class="check"><span class="check__box"></span>Кормовой стандарт <span class="facet__count">(9)</span></span></div></div>
+            <div class="acc__item"><div class="acc__head">Вид животного<svg><use href="#i-chevron-down"/></svg></div></div>
+            <div class="acc__item"><div class="acc__head is-hover">Форма выпуска<svg><use href="#i-chevron-down"/></svg></div></div>
+            <div class="acc__item"><div class="acc__head">Все характеристики<svg><use href="#i-chevron-down"/></svg></div></div>
+          </div>
+          <p class="note">Заголовок 48 px, шеврон справа поворачивается при раскрытии, наведение — светлая заливка, секции разделены линией. Раскрытие одной секции не сворачивает остальные. В фильтрах секции по умолчанию раскрыты, «Все характеристики» в карточке товара — свёрнут.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Поповер и тултип</p>
+          <div class="tip-demo"><span class="row" style="gap:4px">Выберите фасовку<button class="icon-btn icon-btn--sm icon-btn--help" aria-label="Что такое фасовка"><svg><use href="#i-help"/></svg></button></span><div class="tip">Одна позиция в нескольких упаковках. У каждой фасовки свой код 1С и цена.</div></div>
+          <div class="pop" style="margin-top:20px">
+            <div class="pop__head"><strong>Как читать график?</strong><button class="icon-btn icon-btn--sm" aria-label="Закрыть"><svg><use href="#i-x"/></svg></button></div>
+            <ul class="pop__list">
+              <li><span class="pop__dot" style="background:var(--warning)"></span>Период закупки — сформируйте запас к сезону</li>
+              <li><span class="pop__dot" style="background:var(--primary)"></span>Оптимальный период применения</li>
+              <li><span class="pop__dot" style="background:var(--primary-soft);border:1px solid var(--primary)"></span>Возможное применение</li>
+              <li><span class="pop__dot" style="background:var(--neutral)"></span>Не рекомендуется</li>
+            </ul>
+            <p>Пример: если оптимальное применение начинается в марте, планируйте закупку с января–февраля.</p>
+          </div>
+          <p class="note">Триггер — кнопка «?» 32 px без рамки. Тултип отвечает одной-двумя строками при наведении и фокусе; поповер открывается по клику, у него заголовок, список и крестик, закрывается по ✕, Esc и клику вне. Стрелок-хвостиков нет.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Модальное окно</p>
+          <div class="overlay-demo">
+            <div class="modal" role="dialog" aria-labelledby="modal-demo-title">
+              <div class="modal__head"><h4 id="modal-demo-title">Очистить корзину?</h4><button class="icon-btn" aria-label="Закрыть"><svg><use href="#i-x"/></svg></button></div>
+              <p>24 позиции на 125 400 ₽ будут удалены. Отменить это действие нельзя.</p>
+              <div class="modal__foot"><button class="btn btn--neutral">Отмена</button><button class="btn btn--danger">Очистить</button></div>
+            </div>
+          </div>
+          <p class="note">Подложка — основной цвет текста с прозрачностью 40 %. Окно 480 px для подтверждений и коротких форм, 960 px — двухколоночное «Заказать звонок» с промо-колонкой. Кнопки в подвале справа, главное действие последним. На телефоне окно превращается в шторку снизу.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px">
+        <p class="swatch__role" style="margin-bottom:14px">Шторка</p>
+        <div class="overlay-demo overlay-demo--sheet">
+          <div class="sheet" role="dialog" aria-label="Фильтры">
+            <div class="sheet__head"><strong>Фильтры</strong><span class="counter">5</span><button class="icon-btn" aria-label="Закрыть" style="margin-left:auto"><svg><use href="#i-x"/></svg></button></div>
+            <div class="sheet__body">
+              <div class="acc">
+                <div class="acc__item acc__item--open"><div class="acc__head">Наличие<svg><use href="#i-chevron-down"/></svg></div><div class="acc__body"><span class="check check--on"><span class="check__box"><svg><use href="#i-check"/></svg></span>В наличии <span class="facet__count">(64)</span></span><span class="check"><span class="check__box"></span>Под заказ <span class="facet__count">(8)</span></span></div></div>
+                <div class="acc__item"><div class="acc__head">Производитель<svg><use href="#i-chevron-down"/></svg></div></div>
+                <div class="acc__item"><div class="acc__head">Вид животного<svg><use href="#i-chevron-down"/></svg></div></div>
+              </div>
+            </div>
+            <div class="sheet__foot"><button class="btn btn--primary btn--lg" style="flex:1">Показать 72 товара</button><button class="btn btn--neutral btn--lg">Сбросить</button></div>
+          </div>
+        </div>
+        <p class="note">Выезжает справа: 360 px на планшете, во всю ширину экрана на телефоне. Шапка 56 px с заголовком и крестиком, содержимое прокручивается внутри, подвал прижат к низу с главным действием на всю ширину. Применение: фильтры каталога на телефоне, меню кабинета, мини-корзина.</p>
+      </div>
+    </section>
+
+    <!-- 12 ИЕРАРХИЯ -->
+    <section class="section" id="hierarchy">
+      <div class="section__head">
+        <p class="section__num">12</p>
         <h2>Иерархия и запреты</h2>
         <p>Четыре уровня важности задают, чему цвет вообще положен. Если элемент не относится ни к одному уровню — он серый.</p>
       </div>
@@ -755,7 +900,7 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.1 от 04.09.2026</span>
+    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.2 от 05.09.2026</span>
     <span>Страница для согласования. Не для публичного распространения.</span>
   </div>
 </footer>
