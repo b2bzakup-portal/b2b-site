@@ -54,7 +54,7 @@
       <a href="../design-system/index.html" aria-current="page">Дизайн-система</a>
       <a href="../design-system/references.html">Референсы</a>
       <a href="../progress/index.html">Ход работ</a>
-      <span class="version-chip">v1.2 · 05.09.2026</span>
+      <span class="version-chip">v1.3 · 05.09.2026</span>
     </nav>
   </div>
 </header>
@@ -75,7 +75,8 @@
       <a href="#table"><span>09</span>Таблица каталога</a>
       <a href="#alerts"><span>10</span>Плашки и пустые состояния</a>
       <a href="#containers"><span>11</span>Контейнеры и наложения</a>
-      <a href="#hierarchy"><span>12</span>Иерархия и запреты</a>
+      <a href="#frame"><span>12</span>Каркас страницы</a>
+      <a href="#hierarchy"><span>13</span>Иерархия и запреты</a>
     </nav>
   </aside>
 
@@ -88,7 +89,7 @@
       <div class="hero__meta">
         <span class="badge badge--success">Палитра и типографика согласованы</span>
         <span class="badge badge--tag">48 макетов разобрано</span>
-        <span class="badge badge--tag">Версия 1.1 · 05.09.2026</span>
+        <span class="badge badge--tag">Версия 1.2 · 05.09.2026</span>
       </div>
     </section>
 
@@ -845,10 +846,188 @@
       </div>
     </section>
 
-    <!-- 12 ИЕРАРХИЯ -->
-    <section class="section" id="hierarchy">
+    <!-- 12 КАРКАС -->
+    <section class="section" id="frame">
       <div class="section__head">
         <p class="section__num">12</p>
+        <h2>Каркас страницы</h2>
+        <p>Сквозные элементы всех страниц: служебная строка, шапки, меню каталога, футер с полосой преимуществ, окно «Заказать звонок», уведомление о cookie и мобильная навигация. Кадры с канваса дизайн-системы в ширинах 1440 и 375. Строка категорий под шапкой есть только на каталожных страницах — на главной и остальных навигация по товарам живёт в кнопке «Каталог товаров».</p>
+      </div>
+
+      <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-topbar-header-guest.webp" data-title="Служебная строка и шапка · гость">
+          <img src="assets/frame/frame-topbar-header-guest.webp" width="1440" height="112" loading="lazy" decoding="async" alt="Служебная строка и шапка · гость">
+        </a>
+        <figcaption>
+          <p class="ref__title">Служебная строка и шапка · гость</p>
+          <p class="ref__note">Город статичным текстом, ссылки разделов, телефон и «Заказать звонок»; в шапке логотип, «Каталог товаров», поиск с подсказкой Ctrl + /, избранное и корзина со счётчиками, «Личный кабинет».</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-header-client.webp" data-title="Шапка · клиент">
+          <img src="assets/frame/frame-header-client.webp" width="1440" height="112" loading="lazy" decoding="async" alt="Шапка · клиент">
+        </a>
+        <figcaption>
+          <p class="ref__title">Шапка · клиент</p>
+          <p class="ref__note">После входа вместо «Личный кабинет» — название организации с меню.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-header-account-menu.webp" data-title="Шапка · меню аккаунта открыто">
+          <img src="assets/frame/frame-header-account-menu.webp" width="1440" height="324" loading="lazy" decoding="async" alt="Шапка · меню аккаунта открыто">
+        </a>
+        <figcaption>
+          <p class="ref__title">Шапка · меню аккаунта открыто</p>
+          <p class="ref__note">Панель выпадающего списка 240 px по правому краю: Личный кабинет, Мои заказы, Быстрый заказ, Избранное, Выйти.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-nav-1440.webp" data-title="Навигация по категориям · 1440">
+          <img src="assets/frame/frame-nav-1440.webp" width="1440" height="48" loading="lazy" decoding="async" alt="Навигация по категориям · 1440">
+        </a>
+        <figcaption>
+          <p class="ref__title">Навигация по категориям · 1440</p>
+          <p class="ref__note">Только на каталожных страницах. Названия длинные: в строку входят пять категорий и «Ещё», остальное — в выпадающем списке.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-nav-1024.webp" data-title="Навигация по категориям · 1024">
+          <img src="assets/frame/frame-nav-1024.webp" width="1440" height="68" loading="lazy" decoding="async" alt="Навигация по категориям · 1024">
+        </a>
+        <figcaption>
+          <p class="ref__title">Навигация по категориям · 1024</p>
+          <p class="ref__note">На планшете в строку входят четыре категории и «Ещё».</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-catalog-menu.webp" data-title="Меню каталога открыто">
+          <img src="assets/frame/frame-catalog-menu.webp" width="1440" height="500" loading="lazy" decoding="async" alt="Меню каталога открыто">
+        </a>
+        <figcaption>
+          <p class="ref__title">Меню каталога открыто</p>
+          <p class="ref__note">Кнопка «Каталог товаров» в нажатом состоянии; слева список категорий, справа подкатегории активной в три колонки.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-breadcrumbs.webp" data-title="Хлебные крошки">
+          <img src="assets/frame/frame-breadcrumbs.webp" width="1440" height="48" loading="lazy" decoding="async" alt="Хлебные крошки">
+        </a>
+        <figcaption>
+          <p class="ref__title">Хлебные крошки</p>
+          <p class="ref__note">На всех страницах, кроме карточки товара: там теги-крошки.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-footer-basic.webp" data-title="Преимущества и футер · базовый набор">
+          <img src="assets/frame/frame-footer-basic.webp" width="1440" height="620" loading="lazy" decoding="async" alt="Преимущества и футер · базовый набор">
+        </a>
+        <figcaption>
+          <p class="ref__title">Преимущества и футер · базовый набор</p>
+          <p class="ref__note">Полоса преимуществ в четыре колонки и футер в пять колонок: о портале, каталог, покупателям, компания, контакты.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-footer-catalog.webp" data-title="Преимущества и футер · каталог и избранное">
+          <img src="assets/frame/frame-footer-catalog.webp" width="1440" height="620" loading="lazy" decoding="async" alt="Преимущества и футер · каталог и избранное">
+        </a>
+        <figcaption>
+          <p class="ref__title">Преимущества и футер · каталог и избранное</p>
+          <p class="ref__note">Второй набор преимуществ для каталога и избранного: быстрый заказ, индивидуальные цены, доставка по РФ, поддержка.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-auth-frame.webp" data-title="Облегчённые шапка и футер · вход">
+          <img src="assets/frame/frame-auth-frame.webp" width="1440" height="296" loading="lazy" decoding="async" alt="Облегчённые шапка и футер · вход">
+        </a>
+        <figcaption>
+          <p class="ref__title">Облегчённые шапка и футер · вход</p>
+          <p class="ref__note">Для входа, регистрации и восстановления пароля: логотип, четыре ссылки, телефон и кнопка-обводка.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-call-dialog-form.webp" data-title="Окно «Заказать звонок»">
+          <img src="assets/frame/frame-call-dialog-form.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Окно «Заказать звонок»">
+        </a>
+        <figcaption>
+          <p class="ref__title">Окно «Заказать звонок»</p>
+          <p class="ref__note">Окно 960 на подложке: слева форма с именем, телефоном, временем звонка, комментарием и согласием; справа промо-панель.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-call-dialog-success.webp" data-title="Окно «Заказать звонок» · заявка отправлена">
+          <img src="assets/frame/frame-call-dialog-success.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Окно «Заказать звонок» · заявка отправлена">
+        </a>
+        <figcaption>
+          <p class="ref__title">Окно «Заказать звонок» · заявка отправлена</p>
+          <p class="ref__note">Состояние успеха в том же окне: плашка и кнопка «Закрыть».</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-help-block.webp" data-title="Блок «Нужна помощь?»">
+          <img src="assets/frame/frame-help-block.webp" width="1440" height="338" loading="lazy" decoding="async" alt="Блок «Нужна помощь?»">
+        </a>
+        <figcaption>
+          <p class="ref__title">Блок «Нужна помощь?»</p>
+          <p class="ref__note">Слева — для контентных страниц и авторизации, справа — виджет кабинета с кнопкой «Связаться с менеджером».</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-cookie.webp" data-title="Уведомление о cookie">
+          <img src="assets/frame/frame-cookie.webp" width="1440" height="160" loading="lazy" decoding="async" alt="Уведомление о cookie">
+        </a>
+        <figcaption>
+          <p class="ref__title">Уведомление о cookie</p>
+          <p class="ref__note">Прилипает к низу окна, содержимое в контейнере; показывается до нажатия «Принять».</p>
+        </figcaption>
+      </figure>
+      </div>
+
+      <p class="swatch__role" style="margin:32px 0 14px">Телефон · 375</p>
+      <div class="ref-grid ref-grid--phones">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-mobile-screen.webp" data-title="Телефон · шапка, cookie и таб-бар">
+          <img src="assets/frame/frame-mobile-screen.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Телефон · шапка, cookie и таб-бар">
+        </a>
+        <figcaption>
+          <p class="ref__title">Телефон · шапка, cookie и таб-бар</p>
+          <p class="ref__note">Шапка в три строки: логотип с иконками, кнопка «Каталог» на всю ширину, поиск; внизу уведомление о cookie над таб-баром.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-mobile-menu.webp" data-title="Телефон · меню каталога">
+          <img src="assets/frame/frame-mobile-menu.webp" width="750" height="1624" loading="lazy" decoding="async" alt="Телефон · меню каталога">
+        </a>
+        <figcaption>
+          <p class="ref__title">Телефон · меню каталога</p>
+          <p class="ref__note">Шторка во всю ширину: категории, затем разделы служебной строки, внизу телефон и «Заказать звонок».</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-mobile-call.webp" data-title="Телефон · окно «Заказать звонок»">
+          <img src="assets/frame/frame-mobile-call.webp" width="750" height="1920" loading="lazy" decoding="async" alt="Телефон · окно «Заказать звонок»">
+        </a>
+        <figcaption>
+          <p class="ref__title">Телефон · окно «Заказать звонок»</p>
+          <p class="ref__note">Окно становится шторкой снизу; показан длинный экран, на устройстве шторка прокручивается.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/frame/frame-mobile-footer.webp" data-title="Телефон · преимущества и футер">
+          <img src="assets/frame/frame-mobile-footer.webp" width="750" height="3092" loading="lazy" decoding="async" alt="Телефон · преимущества и футер">
+        </a>
+        <figcaption>
+          <p class="ref__title">Телефон · преимущества и футер</p>
+          <p class="ref__note">Преимущества по одному в ряд, колонки футера одна под другой в порядке десктопа.</p>
+        </figcaption>
+      </figure>
+      </div>
+    </section>
+
+    <!-- 13 ИЕРАРХИЯ -->
+    <section class="section" id="hierarchy">
+      <div class="section__head">
+        <p class="section__num">13</p>
         <h2>Иерархия и запреты</h2>
         <p>Четыре уровня важности задают, чему цвет вообще положен. Если элемент не относится ни к одному уровню — он серый.</p>
       </div>
@@ -900,7 +1079,7 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.2 от 05.09.2026</span>
+    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.3 от 05.09.2026</span>
     <span>Страница для согласования. Не для публичного распространения.</span>
   </div>
 </footer>
