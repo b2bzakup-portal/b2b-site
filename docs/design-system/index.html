@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Дизайн-система — B2B-портал агробизнеса b2bzakup.ru</title>
+<meta name="description" content="Дизайн-система B2B-портала оптовых закупок b2bzakup.ru: палитра, типографика, сетка, компоненты и паттерны.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F6F4A'/%3E%3Cpath d='M9 21c0-6 4-10 14-11-1 9-5 12-11 12H9z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true" focusable="false"><defs>
+<g id="ip" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></g>
+</defs>
+<symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+<symbol id="i-funnel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 20a1 1 0 0 0 1.6.8l3-2.2a1 1 0 0 0 .4-.8v-4.4a1 1 0 0 1 .24-.65L21.7 4.6A1 1 0 0 0 20.94 3H3.06a1 1 0 0 0-.76 1.65l6.46 8.15a1 1 0 0 1 .24.65Z"/></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.06 12.35a1 1 0 0 1 0-.7 10.75 10.75 0 0 1 19.88 0 1 1 0 0 1 0 .7 10.75 10.75 0 0 1-19.88 0"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-search-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13.5 8.5-5 5"/><path d="m8.5 8.5 5 5"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+<symbol id="i-alert-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></symbol>
+<symbol id="i-check-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+<symbol id="i-alert-triangle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-x-circle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+<symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="../design-system/index.html" aria-label="B2B-портал агробизнеса">
+      <span class="brand__mark"><svg><use href="#i-leaf"/></svg></span>
+      <span class="brand__text">B2B-портал агробизнеса</span>
+    </a>
+    <nav class="topnav">
+      <a href="../design-system/index.html" aria-current="page">Дизайн-система</a>
+      <a href="../design-system/references.html">Референсы</a>
+      <a href="../progress/index.html">Ход работ</a>
+      <span class="version-chip">v1.1 · 04.09.2026</span>
+    </nav>
+  </div>
+</header>
+
+<main class="container layout">
+
+  <aside class="sidebar">
+    <p class="sidebar__title">Разделы</p>
+    <nav id="toc">
+      <a href="#colors"><span>01</span>Цветовая палитра</a>
+      <a href="#type"><span>02</span>Типографика</a>
+      <a href="#shape"><span>03</span>Форма и ритм</a>
+      <a href="#grid"><span>04</span>Сетка и контейнер</a>
+      <a href="#layouts"><span>05</span>Раскладки на сетке</a>
+      <a href="#buttons"><span>06</span>Кнопки</a>
+      <a href="#badges"><span>07</span>Бейджи и статусы</a>
+      <a href="#forms"><span>08</span>Поля и формы</a>
+      <a href="#table"><span>09</span>Таблица каталога</a>
+      <a href="#alerts"><span>10</span>Плашки и пустые состояния</a>
+      <a href="#hierarchy"><span>11</span>Иерархия и запреты</a>
+    </nav>
+  </aside>
+
+  <div>
+
+    <section class="hero">
+      <p class="eyebrow">b2bzakup.ru</p>
+      <h1>Дизайн-система</h1>
+      <p>Портал — операционная среда закупщика, а не витрина. Дословно из вашей дизайн-системы: интерфейс должен быть ближе к ERP/CRM-системе, чем к интернет-магазину. Ниже — как этот принцип разложен на конкретные цвета, размеры и состояния, из которых собираются все экраны.</p>
+      <div class="hero__meta">
+        <span class="badge badge--success">Палитра и типографика согласованы</span>
+        <span class="badge badge--tag">48 макетов разобрано</span>
+        <span class="badge badge--tag">Версия 1.0 · 02.09.2026</span>
+      </div>
+    </section>
+
+    <!-- 01 ЦВЕТА -->
+    <section class="section" id="colors">
+      <div class="section__head">
+        <p class="section__num">01</p>
+        <h2>Цветовая палитра</h2>
+        <p>Девять цветов, согласованных в переписке 21.08.2026. Каждый отвечает за смысл, а не за настроение: зелёный — действие и деньги, жёлтый — ограничение, красный — стоп, серый — всё остальное.</p>
+      </div>
+
+      <div class="grid grid--3 grid--swatches">
+        <div class="swatch"><div class="swatch__chip" style="background:#1F6F4A"></div><div class="swatch__body"><p class="swatch__role">Основной зелёный</p><p class="swatch__hex">#1F6F4A</p><p class="swatch__use">Кнопки действий, цены, статус «В наличии», ключевые B2B-действия</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#1C1C1C"></div><div class="swatch__body"><p class="swatch__role">Текст основной</p><p class="swatch__hex">#1C1C1C</p><p class="swatch__use">Заголовки, основной текст, данные таблиц</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#8A94A6"></div><div class="swatch__body"><p class="swatch__role">Второстепенный текст</p><p class="swatch__hex">#8A94A6</p><p class="swatch__use">Коды 1С, подсказки, метаданные</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#F7F9FC"></div><div class="swatch__body"><p class="swatch__role">Фон базовый</p><p class="swatch__hex">#F7F9FC</p><p class="swatch__use">Фон страниц, разделение блоков</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#FFFFFF;border-bottom:1px solid #E5E7EB"></div><div class="swatch__body"><p class="swatch__role">Поверхность</p><p class="swatch__hex">#FFFFFF</p><p class="swatch__use">Карточки, таблицы, поля ввода</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#E5E7EB"></div><div class="swatch__body"><p class="swatch__role">Границы</p><p class="swatch__hex">#E5E7EB</p><p class="swatch__use">Разделители, обводки, неактивные элементы</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#FFB020"></div><div class="swatch__body"><p class="swatch__role">Внимание</p><p class="swatch__hex">#FFB020</p><p class="swatch__use">МЗП, кратность, предупреждения</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#E5484D"></div><div class="swatch__body"><p class="swatch__role">Ошибка</p><p class="swatch__hex">#E5484D</p><p class="swatch__use">Ошибки заказа, невыполнимые условия</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#2A80D9"></div><div class="swatch__body"><p class="swatch__role">Информационный</p><p class="swatch__hex">#2A80D9</p><p class="swatch__use">Ссылки, «Экспорт в Excel», навигация, теги</p></div></div>
+      </div>
+
+      <h3>Производные оттенки</h3>
+      <p class="note">Наведение, нажатие и мягкие подложки бейджей — затемнение и осветление тех же девяти цветов. Новых оттенков в палитру не вводится.</p>
+      <div class="grid grid--4 grid--swatches" style="margin-top:16px">
+        <div class="swatch"><div class="swatch__chip" style="height:56px;background:#19593C"></div><div class="swatch__body"><p class="swatch__hex">#19593C</p><p class="swatch__use">Наведение на зелёную кнопку</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="height:56px;background:#12452E"></div><div class="swatch__body"><p class="swatch__hex">#12452E</p><p class="swatch__use">Нажатие зелёной кнопки</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="height:56px;background:#E9F3EE"></div><div class="swatch__body"><p class="swatch__hex">#E9F3EE</p><p class="swatch__use">Подложка «В наличии», выбранный чип</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="height:56px;background:#F1F3F7"></div><div class="swatch__body"><p class="swatch__hex">#F1F3F7</p><p class="swatch__use">Нейтральная кнопка, «Отменён»</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="height:56px;background:#FFF7E8"></div><div class="swatch__body"><p class="swatch__hex">#FFF7E8</p><p class="swatch__use">Подложка бейджей МЗП и кратности</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="height:56px;background:#FDECED"></div><div class="swatch__body"><p class="swatch__hex">#FDECED</p><p class="swatch__use">Подложка плашки ошибки</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="height:56px;background:#EAF2FC"></div><div class="swatch__body"><p class="swatch__hex">#EAF2FC</p><p class="swatch__use">Информационная плашка, «Отгружен»</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="height:56px;background:#FDF6F6"></div><div class="swatch__body"><p class="swatch__hex">#FDF6F6</p><p class="swatch__use">Заливка строки с нарушением МЗП</p></div></div>
+      </div>
+
+      <h3>Читаемость мелкого текста</h3>
+      <p class="note">Жёлтый <code>#FFB020</code> на светлой подложке даёт контраст 1,8:1 — текст 12&nbsp;px в бейдже МЗП становится нечитаемым. Для текста и иконок внутри мягких подложек берутся затемнённые варианты. Согласованные цвета при этом не меняются: они остаются для заливок, обводок и крупных элементов.</p>
+      <div class="grid grid--3" style="margin-top:16px">
+        <div class="card">
+          <p class="row"><span class="badge badge--warning"><svg><use href="#i-alert-triangle"/></svg>МЗП: 10 кг</span></p>
+          <p class="swatch__hex" style="margin-top:12px">Текст #9A5B00 · контраст 6,4:1</p>
+        </div>
+        <div class="card">
+          <p class="row"><span class="badge badge--danger"><svg><use href="#i-x-circle"/></svg>Меньше МЗП</span></p>
+          <p class="swatch__hex" style="margin-top:12px">Текст #C13438 · контраст 4,8:1</p>
+        </div>
+        <div class="card">
+          <p class="row"><span class="badge badge--info">Отгружен</span></p>
+          <p class="swatch__hex" style="margin-top:12px">Текст #1D63AC · контраст 6,1:1</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 ТИПОГРАФИКА -->
+    <section class="section" id="type">
+      <div class="section__head">
+        <p class="section__num">02</p>
+        <h2>Типографика</h2>
+        <p>Inter — читается в таблицах, нейтральный, подходит под ERP/CRM-стиль. Шкала компактная, согласована 21.08.2026; альтернативная шкала из второго листа отклонена.</p>
+      </div>
+
+      <div class="card font-card">
+        <div class="font-card__aa">Aa</div>
+        <div>
+          <p class="font-card__name">Inter</p>
+          <p class="font-card__weights">Regular 400 · Medium 500 · SemiBold 600</p>
+          <p class="font-card__glyphs">АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ<br>ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789 ₽ %</p>
+        </div>
+      </div>
+
+      <div class="card" style="padding:0;margin-top:20px">
+        <div class="type-row"><div class="type-row__tag">H1</div><div class="type-row__sample" style="font-size:32px;font-weight:600;line-height:1.2">Заголовок страницы</div><div class="type-row__spec">SemiBold · 28–32 px</div><div class="type-row__use">Заголовок страницы, один на страницу</div></div>
+        <div class="type-row"><div class="type-row__tag">H2</div><div class="type-row__sample" style="font-size:20px;font-weight:600">Заголовок блока</div><div class="type-row__spec">SemiBold · 18–20 px</div><div class="type-row__use">Блоки внутри страниц, карточки</div></div>
+        <div class="type-row"><div class="type-row__tag">H3</div><div class="type-row__sample" style="font-size:16px;font-weight:500">Подзаголовок секции</div><div class="type-row__spec">Medium · 14–16 px</div><div class="type-row__use">Подзаголовки секций, шапка таблицы</div></div>
+        <div class="type-row"><div class="type-row__tag">Body</div><div class="type-row__sample" style="font-size:14px">Основной текст интерфейса</div><div class="type-row__spec">Regular · 14 px</div><div class="type-row__use">Описания, подписи, пояснения</div></div>
+        <div class="type-row"><div class="type-row__tag">Table</div><div class="type-row__sample" style="font-size:14px;font-weight:500">1 200 ₽ · 350 кг · 10 уп.</div><div class="type-row__spec">Medium · 13–14 px</div><div class="type-row__use">Данные таблиц, числа, цены — B2B-ключ</div></div>
+        <div class="type-row"><div class="type-row__tag">Small</div><div class="type-row__sample" style="font-size:12px">Второстепенный текст</div><div class="type-row__spec">Regular · 12 px</div><div class="type-row__use">Подсказки, метаданные, служебные подписи</div></div>
+        <div class="type-row"><div class="type-row__tag">Mono</div><div class="type-row__sample mono" style="font-size:13px">00-0012345 · 4607013043123</div><div class="type-row__spec">JetBrains Mono · 12 px</div><div class="type-row__use">Коды 1С и штрихкоды: их сравнивают посимвольно</div></div>
+      </div>
+    </section>
+
+    <!-- 03 ФОРМА -->
+    <section class="section" id="shape">
+      <div class="section__head">
+        <p class="section__num">03</p>
+        <h2>Форма и ритм</h2>
+        <p>Служебные величины, выведенные из макетов: радиусы, шаг отступов, высоты элементов и единственная допустимая тень.</p>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="card"><p class="swatch__role">Радиусы</p><p class="swatch__hex">6 · 8 · 12 px</p><p class="swatch__use">Поля и мелкие бейджи — 6, кнопки и ячейки — 8, карточки и панели — 12. Круг только у счётчиков.</p></div>
+        <div class="card"><p class="swatch__role">Шаг сетки</p><p class="swatch__hex">4 px</p><p class="swatch__use">Отступы кратны четырём: 4 · 8 · 12 · 16 · 20 · 24 · 32 · 48 · 64.</p></div>
+        <div class="card"><p class="swatch__role">Высоты</p><p class="swatch__hex">32 · 40 · 48 px</p><p class="swatch__use">Строка таблицы и степпер — 32, поле и кнопка — 40, главное действие — 48.</p></div>
+        <div class="card"><p class="swatch__role">Тень</p><p class="swatch__hex">0 1 2 rgba(28,28,28,.06)</p><p class="swatch__use">Одна тень на выпадающие списки и поповеры. Карточки отделяются границей, а не тенью.</p></div>
+      </div>
+    </section>
+
+    <!-- 04 СЕТКА -->
+    <section class="section" id="grid">
+      <div class="section__head">
+        <p class="section__num">04</p>
+        <h2>Сетка и контейнер</h2>
+        <p>Вёрстки на всю ширину экрана нет. Контент живёт в контейнере фиксированной максимальной ширины, на больших мониторах слева и справа остаются поля — «уши». Закупщики в отрасли привыкли к такому формату: строка таблицы, растянутая на 2560&nbsp;px, нечитаема.</p>
+      </div>
+
+      <div class="card">
+        <p class="swatch__role" style="margin-bottom:16px">Экран 1920 px · контейнер 1440 px · уши по 240 px</p>
+        <div class="viewport">
+          <div class="viewport__ear">ухо</div>
+          <div class="viewport__container">
+            <div class="viewport__col">1</div><div class="viewport__col">2</div><div class="viewport__col">3</div>
+            <div class="viewport__col">4</div><div class="viewport__col">5</div><div class="viewport__col">6</div>
+            <div class="viewport__col">7</div><div class="viewport__col">8</div><div class="viewport__col">9</div>
+            <div class="viewport__col">10</div><div class="viewport__col">11</div><div class="viewport__col">12</div>
+          </div>
+          <div class="viewport__ear">ухо</div>
+        </div>
+        <p class="note">12 колонок по 94 px, промежуток 24 px, внутренние поля контейнера 24 px: 24 + 12×94 + 11×24 + 24 = 1440. Схема дана в масштабе. Эта страница свёрстана по тому же правилу — разверните окно шире 1440 px и увидите уши.</p>
+      </div>
+
+      <div class="grid grid--2 grid--stack-md" style="margin-top:20px">
+        <div class="spec-scroll">
+        <table class="spec">
+          <thead><tr><th>Ширина окна</th><th>Контейнер</th><th class="num">Колонки</th><th>Поля</th></tr></thead>
+          <tbody>
+            <tr><td class="spec__label">от 1440 px</td><td>1440 px, фиксирован</td><td class="num mono">12</td><td>24 px, уши растут</td></tr>
+            <tr><td class="spec__label">1024–1439 px</td><td>тянется по окну</td><td class="num mono">12</td><td>24 px</td></tr>
+            <tr><td class="spec__label">768–1023 px</td><td>тянется по окну</td><td class="num mono">8</td><td>24 px</td></tr>
+            <tr><td class="spec__label">до 767 px</td><td>тянется по окну</td><td class="num mono">4</td><td>16 px</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Что из этого следует</p>
+          <div class="rule-list">
+            <div><strong>Ни один блок не выходит за контейнер</strong><p>Цветная подложка секции может тянуться на всю ширину окна, но её содержимое всё равно выравнивается по контейнеру.</p></div>
+            <div><strong>Шапка, футер и sticky-панели — тоже по контейнеру</strong><p>Панель заказа внизу каталога прижата к низу окна, но её содержимое стоит в тех же 1440 px, что и таблица.</p></div>
+            <div><strong>Широкая таблица прокручивается внутри себя</strong><p>Если служебные колонки не помещаются в 1440 px — горизонтальная прокрутка внутри таблицы с закреплённой колонкой товара, а не растягивание контейнера.</p></div>
+            <div><strong>Уши остаются пустыми</strong><p>В поля слева и справа ничего не выносится: ни навигация, ни реклама, ни декор.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 РАСКЛАДКИ -->
+    <section class="section" id="layouts">
+      <div class="section__head">
+        <p class="section__num">05</p>
+        <h2>Раскладки на сетке</h2>
+        <p>Как реальные экраны портала ложатся на 12 колонок. Числа сняты с ваших макетов: пропорции блоков сохранены, ширина приведена к контейнеру 1440&nbsp;px. Раскладка страницы задаётся один раз и дальше не пересобирается под каждый экран.</p>
+      </div>
+
+      <h3>Раскладки страниц</h3>
+
+      <div class="card">
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Каталог · таблица</strong><span class="mono">12 · 12</span><em>Таблица работает во всю ширину контейнера, фильтры — рядом сверху</em></p>
+          <div class="cols"><span class="col-block" style="--span:12"><b>Фильтры</b><i>12</i></span></div>
+          <div class="cols"><span class="col-block" style="--span:12"><b>Таблица каталога</b><i>12</i></span></div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Карточка товара</strong><span class="mono">5 · 4 · 3</span><em>Панель покупки не уезжает вниз при прокрутке характеристик</em></p>
+          <div class="cols">
+            <span class="col-block" style="--span:5"><b>Галерея</b><i>5</i></span>
+            <span class="col-block" style="--span:4"><b>Данные и характеристики</b><i>4</i></span>
+            <span class="col-block" style="--span:3"><b>Панель покупки</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Корзина и оформление заказа</strong><span class="mono">9 · 3</span><em>Состав, способ получения и итог — на одной странице</em></p>
+          <div class="cols">
+            <span class="col-block" style="--span:9"><b>Состав заказа и способ получения</b><i>9</i></span>
+            <span class="col-block" style="--span:3"><b>Панель заказа</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Личный кабинет</strong><span class="mono">3 · 9</span><em>Меню одинаковое во всех разделах кабинета</em></p>
+          <div class="cols">
+            <span class="col-block col-block--aux" style="--span:3"><b>Меню ЛК</b><i>3</i></span>
+            <span class="col-block" style="--span:9"><b>Контент раздела</b><i>9</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Вход и регистрация</strong><span class="mono">5 · 7</span><em>Промо-колонка объясняет, зачем подключаться</em></p>
+          <div class="cols">
+            <span class="col-block col-block--aux" style="--span:5"><b>Промо-колонка</b><i>5</i></span>
+            <span class="col-block" style="--span:7"><b>Форма</b><i>7</i></span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Ряды карточек</h3>
+      <p class="note">Сколько карточек помещается в ряд и какая ширина колонки за этим стоит. Других вариантов не вводим: ряд из пяти или семи карточек ломает сетку.</p>
+
+      <div class="card" style="margin-top:16px">
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>6 карточек в ряд</strong><span class="mono">по 2 колонки</span><em>Категории каталога, товарные карточки, «Для кого наш портал»</em></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+            <span class="col-block col-block--sm" style="--span:2"><b>Карточка</b><i>2</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>4 карточки в ряд</strong><span class="mono">по 3 колонки</span><em>Преимущества, документы, статьи, быстрые действия в ЛК</em></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:3"><b>Карточка</b><i>3</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Карточка</b><i>3</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Карточка</b><i>3</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Карточка</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>3 карточки в ряд</strong><span class="mono">по 4 колонки</span><em>Пустые состояния, карточки условий, шаги «Что дальше»</em></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:4"><b>Карточка</b><i>4</i></span>
+            <span class="col-block col-block--sm" style="--span:4"><b>Карточка</b><i>4</i></span>
+            <span class="col-block col-block--sm" style="--span:4"><b>Карточка</b><i>4</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>2 карточки в ряд</strong><span class="mono">по 6 колонок</span><em>Крупные промо-блоки и парные сравнения</em></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:6"><b>Карточка</b><i>6</i></span>
+            <span class="col-block col-block--sm" style="--span:6"><b>Карточка</b><i>6</i></span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Поведение на брейкпоинтах</h3>
+      <p class="note">Одна и та же карточка товара на трёх ширинах. Блоки не исчезают и не меняются местами — только перестраиваются: сначала галерея занимает всю ширину, затем всё встаёт в одну колонку.</p>
+
+      <div class="card" style="margin-top:16px">
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Десктоп · от 1024 px</strong><span class="mono">12 колонок</span></p>
+          <div class="cols">
+            <span class="col-block col-block--sm" style="--span:5"><b>Галерея</b><i>5</i></span>
+            <span class="col-block col-block--sm" style="--span:4"><b>Данные и характеристики</b><i>4</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Панель покупки</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Планшет · 768–1023 px</strong><span class="mono">8 колонок</span></p>
+          <div class="cols" style="--cols:8"><span class="col-block col-block--sm" style="--span:8"><b>Галерея</b><i>8</i></span></div>
+          <div class="cols" style="--cols:8">
+            <span class="col-block col-block--sm" style="--span:5"><b>Данные и характеристики</b><i>5</i></span>
+            <span class="col-block col-block--sm" style="--span:3"><b>Панель покупки</b><i>3</i></span>
+          </div>
+        </div>
+
+        <div class="layout-demo">
+          <p class="layout-demo__cap"><strong>Мобильный · до 767 px</strong><span class="mono">4 колонки</span></p>
+          <div class="cols" style="--cols:4"><span class="col-block col-block--sm" style="--span:4"><b>Галерея</b><i>4</i></span></div>
+          <div class="cols" style="--cols:4"><span class="col-block col-block--sm" style="--span:4"><b>Данные и характеристики</b><i>4</i></span></div>
+          <div class="cols" style="--cols:4"><span class="col-block col-block--sm" style="--span:4"><b>Панель покупки · прилипает к низу экрана</b><i>4</i></span></div>
+        </div>
+      </div>
+
+      <div class="grid grid--3" style="margin-top:20px">
+        <div class="card"><p class="swatch__role">Раскладка одна на тип страницы</p><p class="swatch__use">Каталог, карточка, корзина, кабинет и авторизация — пять раскладок на весь портал. Новый экран берёт готовую, а не заводит шестую.</p></div>
+        <div class="card"><p class="swatch__role">Блоки не меняются местами</p><p class="swatch__use">При сужении окна порядок сохраняется: то, что было слева, окажется сверху. Иначе на планшете и десктопе получаются два разных продукта.</p></div>
+        <div class="card"><p class="swatch__role">Боковая панель не тоньше 3 колонок</p><p class="swatch__use">В 3 колонки (≈ 314 px) помещается цена, МЗП, степпер и кнопка. Уже — панель заказа перестаёт читаться и переносит слова.</p></div>
+      </div>
+    </section>
+
+    <!-- 06 КНОПКИ -->
+    <section class="section" id="buttons">
+      <div class="section__head">
+        <p class="section__num">06</p>
+        <h2>Кнопки</h2>
+        <p>Пять типов действий и четыре состояния каждого. Тип выбирается по смыслу действия, а не по месту на экране: зелёное — деньги и заказ, синее — информационное, красное — необратимое.</p>
+      </div>
+
+      <div class="spec-scroll">
+      <table class="spec spec--buttons">
+        <thead><tr><th>Тип действия</th><th>Обычное</th><th>Наведение</th><th>Нажатие</th><th>Отключено</th><th>Когда применяется</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="spec__label">Основное</td>
+            <td><button class="btn btn--primary"><svg><use href="#i-cart"/></svg>В корзину</button></td>
+            <td><button class="btn btn--primary is-hover"><svg><use href="#i-cart"/></svg>В корзину</button></td>
+            <td><button class="btn btn--primary is-active"><svg><use href="#i-cart"/></svg>В корзину</button></td>
+            <td><button class="btn btn--primary is-disabled" disabled><svg><use href="#i-cart"/></svg>В корзину</button></td>
+            <td>Деньги и заказ: «В корзину», «Оформить заказ», «Отправить заявку». Одно на экран</td>
+          </tr>
+          <tr>
+            <td class="spec__label">Вторичное</td>
+            <td><button class="btn btn--secondary"><svg><use href="#i-zap"/></svg>Быстрый заказ</button></td>
+            <td><button class="btn btn--secondary is-hover"><svg><use href="#i-zap"/></svg>Быстрый заказ</button></td>
+            <td><button class="btn btn--secondary is-active"><svg><use href="#i-zap"/></svg>Быстрый заказ</button></td>
+            <td><button class="btn btn--secondary is-disabled" disabled><svg><use href="#i-zap"/></svg>Быстрый заказ</button></td>
+            <td>Альтернативный путь к тому же результату: «Быстрый заказ», «Повторить заказ»</td>
+          </tr>
+          <tr>
+            <td class="spec__label">Информационное</td>
+            <td><button class="btn btn--info"><svg><use href="#i-download"/></svg>Экспорт в Excel</button></td>
+            <td><button class="btn btn--info is-hover"><svg><use href="#i-download"/></svg>Экспорт в Excel</button></td>
+            <td><button class="btn btn--info is-active"><svg><use href="#i-download"/></svg>Экспорт в Excel</button></td>
+            <td><button class="btn btn--info is-disabled" disabled><svg><use href="#i-download"/></svg>Экспорт в Excel</button></td>
+            <td>Работа с данными без изменения заказа: выгрузка, печать, скачивание прайса</td>
+          </tr>
+          <tr>
+            <td class="spec__label">Нейтральное</td>
+            <td><button class="btn btn--neutral"><svg><use href="#i-x"/></svg>Отмена</button></td>
+            <td><button class="btn btn--neutral is-hover"><svg><use href="#i-x"/></svg>Отмена</button></td>
+            <td><button class="btn btn--neutral is-active"><svg><use href="#i-x"/></svg>Отмена</button></td>
+            <td><button class="btn btn--neutral is-disabled" disabled><svg><use href="#i-x"/></svg>Отмена</button></td>
+            <td>Отказ от действия и сворачивание: «Отмена», «Свернуть», «Сбросить фильтры»</td>
+          </tr>
+          <tr>
+            <td class="spec__label">Опасное</td>
+            <td><button class="btn btn--danger"><svg><use href="#i-trash"/></svg>Удалить</button></td>
+            <td><button class="btn btn--danger is-hover"><svg><use href="#i-trash"/></svg>Удалить</button></td>
+            <td><button class="btn btn--danger is-active"><svg><use href="#i-trash"/></svg>Удалить</button></td>
+            <td><button class="btn btn--danger is-disabled" disabled><svg><use href="#i-trash"/></svg>Удалить</button></td>
+            <td>Необратимое удаление: «Удалить», «Очистить корзину». Всегда с подтверждением</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
+      <div class="grid grid--2" style="margin-top:20px">
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Иконочные кнопки в строке таблицы</p>
+          <div class="row">
+            <button class="icon-btn icon-btn--primary" aria-label="В корзину"><svg><use href="#i-cart"/></svg></button>
+            <button class="icon-btn icon-btn--accent" aria-label="В избранное"><svg><use href="#i-star"/></svg></button>
+            <button class="icon-btn icon-btn--accent" aria-label="Нравится"><svg><use href="#i-heart"/></svg></button>
+            <button class="icon-btn" aria-label="Фильтр"><svg><use href="#i-funnel"/></svg></button>
+            <button class="icon-btn" aria-label="Просмотр"><svg><use href="#i-eye"/></svg></button>
+            <button class="icon-btn icon-btn--info" aria-label="Скачать"><svg><use href="#i-download"/></svg></button>
+            <button class="icon-btn icon-btn--danger" aria-label="Удалить"><svg><use href="#i-trash"/></svg></button>
+          </div>
+          <p class="note">Размер 40×40, иконка 18×18, набор — lucide. Те же четыре состояния, что и у текстовых кнопок. В компактных строках таблицы — 32×32 с иконкой 16×16. У каждой обязателен <code>aria-label</code>.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Размеры</p>
+          <div class="row row--lg">
+            <div style="display:grid;gap:8px;justify-items:center"><button class="btn btn--primary btn--sm">В корзину</button><span class="swatch__hex">S · 32 px</span></div>
+            <div style="display:grid;gap:8px;justify-items:center"><button class="btn btn--primary">В корзину</button><span class="swatch__hex">M · 40 px</span></div>
+            <div style="display:grid;gap:8px;justify-items:center"><button class="btn btn--primary btn--lg">В корзину</button><span class="swatch__hex">L · 48 px</span></div>
+          </div>
+          <p class="note">Радиус 8 px у всех размеров. Ширина — по содержимому, минимум 120 px; в панели заказа и на мобиле главное действие растягивается на всю ширину.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 БЕЙДЖИ -->
+    <section class="section" id="badges">
+      <div class="section__head">
+        <p class="section__num">07</p>
+        <h2>Бейджи, статусы и теги</h2>
+        <p>Второй и третий уровни иерархии: ограничения — жёлтым, невыполнимые условия — красным. Форма одна (пилюля 26 px, радиус 6), различает только цвет и наличие обводки.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Ограничения и наличие</p>
+          <div class="row" style="margin-bottom:10px">
+            <span class="badge badge--warning"><svg><use href="#i-alert-triangle"/></svg>МЗП: 10 кг</span>
+            <span class="badge badge--warning">Кратность: 5 кг</span>
+            <span class="badge badge--success"><svg><use href="#i-check"/></svg>В наличии: 350 кг</span>
+          </div>
+          <div class="row">
+            <span class="badge badge--warning-plain"><svg><use href="#i-calendar"/></svg>Под заказ · от 2 дней</span>
+            <span class="badge badge--neutral">Нет в наличии</span>
+            <span class="badge badge--danger"><svg><use href="#i-x-circle"/></svg>Нельзя заказать меньше МЗП</span>
+          </div>
+          <p class="note">Жёлтый — условие, которое надо соблюсти. Красный — условие нарушено, заказ не оформить. Зелёный — товар готов к отгрузке.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Статусы заказа</p>
+          <div class="row" style="margin-bottom:10px">
+            <span class="badge badge--warning-plain">Принят</span>
+            <span class="badge badge--info-outline">Подтверждён</span>
+            <span class="badge badge--success-outline">В работе</span>
+          </div>
+          <div class="row">
+            <span class="badge badge--success">Выполнен</span>
+            <span class="badge badge--info">Отгружен</span>
+            <span class="badge badge--neutral">Отменён</span>
+          </div>
+          <p class="note">Синий в палитре один, поэтому «Подтверждён» и «Отгружен» различаются обводкой: статус с обводкой ещё может измениться, без обводки — свершившийся факт. Та же логика у пары «В работе» / «Выполнен».</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Чипы-фильтры</p>
+          <div class="row">
+            <span class="chip">Томаты <svg><use href="#i-x"/></svg></span>
+            <span class="chip">Огурцы <svg><use href="#i-x"/></svg></span>
+            <span class="chip">Водорастворимое <svg><use href="#i-x"/></svg></span>
+            <a href="#badges">Сбросить все</a>
+          </div>
+          <p class="note">Выбранный фильтр — зелёная обводка и крестик. «Сбросить все» — текстовая ссылка синим, стоит последней в ряду.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Теги свойств и счётчики</p>
+          <div class="row" style="margin-bottom:10px">
+            <span class="badge badge--tag">Универсальное</span>
+            <span class="badge badge--tag">Минеральное</span>
+            <span class="badge badge--tag">Водорастворимое</span>
+            <span class="badge badge--tag-more">+3</span>
+          </div>
+          <div class="row row--lg">
+            <span class="counter">3</span><span class="counter">12</span><span class="counter">24</span>
+            <span class="badge badge--hit">ХИТ</span>
+            <span class="badge badge--new">Новинка</span>
+          </div>
+          <p class="note">В карточке товара теги кликабельны — это ЧПУ-ссылки на разделы каталога вместо хлебных крошек. Счётчик «+N» раскрывает скрытые.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 ПОЛЯ -->
+    <section class="section" id="forms">
+      <div class="section__head">
+        <p class="section__num">08</p>
+        <h2>Поля и формы</h2>
+        <p>Одна высота 40 px, радиус 8, обводка 1 px. Фокус — зелёная рамка 2 px, ошибка — красная рамка и подпись под полем. Плейсхолдер серый, введённое значение — основным текстом.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Состояния поля</p>
+          <div class="grid grid--2" style="gap:16px">
+            <div>
+              <div class="field field--placeholder"><span class="field__label">Обычное</span><div class="field__box"><span>Введите ИНН</span></div></div>
+              <div class="field" style="margin-top:16px"><span class="field__label">Заполнено</span><div class="field__box"><span>7723456789</span></div></div>
+              <div class="field field--disabled" style="margin-top:16px"><span class="field__label">Отключено</span><div class="field__box"><span>ООО «Ромашка»</span><svg><use href="#i-lock"/></svg></div></div>
+            </div>
+            <div>
+              <div class="field field--focus"><span class="field__label">В фокусе</span><div class="field__box"><span>772345</span></div></div>
+              <div class="field field--error" style="margin-top:16px"><span class="field__label">Ошибка</span><div class="field__box"><span>77234</span><svg><use href="#i-alert-circle"/></svg></div><p class="field__hint">ИНН должен содержать 10 или 12 цифр</p></div>
+              <div class="field field--success" style="margin-top:10px"><span class="field__label">Успех</span><div class="field__box"><span>7723456789</span><svg><use href="#i-check"/></svg></div><p class="field__hint">Компания найдена в реестре</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Управление количеством</p>
+          <div class="row row--lg">
+            <div class="row" style="gap:8px"><div class="stepper"><button aria-label="Меньше"><svg><use href="#i-minus"/></svg></button><span class="stepper__value">10</span><button aria-label="Больше"><svg><use href="#i-plus"/></svg></button></div><span style="color:var(--text-muted);font-size:13px">уп.</span></div>
+            <div class="row" style="gap:8px"><div class="stepper stepper--error"><button aria-label="Меньше"><svg><use href="#i-minus"/></svg></button><span class="stepper__value">5</span><button aria-label="Больше"><svg><use href="#i-plus"/></svg></button></div><span style="color:var(--text-muted);font-size:13px">уп.</span></div>
+          </div>
+          <p class="note">Степпер — единственный способ менять количество: значение всегда кратно упаковке, ручной ввод округляется вверх до кратности при потере фокуса. Красная обводка — количество меньше минимальной партии или не кратно упаковке; кнопка «Оформить заказ» при этом неактивна.</p>
+
+          <p class="swatch__role" style="margin:24px 0 14px">Поиск</p>
+          <div class="search">
+            <div class="search__field"><span>Поиск по коду 1С, названию или штрихкоду</span><span class="search__hotkey">Ctrl + /</span></div>
+            <button class="search__btn" aria-label="Найти"><svg><use href="#i-search"/></svg></button>
+          </div>
+          <p class="note">Главный инструмент B2B-каталога. Найденный фрагмент кода подсвечивается жёлтым в выдаче; точное совпадение по коду 1С показывается первым с кнопкой «В корзину» прямо в подсказке.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Выбор</p>
+          <div class="stack" style="gap:12px">
+            <span class="check check--on"><span class="check__box"><svg><use href="#i-check"/></svg></span>Я принимаю пользовательское соглашение</span>
+            <span class="check"><span class="check__box"></span>Согласие на обработку персональных данных</span>
+          </div>
+          <div class="grid grid--2" style="gap:12px;margin-top:18px">
+            <div class="radio-card"><span class="radio-card__dot"></span><span><strong>Самовывоз</strong><span>г. Лобня, ул. Спортивная, 4А</span></span></div>
+            <div class="radio-card radio-card--on"><span class="radio-card__dot"></span><span><strong>Доставка</strong><span>Транспортной компанией</span></span></div>
+          </div>
+          <p class="note">Чекбокс — согласия и множественный выбор в таблице. Радио-карточка — способ получения заказа, взаимоисключающий выбор с пояснением.</p>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Доступность</p>
+          <div class="rule-list">
+            <div><strong>Контраст не ниже 4,5:1</strong><p>Основной текст и данные таблиц. Для мелкого текста на мягких подложках — затемнённые варианты из раздела 01.</p></div>
+            <div><strong>Цвет не единственный носитель смысла</strong><p>Статус наличия дублируется текстом, ошибка строки — плашкой, нарушенный степпер — подписью, а не только красной обводкой.</p></div>
+            <div><strong>Клавиатура</strong><p>Полный обход табом, видимый фокус зелёной рамкой 2 px, Ctrl + / — переход в поиск, Esc закрывает шторки и модальные окна.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09 ТАБЛИЦА -->
+    <section class="section" id="table">
+      <div class="section__head">
+        <p class="section__num">09</p>
+        <h2>Таблица каталога</h2>
+        <p>Основной режим работы: плотная строка, выравнивание чисел по правому краю, действие в конце строки. Всё, что ограничивает заказ, видно до перехода в корзину.</p>
+      </div>
+
+      <div class="catalog-wrap">
+        <div class="catalog-scroll">
+          <table class="catalog">
+            <thead>
+              <tr>
+                <th style="width:44px"><span class="check__box" style="display:inline-grid"></span></th>
+                <th>Наименование товара</th>
+                <th>Код 1С <svg style="width:12px;height:12px;vertical-align:-1px"><use href="#i-chevron-down"/></svg></th>
+                <th>Наличие <svg style="width:12px;height:12px;vertical-align:-1px"><use href="#i-chevron-down"/></svg></th>
+                <th class="num">Цена B2B, ₽ <svg style="width:12px;height:12px;vertical-align:-1px"><use href="#i-chevron-down"/></svg></th>
+                <th class="num">Кратность</th>
+                <th class="num">МЗП</th>
+                <th class="center">Количество</th>
+                <th class="center">Действия</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="check__box" style="display:inline-grid"></span></td>
+                <td><span class="cat-product"><span class="cat-product__img"></span><span><strong>Акварин универсальный</strong><span>водорастворимое удобрение</span></span></span></td>
+                <td class="mono" style="color:var(--text-muted)">00-0012345</td>
+                <td><span class="cat-stock"><strong>В наличии</strong><span>350 кг</span></span></td>
+                <td class="num cat-price">85 ₽</td>
+                <td class="num" style="color:var(--text-muted)">10 уп.</td>
+                <td class="num"><span class="badge badge--warning">10 уп.</span></td>
+                <td class="center"><div class="stepper stepper--sm"><button aria-label="Меньше"><svg><use href="#i-minus"/></svg></button><span class="stepper__value">10</span><button aria-label="Больше"><svg><use href="#i-plus"/></svg></button></div></td>
+                <td class="center"><span class="row" style="gap:8px;flex-wrap:nowrap;justify-content:center"><button class="icon-btn icon-btn--sm icon-btn--primary" aria-label="В корзину"><svg><use href="#i-cart"/></svg></button><button class="icon-btn icon-btn--sm" aria-label="В избранное"><svg><use href="#i-star"/></svg></button></span></td>
+              </tr>
+              <tr>
+                <td><span class="check__box" style="display:inline-grid"></span></td>
+                <td><span class="cat-product"><span class="cat-product__img"></span><span><strong>ОМУ для томатов, перцев, баклажанов</strong><span>органоминеральное удобрение</span></span></span></td>
+                <td class="mono" style="color:var(--text-muted)">00-0011222</td>
+                <td><span class="cat-stock"><strong>В наличии</strong><span>120 кг</span></span></td>
+                <td class="num cat-price">120 ₽</td>
+                <td class="num" style="color:var(--text-muted)">10 шт.</td>
+                <td class="num"><span class="badge badge--warning">10 шт.</span></td>
+                <td class="center"><div class="stepper stepper--sm"><button aria-label="Меньше"><svg><use href="#i-minus"/></svg></button><span class="stepper__value">20</span><button aria-label="Больше"><svg><use href="#i-plus"/></svg></button></div></td>
+                <td class="center"><span class="row" style="gap:8px;flex-wrap:nowrap;justify-content:center"><button class="icon-btn icon-btn--sm icon-btn--primary" aria-label="В корзину"><svg><use href="#i-cart"/></svg></button><button class="icon-btn icon-btn--sm" aria-label="В избранное"><svg><use href="#i-star"/></svg></button></span></td>
+              </tr>
+              <tr class="is-error">
+                <td><span class="check__box" style="display:inline-grid"></span></td>
+                <td><span class="cat-product"><span class="cat-product__img"></span><span><strong>Селитра аммиачная</strong><span>азотное удобрение</span></span></span></td>
+                <td class="mono" style="color:var(--text-muted)">00-0005678</td>
+                <td><span class="cat-stock cat-stock--order"><strong>Под заказ</strong><span>от 2 дней</span></span></td>
+                <td class="num cat-price">68 ₽</td>
+                <td class="num" style="color:var(--text-muted)">10 шт.</td>
+                <td class="num"><span class="badge badge--warning">25 шт.</span></td>
+                <td class="center"><div class="stepper stepper--sm stepper--error"><button aria-label="Меньше"><svg><use href="#i-minus"/></svg></button><span class="stepper__value">5</span><button aria-label="Больше"><svg><use href="#i-plus"/></svg></button></div></td>
+                <td class="center"><span class="row" style="gap:8px;flex-wrap:nowrap;justify-content:center"><button class="icon-btn icon-btn--sm is-disabled" aria-label="В корзину недоступно" disabled><svg><use href="#i-cart"/></svg></button><button class="icon-btn icon-btn--sm" aria-label="В избранное"><svg><use href="#i-star"/></svg></button></span></td>
+              </tr>
+              <tr>
+                <td><span class="check__box" style="display:inline-grid"></span></td>
+                <td><span class="cat-product"><span class="cat-product__img"></span><span><strong>Монокалийфосфат калия</strong><span>водорастворимое удобрение</span></span></span></td>
+                <td class="mono" style="color:var(--text-muted)">00-0018765</td>
+                <td><span class="cat-stock"><strong>В наличии</strong><span>80 кг</span></span></td>
+                <td class="num cat-price">110 ₽</td>
+                <td class="num" style="color:var(--text-muted)">20 шт.</td>
+                <td class="num"><span class="badge badge--warning">20 шт.</span></td>
+                <td class="center"><div class="stepper stepper--sm"><button aria-label="Меньше"><svg><use href="#i-minus"/></svg></button><span class="stepper__value">40</span><button aria-label="Больше"><svg><use href="#i-plus"/></svg></button></div></td>
+                <td class="center"><span class="row" style="gap:8px;flex-wrap:nowrap;justify-content:center"><button class="icon-btn icon-btn--sm icon-btn--primary" aria-label="В корзину"><svg><use href="#i-cart"/></svg></button><button class="icon-btn icon-btn--sm" aria-label="В избранное"><svg><use href="#i-star"/></svg></button></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="catalog-error"><svg><use href="#i-alert-circle"/></svg>«Селитра аммиачная»: минимальная партия — 25 шт. Увеличьте количество, иначе позиция не попадёт в заказ.</p>
+      </div>
+
+      <div class="grid grid--4" style="margin-top:20px">
+        <div class="card"><p class="swatch__role">Числа — вправо</p><p class="swatch__use">Цены, кратность, МЗП и вес выравниваются по правому краю: колонка читается как столбик чисел, а не как текст.</p></div>
+        <div class="card"><p class="swatch__role">Код 1С — моноширинный</p><p class="swatch__use">Код и штрихкод набираются JetBrains Mono 12 px серым: их сравнивают посимвольно, а не читают.</p></div>
+        <div class="card"><p class="swatch__role">Строка 64 px</p><p class="swatch__use">Плотность выше карточек: на первом экране помещается 10–12 позиций. Компактный режим — 48 px.</p></div>
+        <div class="card"><p class="swatch__role">Ошибка красит строку</p><p class="swatch__use">Нарушение МЗП или кратности подсвечивает строку, обводит степпер и гасит кнопку «В корзину» до исправления.</p></div>
+      </div>
+    </section>
+
+    <!-- 10 ПЛАШКИ -->
+    <section class="section" id="alerts">
+      <div class="section__head">
+        <p class="section__num">10</p>
+        <h2>Плашки и пустые состояния</h2>
+        <p>Плашка сообщает о результате действия, пустое состояние — о том, что делать дальше. Ни то, ни другое не оставляет пользователя без следующего шага.</p>
+      </div>
+
+      <div class="stack">
+        <div class="alert alert--success"><svg><use href="#i-check-circle"/></svg><div><strong>Заказ № 4512 принят</strong><p>Менеджер свяжется с вами в течение рабочего дня. Счёт придёт на почту.</p></div></div>
+        <div class="alert alert--info"><svg><use href="#i-info"/></svg><div><strong>Прайс-лист обновляется раз в сутки</strong><p>Актуальные остатки и цены — в каталоге и личном кабинете.</p></div></div>
+        <div class="alert alert--warning"><svg><use href="#i-alert-triangle"/></svg><div><strong>4 позиции из файла требуют уточнения</strong><p>Код найден, но количество меньше минимальной партии. Проверьте выделенные строки.</p></div></div>
+        <div class="alert alert--danger"><svg><use href="#i-x-circle"/></svg><div><strong>Файл не распознан</strong><p>Поддерживаются XLSX, CSV и список кодов текстом. Скачайте шаблон и заполните его.</p></div></div>
+      </div>
+
+      <div class="grid grid--3" style="margin-top:20px">
+        <div class="empty">
+          <span class="empty__icon"><svg><use href="#i-cart"/></svg></span>
+          <h4>Корзина пуста</h4>
+          <p>Добавьте товары из каталога или загрузите список кодов файлом — счёт будет готов за минуту.</p>
+          <div class="row" style="justify-content:center"><button class="btn btn--primary">Перейти в каталог</button><button class="btn btn--secondary">Быстрый заказ</button></div>
+        </div>
+        <div class="empty">
+          <span class="empty__icon"><svg><use href="#i-star"/></svg></span>
+          <h4>В избранном пусто</h4>
+          <p>Отмечайте звёздочкой позиции, которые заказываете регулярно: они соберутся в отдельный список.</p>
+          <div class="row" style="justify-content:center"><button class="btn btn--primary">Перейти в каталог</button></div>
+        </div>
+        <div class="empty">
+          <span class="empty__icon"><svg><use href="#i-search-x"/></svg></span>
+          <h4>Ничего не найдено</h4>
+          <p>Проверьте код 1С или попробуйте искать по названию. Можно сбросить фильтры и посмотреть весь раздел.</p>
+          <div class="row" style="justify-content:center"><button class="btn btn--primary">Сбросить фильтры</button><button class="btn btn--secondary">Заказать звонок</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11 ИЕРАРХИЯ -->
+    <section class="section" id="hierarchy">
+      <div class="section__head">
+        <p class="section__num">11</p>
+        <h2>Иерархия и запреты</h2>
+        <p>Четыре уровня важности задают, чему цвет вообще положен. Если элемент не относится ни к одному уровню — он серый.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:16px">Визуальная иерархия</p>
+          <div class="stack" style="gap:16px">
+            <div class="level"><span class="level__num" style="background:#1F6F4A">1</span><span><strong>Деньги и заказ</strong><p>Зелёный, жирный, крупный · цена, кнопка «В корзину», итог заказа</p></span></div>
+            <div class="level"><span class="level__num" style="background:#FFB020">2</span><span><strong>Ограничения</strong><p>Жёлтый бейдж · МЗП, кратность, «Под заказ»</p></span></div>
+            <div class="level"><span class="level__num" style="background:#E5484D">3</span><span><strong>Ошибки</strong><p>Красная плашка · «Нельзя заказать меньше МЗП»</p></span></div>
+            <div class="level"><span class="level__num" style="background:#8A94A6">4</span><span><strong>Второстепенное</strong><p>Серый, обычный · код 1С, описание, подсказки</p></span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:16px">Что нельзя делать</p>
+          <ul class="no-list">
+            <li><svg><use href="#i-x"/></svg>Яркие маркетинговые градиенты</li>
+            <li><svg><use href="#i-x"/></svg>«Инстаграмный» дизайн и избыточная графика</li>
+            <li><svg><use href="#i-x"/></svg>Декоративные шрифты</li>
+            <li><svg><use href="#i-x"/></svg>Зелёный ради красоты, без смысла</li>
+            <li><svg><use href="#i-x"/></svg>Перегруз интерфейса визуалом</li>
+            <li><svg><use href="#i-x"/></svg>Тёмные тяжёлые фоны</li>
+            <li><svg><use href="#i-x"/></svg>Избыточные тени и блики</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <svg><use href="#i-leaf"/></svg>
+        <div>
+          <strong>Главный вывод</strong>
+          <p>Интерфейс должен быть ближе к ERP/CRM-системе (1С, SAP), чем к интернет-магазину. Каждый цвет отвечает за смысл, а не за настроение: зелёный — действие и деньги, жёлтый — ограничение, красный — стоп, серый — всё остальное.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2>Дальше — референсы</h2>
+        <p>Все 48 макетов, по которым собрана эта система: главная, каталог в двух режимах, карточка товара, корзина, личный кабинет, быстрый заказ, регистрация, прайс-лист и служебные экраны.</p>
+      </div>
+      <a class="btn btn--primary btn--lg" href="references.html">Смотреть референсы</a>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.1 от 04.09.2026</span>
+    <span>Страница для согласования. Не для публичного распространения.</span>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
