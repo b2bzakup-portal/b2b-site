@@ -1,0 +1,214 @@
+/* Дизайн-токены B2B-портала b2bzakup.ru
+ * Tailwind CSS 4, блок @theme. Подключается в глобальный CSS проекта.
+ * Значения утверждены дизайн-системой портала и не меняются в компонентах.
+ * Произвольные HEX в компонентах не допускаются — только эти токены. */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme {
+  /* --- Цвет: утверждено заказчиком --- */
+  --color-primary: #1f6f4a;
+  --color-text: #1c1c1c;
+  --color-text-muted: #8a94a6;
+  --color-bg: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+  --color-warning: #ffb020;
+  --color-danger: #e5484d;
+  --color-info: #2a80d9;
+
+  /* --- Цвет: производные --- */
+  --color-primary-hover: #19593c;
+  --color-primary-active: #12452e;
+  --color-primary-soft: #e9f3ee;
+  --color-primary-pressed: #d7e9e0;
+  --color-warning-soft: #fff7e8;
+  --color-danger-soft: #fdeced;
+  --color-danger-pressed: #f8d5d6;
+  --color-danger-row: #fdf6f6;
+  --color-info-soft: #eaf2fc;
+  --color-info-pressed: #d6e6fa;
+  --color-neutral: #f1f3f7;
+  --color-neutral-pressed: #d9dde4;
+
+  /* --- Цвет: подложка под модальным окном и шторкой, text с прозрачностью 40 % --- */
+  --color-overlay: #1c1c1c66;
+
+  /* --- Цвет: контрастные варианты для текста 12–13 px на мягких подложках --- */
+  --color-warning-ink: #9a5b00;
+  --color-danger-ink: #c13438;
+  --color-info-ink: #1d63ac;
+
+  /* --- Шрифты --- */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* --- Типографическая шкала --- */
+  --text-h1: 2rem;          /* 32px, SemiBold */
+  --text-h1--line-height: 1.2;
+  --text-h2: 1.25rem;       /* 20px, SemiBold */
+  --text-h2--line-height: 1.3;
+  --text-h3: 1rem;          /* 16px, Medium */
+  --text-h3--line-height: 1.4;
+  --text-body: 0.875rem;    /* 14px, Regular */
+  --text-body--line-height: 1.55;
+  --text-table: 0.875rem;   /* 14px, Medium */
+  --text-table--line-height: 1.4;
+  --text-small: 0.75rem;    /* 12px, Regular */
+  --text-small--line-height: 1.5;
+
+  /* --- Радиусы --- */
+  --radius-sm: 6px;   /* поля, бейджи, ячейки степпера */
+  --radius-md: 8px;   /* кнопки, поля ввода, чипы */
+  --radius-lg: 12px;  /* карточки и панели */
+
+  /* --- Высоты элементов --- */
+  --spacing-control-sm: 32px;  /* строка таблицы, степпер, иконочная кнопка в строке */
+  --spacing-control-md: 40px;  /* поле ввода, кнопка */
+  --spacing-control-lg: 48px;  /* главное действие страницы */
+  --spacing-row: 64px;         /* строка таблицы каталога */
+  --spacing-row-compact: 48px; /* компактный режим */
+
+  /* --- Тень: единственная разрешённая, только для поповеров, выпадающих списков и sticky-панелей --- */
+  --shadow-overlay: 0 1px 2px rgba(28, 28, 28, 0.06);
+
+  /* --- Контейнер и 12-колоночная сетка ---
+   * Вёрстки на всю ширину экрана нет: на мониторах шире 1440 px
+   * слева и справа остаются пустые поля. 24 + 12*94 + 11*24 + 24 = 1440. */
+  --container-max: 1440px;
+  --container-pad: 24px;
+  --container-pad-mobile: 16px;
+  --grid-columns: 12;
+  --grid-gutter: 24px;
+}
+
+/* Фокус — обводка primary 2 px на всех интерактивных элементах (требование доступности) */
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+  }
+
+  /* Коды 1С, штрихкоды, номера заказов сравнивают посимвольно */
+  .code-1c {
+    font-family: var(--font-mono);
+    font-size: var(--text-small);
+    color: var(--color-text-muted);
+  }
+
+  /* Числовые колонки таблицы каталога выравниваются вправо */
+  .cell-numeric {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  /* Единственный контейнер контента. Full-width-секций нет: цветная подложка
+   * секции может тянуться на всю ширину окна, но её содержимое обёрнуто сюда. */
+  .container-page {
+    width: 100%;
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--container-pad);
+  }
+
+  @media (width < 768px) {
+    .container-page {
+      padding-inline: var(--container-pad-mobile);
+    }
+  }
+
+  .grid-page {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+    gap: var(--grid-gutter);
+  }
+
+  @media (width < 1024px) {
+    .grid-page {
+      --grid-columns: 8;
+    }
+  }
+
+  @media (width < 768px) {
+    .grid-page {
+      --grid-columns: 4;
+    }
+  }
+}
+
+/* ==========================================================================
+   Ниже — привязка проекта к токенам выше. Значения токенов не меняются.
+   ========================================================================== */
+
+/* Шрифты подключены через next/font/google (Inter 400/500/600, JetBrains Mono 400)
+ * и приходят CSS-переменными из корневого лейаута. */
+@theme inline {
+  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, monospace;
+}
+
+/* Соответствие переменных shadcn/ui токенам дизайн-системы. Тёмной темы нет. */
+:root {
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-surface);
+  --secondary: var(--color-neutral);
+  --secondary-foreground: var(--color-text);
+  --muted: var(--color-neutral);
+  --muted-foreground: var(--color-text-muted);
+  --accent: var(--color-primary-soft);
+  --accent-foreground: var(--color-primary);
+  --destructive: var(--color-danger);
+  --destructive-foreground: var(--color-surface);
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-primary);
+  --radius: var(--radius-md);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
