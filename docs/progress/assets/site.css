@@ -196,6 +196,9 @@ code, .mono {
   text-decoration: none;
 }
 
+/* Полная и короткая подпись пункта: на узком экране остаётся короткая */
+.topnav__short { display: none; }
+
 .topnav a[aria-current='page'] {
   background: var(--primary-soft);
   color: var(--primary);
@@ -1374,12 +1377,15 @@ code, .mono {
   :root { --container-pad: 16px; }
 
   /* Шапка: текст бренда не помещается рядом с навигацией, остаётся знак.
-   * Три пункта навигации на 375 px входят только с полями 6 и кеглем 12;
+   * Четыре пункта навигации на 375 px входят только с полями 6, кеглем 12
+   * и короткой подписью «Система» вместо «Дизайн-система»;
    * min-width и overflow — страховка, чтобы шапка никогда не растягивала страницу */
   .topbar__inner { gap: 12px; min-width: 0; }
   .brand__text { display: none; }
   .topnav { gap: 0; min-width: 0; overflow-x: auto; }
   .topnav a { padding-inline: 6px; font-size: 12px; }
+  .topnav__full { display: none; }
+  .topnav__short { display: inline; }
 
   /* Схемы раскладок на узком экране нечитаемы: раскрываем в столбик,
    * цифра колонки остаётся — она и есть смысл схемы */
