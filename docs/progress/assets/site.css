@@ -1373,11 +1373,13 @@ code, .mono {
 @media (width < 768px) {
   :root { --container-pad: 16px; }
 
-  /* Шапка: текст бренда не помещается рядом с навигацией, остаётся знак */
-  .topbar__inner { gap: 16px; }
+  /* Шапка: текст бренда не помещается рядом с навигацией, остаётся знак.
+   * Три пункта навигации на 375 px входят только с полями 6 и кеглем 12;
+   * min-width и overflow — страховка, чтобы шапка никогда не растягивала страницу */
+  .topbar__inner { gap: 12px; min-width: 0; }
   .brand__text { display: none; }
-  .topnav { gap: 0; }
-  .topnav a { padding-inline: 10px; font-size: 13px; }
+  .topnav { gap: 0; min-width: 0; overflow-x: auto; }
+  .topnav a { padding-inline: 6px; font-size: 12px; }
 
   /* Схемы раскладок на узком экране нечитаемы: раскрываем в столбик,
    * цифра колонки остаётся — она и есть смысл схемы */
