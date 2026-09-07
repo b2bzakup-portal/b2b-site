@@ -55,7 +55,7 @@
       <a href="../design-system/references.html">Референсы</a>
       <a href="../design-system/pages.html">Макеты</a>
       <a href="../progress/index.html">Ход работ</a>
-      <span class="version-chip">v1.4 · 05.09.2026</span>
+      <span class="version-chip">v1.5 · 07.09.2026</span>
     </nav>
   </div>
 </header>
@@ -90,7 +90,7 @@
       <div class="hero__meta">
         <span class="badge badge--success">Палитра и типографика согласованы</span>
         <span class="badge badge--tag">48 макетов разобрано</span>
-        <span class="badge badge--tag">Версия 1.4 · 05.09.2026</span>
+        <span class="badge badge--tag">Версия 1.5 · 07.09.2026</span>
       </div>
     </section>
 
@@ -105,13 +105,13 @@
       <div class="grid grid--3 grid--swatches">
         <div class="swatch"><div class="swatch__chip" style="background:#1F6F4A"></div><div class="swatch__body"><p class="swatch__role">Основной зелёный</p><p class="swatch__hex">#1F6F4A</p><p class="swatch__use">Кнопки действий, цены, статус «В наличии», ключевые B2B-действия</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="background:#1C1C1C"></div><div class="swatch__body"><p class="swatch__role">Текст основной</p><p class="swatch__hex">#1C1C1C</p><p class="swatch__use">Заголовки, основной текст, данные таблиц</p></div></div>
-        <div class="swatch"><div class="swatch__chip" style="background:#8A94A6"></div><div class="swatch__body"><p class="swatch__role">Второстепенный текст</p><p class="swatch__hex">#8A94A6</p><p class="swatch__use">Коды 1С, подсказки, метаданные</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#8A94A6"></div><div class="swatch__body"><p class="swatch__role">Второстепенный текст</p><p class="swatch__hex">#8A94A6</p><p class="swatch__use">Иконки второго плана, плейсхолдеры, разделители; читаемый текст 12–14 px — #6B7280, см. ниже</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="background:#F7F9FC"></div><div class="swatch__body"><p class="swatch__role">Фон базовый</p><p class="swatch__hex">#F7F9FC</p><p class="swatch__use">Фон страниц, разделение блоков</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="background:#FFFFFF;border-bottom:1px solid #E5E7EB"></div><div class="swatch__body"><p class="swatch__role">Поверхность</p><p class="swatch__hex">#FFFFFF</p><p class="swatch__use">Карточки, таблицы, поля ввода</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="background:#E5E7EB"></div><div class="swatch__body"><p class="swatch__role">Границы</p><p class="swatch__hex">#E5E7EB</p><p class="swatch__use">Разделители, обводки, неактивные элементы</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="background:#FFB020"></div><div class="swatch__body"><p class="swatch__role">Внимание</p><p class="swatch__hex">#FFB020</p><p class="swatch__use">МЗП, кратность, предупреждения</p></div></div>
         <div class="swatch"><div class="swatch__chip" style="background:#E5484D"></div><div class="swatch__body"><p class="swatch__role">Ошибка</p><p class="swatch__hex">#E5484D</p><p class="swatch__use">Ошибки заказа, невыполнимые условия</p></div></div>
-        <div class="swatch"><div class="swatch__chip" style="background:#2A80D9"></div><div class="swatch__body"><p class="swatch__role">Информационный</p><p class="swatch__hex">#2A80D9</p><p class="swatch__use">Ссылки, «Экспорт в Excel», навигация, теги</p></div></div>
+        <div class="swatch"><div class="swatch__chip" style="background:#2A80D9"></div><div class="swatch__body"><p class="swatch__role">Информационный</p><p class="swatch__hex">#2A80D9</p><p class="swatch__use">Информационные плашки и статусы, «Экспорт в Excel», маркер «Новинка». Текстовые ссылки — зелёные, как на макетах</p></div></div>
       </div>
 
       <h3>Производные оттенки</h3>
@@ -128,8 +128,12 @@
       </div>
 
       <h3>Читаемость мелкого текста</h3>
-      <p class="note">Жёлтый <code>#FFB020</code> на светлой подложке даёт контраст 1,8:1 — текст 12&nbsp;px в бейдже МЗП становится нечитаемым. Для текста и иконок внутри мягких подложек берутся затемнённые варианты. Согласованные цвета при этом не меняются: они остаются для заливок, обводок и крупных элементов.</p>
-      <div class="grid grid--3" style="margin-top:16px">
+      <p class="note">Жёлтый <code>#FFB020</code> на светлой подложке даёт контраст 1,8:1 — текст 12&nbsp;px в бейдже МЗП становится нечитаемым. Для текста и иконок внутри мягких подложек берутся затемнённые варианты. Согласованные цвета при этом не меняются: они остаются для заливок, обводок и крупных элементов. Та же проблема у серого <code>#8A94A6</code>: на белом он даёт 3,06:1, поэтому читаемый второстепенный текст 12–14&nbsp;px набирается серым <code>#6B7280</code> с эскиза заказчика, а <code>#8A94A6</code> остаётся иконкам, плейсхолдерам и разделителям.</p>
+      <div class="grid grid--4" style="margin-top:16px">
+        <div class="card">
+          <p class="row" style="color:var(--text-muted-ink);font-size:13px">Код 00-00020102 · от 10 уп. · В т.ч. НДС 20%</p>
+          <p class="swatch__hex" style="margin-top:12px">Текст #6B7280 · контраст 4,8:1</p>
+        </div>
         <div class="card">
           <p class="row"><span class="badge badge--warning"><svg><use href="#i-alert-triangle"/></svg>МЗП: 10 кг</span></p>
           <p class="swatch__hex" style="margin-top:12px">Текст #9A5B00 · контраст 6,4:1</p>
@@ -186,6 +190,8 @@
         <div class="card"><p class="swatch__role">Шаг сетки</p><p class="swatch__hex">4 px</p><p class="swatch__use">Отступы кратны четырём: 4 · 8 · 12 · 16 · 20 · 24 · 32 · 48 · 64.</p></div>
         <div class="card"><p class="swatch__role">Высоты</p><p class="swatch__hex">32 · 40 · 48 px</p><p class="swatch__use">Строка таблицы и степпер — 32, поле и кнопка — 40, главное действие — 48.</p></div>
         <div class="card"><p class="swatch__role">Тень</p><p class="swatch__hex">0 1 2 rgba(28,28,28,.06)</p><p class="swatch__use">Одна тень на выпадающие списки и поповеры. Карточки отделяются границей, а не тенью.</p></div>
+        <div class="card"><p class="swatch__role">Фон страницы</p><p class="swatch__hex">белый · панели #F7F9FC</p><p class="swatch__use">Страница белая, как на эскизах заказчика; блок, который нужно отделить, лежит на серой панели с радиусом 12 и полями 24, карточки внутри — без обводки. Каталог — исключение: серая страница, белые таблица и карточки.</p></div>
+        <div class="card"><p class="swatch__role">Иконка блока</p><p class="swatch__hex">32 px, без подложки</p><p class="swatch__use">Контурная зелёная иконка в плитках, полосах и сегментах. Квадрат 48 на светло-зелёном — только у блока «Нужна помощь?» и промо-панели окна звонка, круг 64 — у пустых состояний.</p></div>
       </div>
     </section>
 
@@ -499,7 +505,7 @@
             <span class="chip">Водорастворимое <svg><use href="#i-x"/></svg></span>
             <a href="#badges">Сбросить все</a>
           </div>
-          <p class="note">Выбранный фильтр — зелёная обводка и крестик. «Сбросить все» — текстовая ссылка синим, стоит последней в ряду.</p>
+          <p class="note">Выбранный фильтр — зелёная обводка и крестик. «Сбросить все» — текстовая ссылка зелёным, как все ссылки-действия на макетах, стоит последней в ряду.</p>
         </div>
 
         <div class="card">
@@ -921,7 +927,7 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-footer-basic.webp" data-title="Преимущества и футер · базовый набор">
-          <img src="assets/frame/frame-footer-basic.webp" width="1440" height="620" loading="lazy" decoding="async" alt="Преимущества и футер · базовый набор">
+          <img src="assets/frame/frame-footer-basic.webp" width="1440" height="612" loading="lazy" decoding="async" alt="Преимущества и футер · базовый набор">
         </a>
         <figcaption>
           <p class="ref__title">Преимущества и футер · базовый набор</p>
@@ -930,7 +936,7 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-footer-catalog.webp" data-title="Преимущества и футер · каталог и избранное">
-          <img src="assets/frame/frame-footer-catalog.webp" width="1440" height="620" loading="lazy" decoding="async" alt="Преимущества и футер · каталог и избранное">
+          <img src="assets/frame/frame-footer-catalog.webp" width="1440" height="604" loading="lazy" decoding="async" alt="Преимущества и футер · каталог и избранное">
         </a>
         <figcaption>
           <p class="ref__title">Преимущества и футер · каталог и избранное</p>
@@ -1080,7 +1086,7 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.4 от 05.09.2026</span>
+    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.5 от 07.09.2026</span>
     <span>Страница для согласования. Не для публичного распространения.</span>
   </div>
 </footer>

@@ -11,6 +11,7 @@
   --primary: #1f6f4a;
   --text: #1c1c1c;
   --text-muted: #8a94a6;
+  --text-muted-ink: #6b7280;
   --bg: #f7f9fc;
   --surface: #ffffff;
   --border: #e5e7eb;
@@ -92,7 +93,8 @@ ul, ol {
 }
 
 a {
-  color: var(--info);
+  color: var(--primary);
+  font-weight: 500;
   text-decoration: none;
 }
 
