@@ -55,7 +55,7 @@
       <a href="../design-system/references.html">Референсы</a>
       <a href="../design-system/pages.html">Макеты</a>
       <a href="../progress/index.html">Ход работ</a>
-      <span class="version-chip">v1.5 · 07.09.2026</span>
+      <span class="version-chip">v1.6 · 08.09.2026</span>
     </nav>
   </div>
 </header>
@@ -90,7 +90,7 @@
       <div class="hero__meta">
         <span class="badge badge--success">Палитра и типографика согласованы</span>
         <span class="badge badge--tag">48 макетов разобрано</span>
-        <span class="badge badge--tag">Версия 1.5 · 07.09.2026</span>
+        <span class="badge badge--tag">Версия 1.6 · 08.09.2026</span>
       </div>
     </section>
 
@@ -190,8 +190,47 @@
         <div class="card"><p class="swatch__role">Шаг сетки</p><p class="swatch__hex">4 px</p><p class="swatch__use">Отступы кратны четырём: 4 · 8 · 12 · 16 · 20 · 24 · 32 · 48 · 64.</p></div>
         <div class="card"><p class="swatch__role">Высоты</p><p class="swatch__hex">32 · 40 · 48 px</p><p class="swatch__use">Строка таблицы и степпер — 32, поле и кнопка — 40, главное действие — 48.</p></div>
         <div class="card"><p class="swatch__role">Тень</p><p class="swatch__hex">0 1 2 rgba(28,28,28,.06)</p><p class="swatch__use">Одна тень на выпадающие списки и поповеры. Карточки отделяются границей, а не тенью.</p></div>
-        <div class="card"><p class="swatch__role">Фон страницы</p><p class="swatch__hex">белый · панели #F7F9FC</p><p class="swatch__use">Страница белая, как на эскизах заказчика; блок, который нужно отделить, лежит на серой панели с радиусом 12 и полями 24, карточки внутри — без обводки. Каталог — исключение: серая страница, белые таблица и карточки.</p></div>
-        <div class="card"><p class="swatch__role">Иконка блока</p><p class="swatch__hex">32 px, без подложки</p><p class="swatch__use">Контурная зелёная иконка в плитках, полосах и сегментах. Квадрат 48 на светло-зелёном — только у блока «Нужна помощь?» и промо-панели окна звонка, круг 64 — у пустых состояний.</p></div>
+        <div class="card"><p class="swatch__role">Фон страницы</p><p class="swatch__hex">белый · панели #F7F9FC и #E8F2ED</p><p class="swatch__use">Страница белая; блок, который нужно отделить, лежит на панели с радиусом 12 и полями 16. Подложки чередуются — подряд идущие блоки не берут одну и ту же. Каталог — исключение: серая страница, белые таблица и карточки.</p></div>
+        <div class="card"><p class="swatch__role">Иконка блока</p><p class="swatch__hex">40 px слева · 32 px сверху</p><p class="swatch__use">Контурная зелёная иконка без подложки: 40 — когда она стоит слева от двух строк текста и в рост с ними, 32 — когда над названием на плитке. Квадрат 48 на светло-зелёном — только у блока «Нужна помощь?» и промо-панели окна звонка, круг 64 — у пустых состояний.</p></div>
+      </div>
+
+      <h3>Подложки секций</h3>
+      <p>Заказчик насчитал на своём эскизе пять цветов против трёх у нас. Цвета те же, что согласованы 20.08.2026, — меняется применение: подложки чередуются, а не повторяются, потому что два одинаково серых блока подряд читаются как один.</p>
+
+      <div class="spec-scroll">
+        <table class="spec">
+          <thead><tr><th>Подложка</th><th>Что это</th><th>Где</th></tr></thead>
+          <tbody>
+            <tr><td class="spec__label">Белая</td><td>Сама страница</td><td>Фон под всем; каталог — исключение</td></tr>
+            <tr><td class="spec__label">Белая с рамкой</td><td>Панель на белой странице: границу даёт линия, а не заливка</td><td>«Условия для оптовых клиентов», карточки, плитки категорий</td></tr>
+            <tr><td class="spec__label">Серая</td><td>Панель без обводки, радиус 12</td><td>«Почему выбирают нас», «Для кого наш портал», предфутерная полоса, один из промо-блоков, подвал</td></tr>
+            <tr><td class="spec__label">Светло-зелёная</td><td>Панель без обводки, радиус 12</td><td>Промо-карточка подборки, второй промо-блок, промо-панель окна «Заказать звонок»</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="note">Поля панели — 16, а не 24: «очень большой фон, очень большие отступы сверху, внизу очень много пустоты». Поля 24 остаются у карточек с собственным содержимым — промо-карточки подборки и блока «Нужна помощь?». Светло-зелёный здесь работает как один из четырёх фонов, а не как акцент: акцент по-прежнему только у денег и действий.</p>
+
+      <h3>Пункт с иконкой</h3>
+      <p>Единая форма перечисления для всего портала: условия для оптовых клиентов, преимущества над подвалом, сегменты аудитории, предфутерная полоса, шаги «Как начать работать». До 08.09.2026 иконка стояла над текстом — теперь слева и в рост с двумя строками, как на вашем эскизе.</p>
+
+      <div class="grid grid--2 grid--stack-md">
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Как устроен пункт</p>
+          <div class="rule-list">
+            <div><strong>Иконка 40 слева, без подложки</strong><p>Промежуток до текста 12. Иконка не уменьшается, если текст длинный.</p></div>
+            <div><strong>Справа две строки</strong><p>Заголовок 14 px полужирный, подпись 13 px вторым цветом, промежуток 2.</p></div>
+            <div><strong>Вертикальные отсечки</strong><p>Пункты одной полосы разделены тонкой линией с отступом 20 по обе стороны; у крайних линий нет.</p></div>
+            <div><strong>Верхние края выровнены</strong><p>Пункт с длинным заголовком не опускает иконку. На телефоне пункты идут один под другим, линии снимаются.</p></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <p class="swatch__role" style="margin-bottom:14px">Так это выглядит</p>
+          <a class="ref__frame" href="assets/frame/frame-footer-basic.webp" data-title="Пункты с иконкой — полоса преимуществ">
+            <img src="assets/frame/frame-footer-basic.webp" width="1400" height="407" loading="lazy" decoding="async" alt="Полоса преимуществ пунктами с иконкой слева">
+          </a>
+        </div>
       </div>
     </section>
 
@@ -204,7 +243,7 @@
       </div>
 
       <div class="card">
-        <p class="swatch__role" style="margin-bottom:16px">Экран 1920 px · контейнер 1440 px · уши по 240 px</p>
+        <p class="swatch__role" style="margin-bottom:16px">Экран 1920 px · контейнер 1320 px · уши по 300 px</p>
         <div class="viewport">
           <div class="viewport__ear">ухо</div>
           <div class="viewport__container">
@@ -215,7 +254,8 @@
           </div>
           <div class="viewport__ear">ухо</div>
         </div>
-        <p class="note">12 колонок по 94 px, промежуток 24 px, внутренние поля контейнера 24 px: 24 + 12×94 + 11×24 + 24 = 1440. Схема дана в масштабе. Эта страница свёрстана по тому же правилу — разверните окно шире 1440 px и увидите уши.</p>
+        <p class="note">12 колонок по 84 px, промежуток 24 px, внутренние поля контейнера 24 px: 24 + 12×84 + 11×24 + 24 = 1320. Схема дана в масштабе. Эта страница свёрстана по тому же правилу — разверните окно шире 1320 px и увидите уши.</p>
+        <p class="note">Ширина выбрана по вашему замеру: на мониторе 1920 поле слева и справа получается ровно 300 px. Поэтому и макеты страниц рисуются кадром в 1920 — так поля видны на кадре, а не только в браузере.</p>
       </div>
 
       <div class="grid grid--2 grid--stack-md" style="margin-top:20px">
@@ -223,8 +263,8 @@
         <table class="spec">
           <thead><tr><th>Ширина окна</th><th>Контейнер</th><th class="num">Колонки</th><th>Поля</th></tr></thead>
           <tbody>
-            <tr><td class="spec__label">от 1440 px</td><td>1440 px, фиксирован</td><td class="num mono">12</td><td>24 px, уши растут</td></tr>
-            <tr><td class="spec__label">1024–1439 px</td><td>тянется по окну</td><td class="num mono">12</td><td>24 px</td></tr>
+            <tr><td class="spec__label">от 1320 px</td><td>1320 px, фиксирован</td><td class="num mono">12</td><td>24 px, уши растут</td></tr>
+            <tr><td class="spec__label">1024–1319 px</td><td>тянется по окну</td><td class="num mono">12</td><td>24 px</td></tr>
             <tr><td class="spec__label">768–1023 px</td><td>тянется по окну</td><td class="num mono">8</td><td>24 px</td></tr>
             <tr><td class="spec__label">до 767 px</td><td>тянется по окну</td><td class="num mono">4</td><td>16 px</td></tr>
           </tbody>
@@ -235,8 +275,8 @@
           <p class="swatch__role" style="margin-bottom:14px">Что из этого следует</p>
           <div class="rule-list">
             <div><strong>Ни один блок не выходит за контейнер</strong><p>Цветная подложка секции может тянуться на всю ширину окна, но её содержимое всё равно выравнивается по контейнеру.</p></div>
-            <div><strong>Шапка, футер и sticky-панели — тоже по контейнеру</strong><p>Панель заказа внизу каталога прижата к низу окна, но её содержимое стоит в тех же 1440 px, что и таблица.</p></div>
-            <div><strong>Широкая таблица прокручивается внутри себя</strong><p>Если служебные колонки не помещаются в 1440 px — горизонтальная прокрутка внутри таблицы с закреплённой колонкой товара, а не растягивание контейнера.</p></div>
+            <div><strong>Шапка, футер и sticky-панели — тоже по контейнеру</strong><p>Панель заказа внизу каталога прижата к низу окна, но её содержимое стоит в тех же 1320 px, что и таблица.</p></div>
+            <div><strong>Широкая таблица прокручивается внутри себя</strong><p>Если служебные колонки не помещаются в 1320 px — горизонтальная прокрутка внутри таблицы с закреплённой колонкой товара, а не растягивание контейнера.</p></div>
             <div><strong>Уши остаются пустыми</strong><p>В поля слева и справа ничего не выносится: ни навигация, ни реклама, ни декор.</p></div>
           </div>
         </div>
@@ -248,7 +288,7 @@
       <div class="section__head">
         <p class="section__num">05</p>
         <h2>Раскладки на сетке</h2>
-        <p>Как реальные экраны портала ложатся на 12 колонок. Числа сняты с ваших макетов: пропорции блоков сохранены, ширина приведена к контейнеру 1440&nbsp;px. Раскладка страницы задаётся один раз и дальше не пересобирается под каждый экран.</p>
+        <p>Как реальные экраны портала ложатся на 12 колонок. Числа сняты с ваших макетов: пропорции блоков сохранены, ширина приведена к контейнеру 1320&nbsp;px. Раскладка страницы задаётся один раз и дальше не пересобирается под каждый экран.</p>
       </div>
 
       <h3>Раскладки страниц</h3>
@@ -858,22 +898,22 @@
       <div class="section__head">
         <p class="section__num">12</p>
         <h2>Каркас страницы</h2>
-        <p>Сквозные элементы всех страниц: служебная строка, шапки, меню каталога, футер с полосой преимуществ, окно «Заказать звонок», уведомление о cookie и мобильная навигация. Кадры с канваса дизайн-системы в ширинах 1440 и 375. Строка категорий под шапкой есть только на каталожных страницах — на главной и остальных навигация по товарам живёт в кнопке «Каталог товаров».</p>
+        <p>Сквозные элементы всех страниц: служебная строка, шапки, меню каталога, футер с полосой преимуществ, окно «Заказать звонок», уведомление о cookie и мобильная навигация. Кадры с канваса дизайн-системы в ширинах 1320 и 375. Строка категорий под шапкой есть только на каталожных страницах — на главной и остальных навигация по товарам живёт в кнопке «Каталог товаров».</p>
       </div>
 
       <div class="ref-grid ref-grid--wide">
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-topbar-header-guest.webp" data-title="Служебная строка и шапка · гость">
-          <img src="assets/frame/frame-topbar-header-guest.webp" width="1440" height="112" loading="lazy" decoding="async" alt="Служебная строка и шапка · гость">
+          <img src="assets/frame/frame-topbar-header-guest.webp" width="1400" height="119" loading="lazy" decoding="async" alt="Служебная строка и шапка · гость">
         </a>
         <figcaption>
           <p class="ref__title">Служебная строка и шапка · гость</p>
-          <p class="ref__note">Город статичным текстом, ссылки разделов, телефон и «Заказать звонок»; в шапке логотип, «Каталог товаров», поиск с подсказкой Ctrl + /, избранное и корзина со счётчиками, «Личный кабинет».</p>
+          <p class="ref__note">Ссылки разделов, телефон и «Заказать звонок» — города в строке нет; в шапке логотип, «Каталог товаров», поиск с подсказкой Ctrl + /, избранное и корзина со счётчиками, «Личный кабинет».</p>
         </figcaption>
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-header-client.webp" data-title="Шапка · клиент">
-          <img src="assets/frame/frame-header-client.webp" width="1440" height="112" loading="lazy" decoding="async" alt="Шапка · клиент">
+          <img src="assets/frame/frame-header-client.webp" width="1400" height="119" loading="lazy" decoding="async" alt="Шапка · клиент">
         </a>
         <figcaption>
           <p class="ref__title">Шапка · клиент</p>
@@ -882,7 +922,7 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-header-account-menu.webp" data-title="Шапка · меню аккаунта открыто">
-          <img src="assets/frame/frame-header-account-menu.webp" width="1440" height="324" loading="lazy" decoding="async" alt="Шапка · меню аккаунта открыто">
+          <img src="assets/frame/frame-header-account-menu.webp" width="1400" height="344" loading="lazy" decoding="async" alt="Шапка · меню аккаунта открыто">
         </a>
         <figcaption>
           <p class="ref__title">Шапка · меню аккаунта открыто</p>
@@ -890,35 +930,35 @@
         </figcaption>
       </figure>
       <figure class="ref">
-        <a class="ref__frame" href="assets/frame/frame-nav-1440.webp" data-title="Навигация по категориям · 1440">
-          <img src="assets/frame/frame-nav-1440.webp" width="1440" height="48" loading="lazy" decoding="async" alt="Навигация по категориям · 1440">
+        <a class="ref__frame" href="assets/frame/frame-nav-1320.webp" data-title="Навигация по категориям · 1320">
+          <img src="assets/frame/frame-nav-1320.webp" width="1400" height="51" loading="lazy" decoding="async" alt="Навигация по категориям · 1320">
         </a>
         <figcaption>
-          <p class="ref__title">Навигация по категориям · 1440</p>
-          <p class="ref__note">Только на каталожных страницах. Названия длинные: в строку входят пять категорий и «Ещё», остальное — в выпадающем списке.</p>
+          <p class="ref__title">Навигация по категориям · 1320</p>
+          <p class="ref__note">Только на каталожных страницах. Названия длинные: в строку входят четыре категории и «Ещё», остальное — в выпадающем списке.</p>
         </figcaption>
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-nav-1024.webp" data-title="Навигация по категориям · 1024">
-          <img src="assets/frame/frame-nav-1024.webp" width="1440" height="68" loading="lazy" decoding="async" alt="Навигация по категориям · 1024">
+          <img src="assets/frame/frame-nav-1024.webp" width="1400" height="66" loading="lazy" decoding="async" alt="Навигация по категориям · 1024">
         </a>
         <figcaption>
           <p class="ref__title">Навигация по категориям · 1024</p>
-          <p class="ref__note">На планшете в строку входят четыре категории и «Ещё».</p>
+          <p class="ref__note">На планшете в строку входят три категории и «Ещё».</p>
         </figcaption>
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-catalog-menu.webp" data-title="Меню каталога открыто">
-          <img src="assets/frame/frame-catalog-menu.webp" width="1440" height="500" loading="lazy" decoding="async" alt="Меню каталога открыто">
+          <img src="assets/frame/frame-catalog-menu.webp" width="1400" height="530" loading="lazy" decoding="async" alt="Меню каталога открыто">
         </a>
         <figcaption>
           <p class="ref__title">Меню каталога открыто</p>
-          <p class="ref__note">Кнопка «Каталог товаров» в нажатом состоянии; слева список категорий, справа подкатегории активной в три колонки.</p>
+          <p class="ref__note">Кнопка «Каталог товаров» в нажатом состоянии; слева список категорий, справа подкатегории активной в две колонки.</p>
         </figcaption>
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-breadcrumbs.webp" data-title="Хлебные крошки">
-          <img src="assets/frame/frame-breadcrumbs.webp" width="1440" height="48" loading="lazy" decoding="async" alt="Хлебные крошки">
+          <img src="assets/frame/frame-breadcrumbs.webp" width="1400" height="51" loading="lazy" decoding="async" alt="Хлебные крошки">
         </a>
         <figcaption>
           <p class="ref__title">Хлебные крошки</p>
@@ -927,16 +967,16 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-footer-basic.webp" data-title="Преимущества и футер · базовый набор">
-          <img src="assets/frame/frame-footer-basic.webp" width="1440" height="612" loading="lazy" decoding="async" alt="Преимущества и футер · базовый набор">
+          <img src="assets/frame/frame-footer-basic.webp" width="1400" height="407" loading="lazy" decoding="async" alt="Преимущества и футер · базовый набор">
         </a>
         <figcaption>
           <p class="ref__title">Преимущества и футер · базовый набор</p>
-          <p class="ref__note">Полоса преимуществ в четыре колонки и футер в пять колонок: о портале, каталог, покупателям, компания, контакты.</p>
+          <p class="ref__note">Полоса преимуществ — четыре пункта с иконкой слева и вертикальными отсечками; в подвале логотип с описанием и кнопками соцсетей, строка ссылок и контакты. Адреса и режима работы в подвале нет — они на странице «Контакты».</p>
         </figcaption>
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-footer-catalog.webp" data-title="Преимущества и футер · каталог и избранное">
-          <img src="assets/frame/frame-footer-catalog.webp" width="1440" height="604" loading="lazy" decoding="async" alt="Преимущества и футер · каталог и избранное">
+          <img src="assets/frame/frame-footer-catalog.webp" width="1400" height="386" loading="lazy" decoding="async" alt="Преимущества и футер · каталог и избранное">
         </a>
         <figcaption>
           <p class="ref__title">Преимущества и футер · каталог и избранное</p>
@@ -945,7 +985,7 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-auth-frame.webp" data-title="Облегчённые шапка и футер · вход">
-          <img src="assets/frame/frame-auth-frame.webp" width="1440" height="296" loading="lazy" decoding="async" alt="Облегчённые шапка и футер · вход">
+          <img src="assets/frame/frame-auth-frame.webp" width="1400" height="314" loading="lazy" decoding="async" alt="Облегчённые шапка и футер · вход">
         </a>
         <figcaption>
           <p class="ref__title">Облегчённые шапка и футер · вход</p>
@@ -954,7 +994,7 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-call-dialog-form.webp" data-title="Окно «Заказать звонок»">
-          <img src="assets/frame/frame-call-dialog-form.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Окно «Заказать звонок»">
+          <img src="assets/frame/frame-call-dialog-form.webp" width="1400" height="955" loading="lazy" decoding="async" alt="Окно «Заказать звонок»">
         </a>
         <figcaption>
           <p class="ref__title">Окно «Заказать звонок»</p>
@@ -963,7 +1003,7 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-call-dialog-success.webp" data-title="Окно «Заказать звонок» · заявка отправлена">
-          <img src="assets/frame/frame-call-dialog-success.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Окно «Заказать звонок» · заявка отправлена">
+          <img src="assets/frame/frame-call-dialog-success.webp" width="1400" height="955" loading="lazy" decoding="async" alt="Окно «Заказать звонок» · заявка отправлена">
         </a>
         <figcaption>
           <p class="ref__title">Окно «Заказать звонок» · заявка отправлена</p>
@@ -972,7 +1012,7 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-help-block.webp" data-title="Блок «Нужна помощь?»">
-          <img src="assets/frame/frame-help-block.webp" width="1440" height="338" loading="lazy" decoding="async" alt="Блок «Нужна помощь?»">
+          <img src="assets/frame/frame-help-block.webp" width="1400" height="358" loading="lazy" decoding="async" alt="Блок «Нужна помощь?»">
         </a>
         <figcaption>
           <p class="ref__title">Блок «Нужна помощь?»</p>
@@ -981,7 +1021,7 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-cookie.webp" data-title="Уведомление о cookie">
-          <img src="assets/frame/frame-cookie.webp" width="1440" height="160" loading="lazy" decoding="async" alt="Уведомление о cookie">
+          <img src="assets/frame/frame-cookie.webp" width="1400" height="170" loading="lazy" decoding="async" alt="Уведомление о cookie">
         </a>
         <figcaption>
           <p class="ref__title">Уведомление о cookie</p>
@@ -998,7 +1038,7 @@
         </a>
         <figcaption>
           <p class="ref__title">Телефон · шапка, cookie и таб-бар</p>
-          <p class="ref__note">Шапка в три строки: логотип с иконками, кнопка «Каталог» на всю ширину, поиск; внизу уведомление о cookie над таб-баром.</p>
+          <p class="ref__note">Шапка в три строки: логотип с иконками, кнопка «Каталог» на всю ширину, поиск; внизу уведомление о cookie над нижней панелью. В панели: главная, каталог, поиск, корзина, профиль.</p>
         </figcaption>
       </figure>
       <figure class="ref">
@@ -1021,11 +1061,11 @@
       </figure>
       <figure class="ref">
         <a class="ref__frame" href="assets/frame/frame-mobile-footer.webp" data-title="Телефон · преимущества и футер">
-          <img src="assets/frame/frame-mobile-footer.webp" width="750" height="3092" loading="lazy" decoding="async" alt="Телефон · преимущества и футер">
+          <img src="assets/frame/frame-mobile-footer.webp" width="750" height="1720" loading="lazy" decoding="async" alt="Телефон · преимущества и футер">
         </a>
         <figcaption>
           <p class="ref__title">Телефон · преимущества и футер</p>
-          <p class="ref__note">Преимущества по одному в ряд, колонки футера одна под другой в порядке десктопа.</p>
+          <p class="ref__note">Преимущества по одному в ряд, ниже подвал одной колонкой: логотип с описанием, ссылки, телефон и почта.</p>
         </figcaption>
       </figure>
       </div>
@@ -1086,7 +1126,7 @@
 
 <footer class="footer">
   <div class="container footer__inner">
-    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.5 от 07.09.2026</span>
+    <span>B2B-портал агробизнеса · b2bzakup.ru · дизайн-система v1.6 от 08.09.2026</span>
     <span>Страница для согласования. Не для публичного распространения.</span>
   </div>
 </footer>
