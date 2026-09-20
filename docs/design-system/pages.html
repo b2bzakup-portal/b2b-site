@@ -33,7 +33,7 @@
       <a href="../design-system/references.html">Референсы</a>
       <a href="../design-system/pages.html" aria-current="page">Макеты</a>
       <a href="../progress/index.html">Ход работ</a>
-      <span class="version-chip">23 кадра</span>
+      <span class="version-chip">33 кадра</span>
     </nav>
   </div>
 </header>
@@ -45,8 +45,8 @@
     <h1>Макеты страниц</h1>
     <p>Страницы портала, нарисованные по дизайн-системе и вашим макетам, — так они будут выглядеть в браузере ещё до вёрстки. Кадры в ширинах 1920 и 375. Нажмите на кадр, чтобы открыть его крупно; стрелки листают галерею. Статус каждой страницы — на странице «Ход работ».</p>
     <div class="hero__meta">
-      <span class="badge badge--tag">23 кадра</span>
-      <span class="badge badge--tag">9 страниц</span>
+      <span class="badge badge--tag">33 кадра</span>
+      <span class="badge badge--tag">18 страниц</span>
     </div>
   </section>
 
@@ -176,9 +176,65 @@
     </div>
   </section>
 
-  <section class="section" id="section-product">
+  <section class="section" id="section-search">
     <div class="section__head">
       <p class="section__num">03</p>
+      <h2>Поиск</h2>
+      <p>Живые подсказки под строкой поиска, страница результатов в двух режимах и состояние «Ничего не найдено».</p>
+    </div>
+    <h3 id="search-suggest">Подсказки в строке поиска</h3>
+    <p class="note">Живая выдача под строкой: мини-карточка товара, кнопка «В корзину», подсветка совпадений.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/search-suggest-1920.webp" data-title="Подсказки в строке поиска">
+          <img src="assets/pages/search-suggest-1920.webp" width="1400" height="332" loading="lazy" decoding="async" alt="Подсказки в строке поиска">
+        </a>
+        <figcaption>
+          <p class="ref__title">Подсказки в строке поиска</p>
+          <p class="ref__note">Что видит покупатель, когда вводит код 1С в строку поиска: под полем разворачивается панель с найденным товаром — фото, название, код и штрихкод с подсветкой совпадения, наличие, цена и количество упаковок. Добавить в корзину можно прямо отсюда, не открывая карточку.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="search-results">Результаты поиска</h3>
+    <p class="note">Страница выдачи в двух режимах — таблицей и карточками.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/search-results-table-1920.webp" data-title="Результаты поиска, режим «Таблица»">
+          <img src="assets/pages/search-results-table-1920.webp" width="1400" height="1392" loading="lazy" decoding="async" alt="Результаты поиска, режим «Таблица»">
+        </a>
+        <figcaption>
+          <p class="ref__title">Результаты поиска, режим «Таблица»</p>
+          <p class="ref__note">Выдача по запросу на том же рабочем экране, что и каталог: фильтры, сортировка по релевантности, экспорт в Excel. В названиях подсвечен совпавший фрагмент запроса. Под выдачей — три подсказки на случай, если нужный товар не нашёлся: оставить заявку, получить консультацию, собрать заказ списком.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/search-results-cards-1920.webp" data-title="Результаты поиска, режим «Карточки»">
+          <img src="assets/pages/search-results-cards-1920.webp" width="1400" height="1836" loading="lazy" decoding="async" alt="Результаты поиска, режим «Карточки»">
+        </a>
+        <figcaption>
+          <p class="ref__title">Результаты поиска, режим «Карточки»</p>
+          <p class="ref__note">Та же выдача карточками: слева фильтры со счётчиками по найденному, справа мини-корзина с текущим заказом. У каждой карточки — код, штрихкод, цена за единицу, минимальная партия и кнопка добавления.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="search-empty">Ничего не найдено</h3>
+    <p class="note">Что предложить покупателю, когда совпадений нет.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/search-empty-1920.webp" data-title="Ничего не найдено">
+          <img src="assets/pages/search-empty-1920.webp" width="1400" height="1121" loading="lazy" decoding="async" alt="Ничего не найдено">
+        </a>
+        <figcaption>
+          <p class="ref__title">Ничего не найдено</p>
+          <p class="ref__note">Когда по запросу ничего нет: объяснение и кнопка в каталог, ниже три подсказки — проверить запрос, воспользоваться фильтрами, сделать запрос более общим — и блок помощи менеджера.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="section-product">
+    <div class="section__head">
+      <p class="section__num">04</p>
       <h2>Карточка товара</h2>
       <p>Галерея, код 1С и штрихкод, выбор фасовки, блок покупки с уровнями цен и пять вкладок с подробностями.</p>
     </div>
@@ -272,7 +328,7 @@
 
   <section class="section" id="section-cart">
     <div class="section__head">
-      <p class="section__num">04</p>
+      <p class="section__num">05</p>
       <h2>Корзина и заказ</h2>
       <p>Корзина с оформлением на одной странице, способы получения, пустая корзина и экран «Заказ принят».</p>
     </div>
@@ -333,6 +389,92 @@
         <figcaption>
           <p class="ref__title">Заказ принят</p>
           <p class="ref__note">Экран после отправки заказа: зелёная галочка, номер заказа в рамке, что будет дальше. Кнопки «Перейти в мои заказы» и «Продолжить покупки», карточка с деталями заказа и полоса из четырёх шагов обработки.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="section-auth">
+    <div class="section__head">
+      <p class="section__num">06</p>
+      <h2>Вход и регистрация</h2>
+      <p>Подключение компании с проверкой по ИНН, вход и полный цикл восстановления пароля.</p>
+    </div>
+    <h3 id="register">Подключение к порталу</h3>
+    <p class="note">Заявка с автозаполнением по ИНН и двумя раздельными согласиями.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/register-1920.webp" data-title="Подключение к порталу">
+          <img src="assets/pages/register-1920.webp" width="1400" height="1181" loading="lazy" decoding="async" alt="Подключение к порталу">
+        </a>
+        <figcaption>
+          <p class="ref__title">Подключение к порталу</p>
+          <p class="ref__note">Заявка на доступ: ИНН, по которому подтягивается название компании, контакты и пароль, два отдельных согласия со ссылками на документы и отдельная ссылка на политику. Слева — что компания получает после подключения и как защищены её данные.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="register-sent">Заявка отправлена</h3>
+    <p class="note">Экран ожидания проверки менеджером.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/register-sent-1920.webp" data-title="Заявка отправлена">
+          <img src="assets/pages/register-sent-1920.webp" width="1400" height="976" loading="lazy" decoding="async" alt="Заявка отправлена">
+        </a>
+        <figcaption>
+          <p class="ref__title">Заявка отправлена</p>
+          <p class="ref__note">Экран после отправки заявки: какие данные мы получили, три шага до открытия доступа и срок ответа менеджера. Этот же экран видит клиент, который пытается войти, пока заявка на проверке.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="login">Вход</h3>
+    <p class="note">Двухколоночная страница с облегчённой шапкой.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/login-1920.webp" data-title="Вход в личный кабинет">
+          <img src="assets/pages/login-1920.webp" width="1400" height="980" loading="lazy" decoding="async" alt="Вход в личный кабинет">
+        </a>
+        <figcaption>
+          <p class="ref__title">Вход в личный кабинет</p>
+          <p class="ref__note">Вход по рабочей почте и паролю: «Запомнить меня», ссылка на восстановление и отдельная кнопка для тех, у кого доступа ещё нет. Под формой — как защищены данные компании.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="password-reset">Восстановление пароля</h3>
+    <p class="note">Запрос ссылки на почту.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/password-reset-1920.webp" data-title="Восстановление пароля">
+          <img src="assets/pages/password-reset-1920.webp" width="1400" height="789" loading="lazy" decoding="async" alt="Восстановление пароля">
+        </a>
+        <figcaption>
+          <p class="ref__title">Восстановление пароля</p>
+          <p class="ref__note">Запрос ссылки на восстановление: поле почты, кнопка отправки и возврат ко входу. Под формой — что делать, если письмо не пришло, с кнопкой повторной отправки.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="password-new">Новый пароль</h3>
+    <p class="note">Ввод и подтверждение нового пароля.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/password-new-1920.webp" data-title="Новый пароль">
+          <img src="assets/pages/password-new-1920.webp" width="1400" height="839" loading="lazy" decoding="async" alt="Новый пароль">
+        </a>
+        <figcaption>
+          <p class="ref__title">Новый пароль</p>
+          <p class="ref__note">Экран по ссылке из письма: два поля нового пароля с показом символов, рекомендации по надёжности и срок действия ссылки — сутки.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="password-changed">Пароль изменён</h3>
+    <p class="note">Подтверждение смены и переход ко входу.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/password-changed-1920.webp" data-title="Пароль изменён">
+          <img src="assets/pages/password-changed-1920.webp" width="1400" height="796" loading="lazy" decoding="async" alt="Пароль изменён">
+        </a>
+        <figcaption>
+          <p class="ref__title">Пароль изменён</p>
+          <p class="ref__note">Подтверждение смены пароля: что изменилось для безопасности аккаунта, кнопка входа в кабинет и возврат на главную.</p>
         </figcaption>
       </figure>
     </div>
