@@ -33,7 +33,7 @@
       <a href="../design-system/references.html">Референсы</a>
       <a href="../design-system/pages.html" aria-current="page">Макеты</a>
       <a href="../progress/index.html">Ход работ</a>
-      <span class="version-chip">33 кадра</span>
+      <span class="version-chip">43 кадра</span>
     </nav>
   </div>
 </header>
@@ -45,8 +45,8 @@
     <h1>Макеты страниц</h1>
     <p>Страницы портала, нарисованные по дизайн-системе и вашим макетам, — так они будут выглядеть в браузере ещё до вёрстки. Кадры в ширинах 1920 и 375. Нажмите на кадр, чтобы открыть его крупно; стрелки листают галерею. Статус каждой страницы — на странице «Ход работ».</p>
     <div class="hero__meta">
-      <span class="badge badge--tag">33 кадра</span>
-      <span class="badge badge--tag">18 страниц</span>
+      <span class="badge badge--tag">43 кадра</span>
+      <span class="badge badge--tag">26 страниц</span>
     </div>
   </section>
 
@@ -394,9 +394,43 @@
     </div>
   </section>
 
-  <section class="section" id="section-auth">
+  <section class="section" id="section-quick">
     <div class="section__head">
       <p class="section__num">06</p>
+      <h2>Быстрый заказ</h2>
+      <p>Загрузка файла со списком или ввод кодов вручную, отчёт проверки со статусами строк.</p>
+    </div>
+    <h3 id="quick-paste" class="row" style="gap:10px">Вставить список<span class="badge badge--new">Новое</span></h3>
+    <p class="note">Ввод кодов и количеств прямо в поле, без файла.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/quick-paste-1920.webp" data-title="Быстрый заказ, вставка списка">
+          <img src="assets/pages/quick-paste-1920.webp" width="1400" height="1040" loading="lazy" decoding="async" alt="Быстрый заказ, вставка списка">
+        </a>
+        <figcaption>
+          <p class="ref__title">Быстрый заказ, вставка списка</p>
+          <p class="ref__note">Вторая вкладка того же экрана: поле, куда вставляют строки «код и количество», с подсказкой о допустимых разделителях. Остальное — как на первой вкладке.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="quick-report" class="row" style="gap:10px">Отчёт проверки<span class="badge badge--new">Новое</span></h3>
+    <p class="note">Статусы строк: добавлено, нарушена кратность, изменилась цена, нет остатка, не найдено — с действиями по каждой.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/quick-report-1920.webp" data-title="Проверка быстрого заказа">
+          <img src="assets/pages/quick-report-1920.webp" width="1400" height="1196" loading="lazy" decoding="async" alt="Проверка быстрого заказа">
+        </a>
+        <figcaption>
+          <p class="ref__title">Проверка быстрого заказа</p>
+          <p class="ref__note">Отчёт по загруженному файлу: сводка — сколько строк загружено, сколько позиций распознано, что готово к добавлению и где проблемы, рядом выгрузка отчёта в Excel. В таблице по каждой строке видно запрошенное и доступное количество, цену, сумму и результат: готово, не хватает количества или нарушена кратность, изменилась цена, нет в наличии, код не найден. Строки с проблемами подсвечены, у каждой своё действие. Внизу итог по доступным товарам и кнопка добавления в корзину.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="section-auth">
+    <div class="section__head">
+      <p class="section__num">07</p>
       <h2>Вход и регистрация</h2>
       <p>Подключение компании с проверкой по ИНН, вход и полный цикл восстановления пароля.</p>
     </div>
@@ -475,6 +509,114 @@
         <figcaption>
           <p class="ref__title">Пароль изменён</p>
           <p class="ref__note">Подтверждение смены пароля: что изменилось для безопасности аккаунта, кнопка входа в кабинет и возврат на главную.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="section-account">
+    <div class="section__head">
+      <p class="section__num">08</p>
+      <h2>Личный кабинет</h2>
+      <p>Главная кабинета, заказы со списком и детализацией, избранное, профиль компании и быстрый заказ.</p>
+    </div>
+    <h3 id="account-home" class="row" style="gap:10px">Главная кабинета<span class="badge badge--new">Новое</span></h3>
+    <p class="note">Компания, текущий уровень цен и остаток до следующего, быстрые действия, последние заказы.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/account-home-1920.webp" data-title="Личный кабинет, главная">
+          <img src="assets/pages/account-home-1920.webp" width="1400" height="1057" loading="lazy" decoding="async" alt="Личный кабинет, главная">
+        </a>
+        <figcaption>
+          <p class="ref__title">Личный кабинет, главная</p>
+          <p class="ref__note">Дашборд вошедшего клиента: слева меню кабинета с группами заказов и блоком помощи, справа приветствие, три карточки — компания с отметкой «Проверенный клиент», текущий уровень цен с остатком до следующего и сами уровни с порогами. Ниже четыре быстрых действия одной полосой и виджет «Мои заказы»: вкладки со счётчиками и пять последних заказов со статусами.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="swatch__role" style="margin:24px 0 14px">Телефон · 375</p>
+    <div class="ref-grid ref-grid--phones">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/account-home-375.webp" data-title="Личный кабинет на телефоне">
+          <img src="assets/pages/account-home-375.webp" width="750" height="4766" loading="lazy" decoding="async" alt="Личный кабинет на телефоне">
+        </a>
+        <figcaption>
+          <p class="ref__title">Личный кабинет на телефоне</p>
+          <p class="ref__note">Та же страница в одну колонку: вместо бокового меню кнопка «Разделы кабинета», карточки идут друг под другом, быстрые действия по два в ряд, заказы — карточками с номером, статусом, датой, количеством позиций и суммой. Внизу подвал и нижняя навигация с активным профилем.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="account-orders" class="row" style="gap:10px">Мои заказы<span class="badge badge--new">Новое</span></h3>
+    <p class="note">Список с поиском по номеру, вкладками статусов и выбором периода.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/account-orders-1920.webp" data-title="Мои заказы">
+          <img src="assets/pages/account-orders-1920.webp" width="1400" height="1040" loading="lazy" decoding="async" alt="Мои заказы">
+        </a>
+        <figcaption>
+          <p class="ref__title">Мои заказы</p>
+          <p class="ref__note">Список заказов: поиск по номеру или товару, выбор периода, вкладки «Все заказы», «В работе», «Выполненные», «Отменённые» со счётчиками. Каждый заказ — карточка: номер и идентификатор из 1С, дата и время, число позиций со ссылкой на состав, сумма с НДС, статус, способ доставки с адресом и кнопки «Открыть заказ» и «Повторить заказ». Внизу пагинация.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="account-order" class="row" style="gap:10px">Детализация заказа<span class="badge badge--new">Новое</span></h3>
+    <p class="note">Вкладки «Сравнение», «Исходный» и «Итоговый» с подсветкой расхождений.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/account-order-1920.webp" data-title="Детализация заказа">
+          <img src="assets/pages/account-order-1920.webp" width="1400" height="1078" loading="lazy" decoding="async" alt="Детализация заказа">
+        </a>
+        <figcaption>
+          <p class="ref__title">Детализация заказа</p>
+          <p class="ref__note">Один заказ целиком: статус, доставка, контактное лицо с комментарием и сумма с НДС четырьмя карточками; ниже состав тремя вкладками, по умолчанию «Сравнение позиций» — что клиент заказал и что подтвердил менеджер, рядом. Расхождения подсвечены, у каждой строки статус: отгружен, частично отгружен, ожидается, отменён. В итоге видны обе суммы — исходная и итоговая.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="account-favorites" class="row" style="gap:10px">Избранное<span class="badge badge--new">Новое</span></h3>
+    <p class="note">Тот же табличный вид, что и в каталоге, плюс пустое состояние.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/account-favorites-1920.webp" data-title="Избранное">
+          <img src="assets/pages/account-favorites-1920.webp" width="1400" height="1617" loading="lazy" decoding="async" alt="Избранное">
+        </a>
+        <figcaption>
+          <p class="ref__title">Избранное</p>
+          <p class="ref__note">Отложенные товары шаблоном каталога: счётчик списка, кнопка очистки, переключатель вида и сортировка по дате добавления. Слева фильтры — производитель, тип товара, вид животного, назначение, форма выпуска, фасовка и наличие; справа карточки по четыре в ряд с закрашенным сердцем, ценой для клиента и минимальной партией. У товара без остатка кнопка «В корзину» неактивна.</p>
+        </figcaption>
+      </figure>
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/account-favorites-empty-1920.webp" data-title="Избранное пусто">
+          <img src="assets/pages/account-favorites-empty-1920.webp" width="1400" height="1065" loading="lazy" decoding="async" alt="Избранное пусто">
+        </a>
+        <figcaption>
+          <p class="ref__title">Избранное пусто</p>
+          <p class="ref__note">Состояние без товаров: объяснение, зачем нужен список, кнопка перехода в каталог, три карточки о том, как пользоваться избранным, и блок помощи менеджера.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="account-profile" class="row" style="gap:10px">Профиль компании<span class="badge badge--new">Новое</span></h3>
+    <p class="note">Реквизиты на чтение, редактируется контактное лицо.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/account-profile-1920.webp" data-title="Профиль компании">
+          <img src="assets/pages/account-profile-1920.webp" width="1400" height="1212" loading="lazy" decoding="async" alt="Профиль компании">
+        </a>
+        <figcaption>
+          <p class="ref__title">Профиль компании</p>
+          <p class="ref__note">Три карточки: реквизиты компании только для чтения с пометкой, что их меняет менеджер; контактное лицо с кнопкой редактирования и пояснением, зачем нужны эти данные; смена пароля с тремя полями и кнопкой сохранения.</p>
+        </figcaption>
+      </figure>
+    </div>
+    <h3 id="account-quick" class="row" style="gap:10px">Быстрый заказ в кабинете<span class="badge badge--new">Новое</span></h3>
+    <span id="quick-upload"></span>
+    <p class="note">Загрузка файла со списком прямо из кабинета.</p>
+    <div class="ref-grid ref-grid--wide">
+      <figure class="ref">
+        <a class="ref__frame" href="assets/pages/account-quick-1920.webp" data-title="Быстрый заказ, загрузка файла">
+          <img src="assets/pages/account-quick-1920.webp" width="1400" height="1040" loading="lazy" decoding="async" alt="Быстрый заказ, загрузка файла">
+        </a>
+        <figcaption>
+          <p class="ref__title">Быстрый заказ, загрузка файла</p>
+          <p class="ref__note">Первый экран быстрого заказа: две вкладки — файл или список строками. В области загрузки форматы и предельный размер, рядом ссылка на шаблон Excel с примерами. Ниже перечислено, что проверит портал, и предупреждение, что заказ не оформляется автоматически, пока клиент не подтвердит состав.</p>
         </figcaption>
       </figure>
     </div>
