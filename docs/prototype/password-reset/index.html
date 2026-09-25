@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:,">
+  <title>Восстановление пароля — B2B портал агробизнеса</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="../assets/app.css">
+  <script src="../assets/data.js" defer></script>
+  <script src="../assets/app.js" defer></script>
+</head>
+<body class="layout-auth" data-page="password-reset" data-root="../" data-icons="../assets/icons.svg">
+<header class="header header--light">
+  <div class="container-page header__inner">
+    <a class="logo" href="../" aria-label="B2B портал агробизнеса — на главную">
+  <svg class="logo__mark" aria-hidden="true"><use href="../assets/icons.svg#i-leaf"/></svg>
+  <span class="logo__text" aria-hidden="true">B2B ПОРТАЛ АГРОБИЗНЕСА</span>
+</a>
+
+    <nav class="header-light__nav" aria-label="Разделы портала">
+      <a class="header-light__link" href="../catalog/">Каталог товаров</a>
+      <a class="header-light__link" href="../delivery/">Доставка и оплата</a>
+      <a class="header-light__link" href="../cooperation/">О компании</a>
+      <a class="header-light__link" href="../contacts/">Контакты</a>
+    </nav>
+    <a class="phone header-light__phone" href="tel:88005554545"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-phone"/></svg>8 (800) 555-45-45</a>
+    <a class="btn btn--secondary header-light__cta" href="../login/">Вход в аккаунт</a>
+
+  </div>
+</header>
+
+<main class="page" id="main" tabindex="-1">
+<div class="auth-page auth-page--narrow container-page">
+<section class="auth-card" aria-labelledby="auth-title">
+  <div class="auth-card__head">
+    <h1 class="auth-card__title" id="auth-title" data-auth-title>Восстановление пароля</h1>
+<p class="auth-card__lead">Укажите email, и мы вышлем инструкции по восстановлению доступа</p>  </div>
+    <form class="auth-form" novalidate data-auth-form="reset" data-next="../password-reset/new/">
+    <div class="field">
+  <label class="field__label" for="reset-email">Рабочая почта<span class="field__req" aria-hidden="true">*</span></label>
+
+  <div class="field__box">
+    <input class="field__input" id="reset-email" name="reset-email" type="email" value="" placeholder="Введите email" required aria-required="true" autocomplete="email">
+  </div>
+</div>
+
+    <div class="auth-form__actions">
+      <button class="btn btn--primary btn--lg btn--block" type="submit"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-mail"/></svg>Отправить ссылку</button>
+
+      <p class="auth-divider"><span>или</span></p>
+
+      <a class="link auth-form__back" href="../login/"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-arrow-left"/></svg>Вернуться ко входу</a>
+    </div>
+  </form>
+
+</section>
+  <div class="auth-note"><div class="alert alert--info alert--action" role="status">
+  <svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-info"/></svg>
+  <div class="alert__body">
+<p class="alert__title">Не получили письмо?</p><p class="alert__text">Проверьте папку «Спам» или «Промоакции». Письмо может прийти в течение 1–5 минут</p>  </div>
+  <div class="alert__action"><button class="btn btn--info" type="button">Отправить повторно</button>
+</div>
+</div>
+</div>
+  <aside class="help auth-page__help" aria-label="Нужна помощь?">
+  <span class="help__icon" aria-hidden="true"><svg class="i"><use href="../assets/icons.svg#i-headset"/></svg></span>
+  <div>
+    <p class="help__title">Нужна помощь?</p>
+    <p class="help__text">Наш менеджер поможет с подключением и ответит на ваши вопросы</p>
+  </div>
+  <div>
+    <a class="help__phone" href="tel:88005554545"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-phone"/></svg>8 (800) 555-45-45</a>
+    <p class="help__hours">пн–пт: 9:00 – 18:00</p>
+  </div>
+  <button class="btn btn--secondary btn--block" type="button" data-call-open=""><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-phone"/></svg>Заказать звонок</button>
+
+</aside>
+
+</div>
+</main>
+<footer class="footer-light">
+  <div class="container-page footer-light__inner">
+    <a class="logo" href="../" aria-label="B2B портал агробизнеса — на главную">
+  <svg class="logo__mark" aria-hidden="true"><use href="../assets/icons.svg#i-leaf"/></svg>
+  <span class="logo__text" aria-hidden="true">B2B ПОРТАЛ АГРОБИЗНЕСА</span>
+</a>
+
+    <div class="footer-light__meta">
+      <span>© B2B Портал Агробизнеса. Все права защищены</span>
+      <a class="footer-light__link" href="../privacy/">Политика конфиденциальности</a>
+      <a class="footer-light__link" href="../terms/">Пользовательское соглашение</a>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="call" data-dialog hidden>
+  <div class="modal modal--wide" role="dialog" aria-modal="true" aria-labelledby="call-title">
+    <div class="modal__split">
+      <div class="modal__main">
+        <div class="modal__head"><h2 class="modal__title" id="call-title">Заказать звонок</h2><button class="btn-icon btn-icon--ghost" type="button" aria-label="Закрыть" data-dialog-close=""><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-x"/></svg></button>
+</div>
+        <div class="modal__body"><form class="call" data-call-form novalidate>
+  <p class="call__lead">Оставьте свои контакты, и наш менеджер свяжется с вами в ближайшее время</p>
+  <div class="field">
+  <label class="field__label" for="call-name">Ваше имя<span class="field__req" aria-hidden="true">*</span></label>
+
+  <div class="field__box">
+    <input class="field__input" id="call-name" name="call-name" type="text" value="" required aria-required="true" autocomplete="name">
+  </div>
+</div>
+
+  <div class="field">
+  <label class="field__label" for="call-phone">Телефон<span class="field__req" aria-hidden="true">*</span></label>
+
+  <div class="field__box">
+    <input class="field__input" id="call-phone" name="call-phone" type="tel" value="" placeholder="+7 (___) ___-__-__" aria-describedby="call-phone-hint" required aria-required="true" autocomplete="tel" inputmode="tel" data-phone="">
+  </div>
+<p class="field__hint" id="call-phone-hint">Укажите номер телефона для связи</p></div>
+
+  <div>
+    <div class="dropdown dropdown--block" data-dropdown="select">
+  <span class="field__label" id="call-time-label">Удобное время для звонка</span>
+  <div class="field">
+    <button class="field__box dropdown__trigger" type="button" id="call-time" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false" aria-controls="call-time-list" aria-labelledby="call-time-label call-time">
+      <span class="dropdown__value" data-dropdown-value>10:00–11:00</span>
+      <svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-chevron-down"/></svg>
+    </button>
+  </div>
+  <div class="menu" id="call-time-list" hidden>
+    <ul class="menu__list" role="listbox" aria-labelledby="call-time-label">
+      <li class="menu__item" role="option" tabindex="-1" data-value="09:00–10:00" aria-selected="false"><span>09:00–10:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="10:00–11:00" aria-selected="true"><span>10:00–11:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="11:00–12:00" aria-selected="false"><span>11:00–12:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="12:00–13:00" aria-selected="false"><span>12:00–13:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="13:00–14:00" aria-selected="false"><span>13:00–14:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="14:00–15:00" aria-selected="false"><span>14:00–15:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="15:00–16:00" aria-selected="false"><span>15:00–16:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="16:00–17:00" aria-selected="false"><span>16:00–17:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="17:00–18:00" aria-selected="false"><span>17:00–18:00</span><svg class="i i--check" aria-hidden="true"><use href="../assets/icons.svg#i-check"/></svg></li>
+    </ul>
+  </div>
+</div>
+
+    <p class="field__hint">Мы позвоним вам в выбранное время в рабочие часы</p>
+  </div>
+  <div class="field field--area">
+  <div class="field__top"><label class="field__label" for="call-comment">Комментарий</label>
+<span class="field__aside">Необязательно</span></div>
+  <div class="field__box">
+    <textarea class="field__input" id="call-comment" name="call-comment" maxlength="300" aria-describedby="call-comment-count" data-count></textarea>
+  </div>
+<p class="field__count" id="call-comment-count" data-count-out>0 / 300</p></div>
+
+  <div class="call__consent">
+    <label class="check">
+  <input class="check__input" type="checkbox" name="consent" id="call-consent" required="" aria-required="true" aria-describedby="call-consent-hint">
+  <span class="check__box" aria-hidden="true"><svg class="i"><use href="../assets/icons.svg#i-check"/></svg></span>
+  <span class="check__text">Я согласен на обработку персональных данных</span>
+</label>
+
+    <p class="call__docs"><a class="link" href="../consent/">Согласие на обработку персональных данных</a><span aria-hidden="true">·</span><a class="link" href="../privacy/">Политика конфиденциальности</a></p>
+    <p class="field__hint field__hint--error" id="call-consent-hint" role="alert" hidden></p>
+  </div>
+  <div class="call__submit">
+    <button class="btn btn--primary btn--lg btn--block" type="submit"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-phone"/></svg>Заказать звонок</button>
+
+    <p class="call__safe"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-shield-check"/></svg>Ваши данные в безопасности</p>
+  </div>
+</form>
+<div class="call__done" data-call-success hidden>
+  <div class="alert alert--success" role="status">
+  <svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-circle-check"/></svg>
+  <div class="alert__body">
+<p class="alert__title">Заявка принята</p><p class="alert__text">Менеджер перезвонит вам в выбранное время в рабочие часы</p>  </div>
+</div>
+
+  <div class="call__done-foot"><button class="btn btn--neutral" type="button" data-dialog-close="">Закрыть</button>
+</div>
+</div>
+</div>
+      </div>
+      <div class="modal__promo"><div class="call-promo">
+  <div class="call-promo__art">Иллюстрация</div>
+  <p class="call-promo__title">Мы на связи!</p>
+  <ul class="call-promo__list">
+    <li class="call-promo__item">
+      <svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-zap"/></svg>
+      <div><p class="call-promo__name">Быстро</p><p class="call-promo__text">перезвоним в течение 15 минут</p></div>
+    </li>
+    <li class="call-promo__item">
+      <svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-award"/></svg>
+      <div><p class="call-promo__name">Профессионально</p><p class="call-promo__text">опытные менеджеры в сфере агробизнеса</p></div>
+    </li>
+    <li class="call-promo__item">
+      <svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-lock"/></svg>
+      <div><p class="call-promo__name">Надёжно</p><p class="call-promo__text">данные не передаются третьим лицам</p></div>
+    </li>
+  </ul>
+  <p class="call-promo__text">Звонки принимаем Пн–Пт: 09:00–18:00, Сб–Вс: выходной</p>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+<section class="cookie" data-cookie aria-label="Уведомление о cookie" hidden>
+  <div class="container-page cookie__inner">
+    <svg class="i cookie__icon" aria-hidden="true"><use href="../assets/icons.svg#i-cookie"/></svg>
+    <p class="cookie__text">Мы используем cookie, чтобы сайт работал и чтобы понимать, как им пользуются <a class="link" href="../privacy/">Политика конфиденциальности</a></p>
+    <button class="btn btn--primary cookie__accept" type="button" data-cookie-accept="">Принять</button>
+
+  </div>
+</section>
+
+<nav class="tabbar" aria-label="Основные разделы">
+  <a class="tabbar__item" href="../">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-house"/></svg></span>
+  <span class="tabbar__label">Главная</span>
+</a>
+  <button class="tabbar__item" type="button" data-dialog-open="catalog-sheet" aria-haspopup="dialog">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-layout-grid"/></svg></span>
+  <span class="tabbar__label">Каталог</span>
+</button>
+  <button class="tabbar__item" type="button" data-tab-search="" data-href="../search/">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-search"/></svg></span>
+  <span class="tabbar__label">Поиск</span>
+</button>
+<a class="tabbar__item" href="../cart/" data-counted="Корзина">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-shopping-cart"/></svg><span class="counter tabbar__counter" data-counter="cart" hidden></span></span>
+  <span class="tabbar__label">Корзина</span>
+</a>  <a class="tabbar__item" href="../login/" aria-current="page" data-account="guest">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-user"/></svg></span>
+  <span class="tabbar__label">Профиль</span>
+</a>
+  <a class="tabbar__item" href="../account/" aria-current="page" data-account="client">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-user"/></svg></span>
+  <span class="tabbar__label">Профиль</span>
+</a>
+</nav>
+
+<div class="overlay overlay--sheet" id="catalog-sheet" data-dialog data-catalog-sheet hidden>
+  <div class="sheet catalog-sheet" role="dialog" aria-modal="true" aria-labelledby="catalog-sheet-title">
+    <div class="catalog-sheet__screen" data-sheet-screen="root">
+      <div class="sheet__head">
+        <h2 class="sheet__title" id="catalog-sheet-title">Каталог</h2>
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Закрыть" data-dialog-close=""><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-x"/></svg></button>
+
+      </div>
+      <div class="sheet__body catalog-sheet__body">
+        <ul class="catalog-sheet__list">
+          <li>
+            <button class="catalog-sheet__row" type="button" aria-controls="catalog-sheet-udobreniya" data-sheet-open><span>Удобрения</span><svg class="i catalog-sheet__chevron" aria-hidden="true"><use href="../assets/icons.svg#i-chevron-right"/></svg></button>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../catalog/zashchita-rasteniy/">Средства защиты растений</a>
+          </li>
+          <li>
+            <button class="catalog-sheet__row" type="button" aria-controls="catalog-sheet-grunty-i-substraty" data-sheet-open><span>Грунты и субстраты</span><svg class="i catalog-sheet__chevron" aria-hidden="true"><use href="../assets/icons.svg#i-chevron-right"/></svg></button>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../catalog/sredstva-dlya-pochvy/">Средства для почвы и органики</a>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../catalog/sredstva-dlya-septikov/">Средства для септиков и выгребных ям</a>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../catalog/korma/">Корма, кормовые добавки и товары для животных</a>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../catalog/zashchita-ot-vrediteley/">Защита от вредителей</a>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../catalog/kosmetika/">Косметика</a>
+          </li>
+        </ul>
+        <ul class="catalog-sheet__list catalog-sheet__links" aria-label="Информация для покупателей">
+          <li><a class="catalog-sheet__row" href="../delivery/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../assets/icons.svg#i-truck"/></svg><span>Доставка и оплата</span></a></li>
+          <li><a class="catalog-sheet__row" href="../documents/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../assets/icons.svg#i-file-text"/></svg><span>Документы</span></a></li>
+          <li><a class="catalog-sheet__row" href="../articles/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../assets/icons.svg#i-newspaper"/></svg><span>Статьи</span></a></li>
+          <li><a class="catalog-sheet__row" href="../cooperation/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../assets/icons.svg#i-handshake"/></svg><span>Сотрудничество</span></a></li>
+          <li><a class="catalog-sheet__row" href="../contacts/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../assets/icons.svg#i-map"/></svg><span>Контакты</span></a></li>
+        </ul>
+        <div class="catalog-sheet__contacts">
+          <a class="phone catalog-sheet__phone" href="tel:88005554545"><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-phone"/></svg>8 (800) 555-45-45</a>
+          <button class="link" type="button" data-call-open="">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+    <section class="catalog-sheet__screen" id="catalog-sheet-udobreniya" aria-labelledby="catalog-sheet-udobreniya-title" data-sheet-screen hidden>
+      <div class="sheet__head catalog-sheet__head">
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Назад" data-sheet-back=""><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-chevron-left"/></svg></button>
+
+        <h2 class="sheet__title" id="catalog-sheet-udobreniya-title">Удобрения</h2>
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Закрыть" data-dialog-close=""><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-x"/></svg></button>
+
+      </div>
+      <div class="sheet__body catalog-sheet__body">
+        <div class="catalog-sheet__all"><a class="link" href="../catalog/udobreniya/">Все товары раздела</a></div>
+        <ul class="catalog-sheet__list">
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/mineralnye/">Минеральные</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/organicheskie/">Органические</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/organomineralnye/">Органоминеральные</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/biologicheskie/">Биологические</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/stimulyatory-i-regulyatory-rosta/">Стимуляторы и регуляторы роста</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/raskisliteli-i-izvestkovye-materialy/">Раскислители и известковые материалы</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/mikroudobreniya/">Микроудобрения</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/guminovye/">Гуминовые</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/kompleksnye/">Комплексные</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/uluchshiteli-pochvy-razryhliteli/">Улучшители почвы / разрыхлители</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/drenazh/">Дренаж</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/udobreniya/vspomogatelnye-materialy/">Вспомогательные материалы</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="catalog-sheet__screen" id="catalog-sheet-grunty-i-substraty" aria-labelledby="catalog-sheet-grunty-i-substraty-title" data-sheet-screen hidden>
+      <div class="sheet__head catalog-sheet__head">
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Назад" data-sheet-back=""><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-chevron-left"/></svg></button>
+
+        <h2 class="sheet__title" id="catalog-sheet-grunty-i-substraty-title">Грунты и субстраты</h2>
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Закрыть" data-dialog-close=""><svg class="i" aria-hidden="true"><use href="../assets/icons.svg#i-x"/></svg></button>
+
+      </div>
+      <div class="sheet__body catalog-sheet__body">
+        <div class="catalog-sheet__all"><a class="link" href="../catalog/grunty-i-substraty/">Все товары раздела</a></div>
+        <ul class="catalog-sheet__list">
+          <li><a class="catalog-sheet__row" href="../catalog/grunty-i-substraty/pitatelnye-grunty/">Питательные грунты</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/grunty-i-substraty/torf/">Торф</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/grunty-i-substraty/substraty/">Субстраты</a></li>
+          <li><a class="catalog-sheet__row" href="../catalog/grunty-i-substraty/pochvouluchshiteli/">Почвоулучшители</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>

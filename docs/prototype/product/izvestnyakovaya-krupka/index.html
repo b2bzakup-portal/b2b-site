@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="data:,">
+  <title>Известняковая крупка — B2B портал агробизнеса</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+  <link rel="stylesheet" href="../../assets/app.css">
+  <script src="../../assets/data.js" defer></script>
+  <script src="../../assets/app.js" defer></script>
+</head>
+<body class="layout-site" data-page="product" data-root="../../" data-icons="../../assets/icons.svg">
+<div class="topbar">
+  <div class="container-page topbar__inner">
+    <nav class="topbar__nav" aria-label="Информация для покупателей">
+      <a class="topbar__link" href="../../delivery/"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-truck"/></svg>Доставка и оплата</a>
+      <a class="topbar__link" href="../../documents/"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-file-text"/></svg>Документы</a>
+      <a class="topbar__link" href="../../articles/"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-newspaper"/></svg>Статьи</a>
+      <a class="topbar__link" href="../../cooperation/"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-handshake"/></svg>Сотрудничество</a>
+      <a class="topbar__link" href="../../contacts/"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-map"/></svg>Контакты</a>
+    </nav>
+    <div class="topbar__contacts">
+      <a class="phone topbar__phone" href="tel:88005554545"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-phone"/></svg>8 (800) 555-45-45</a>
+      <button class="link topbar__call" type="button" data-call-open="">Заказать звонок</button>
+    </div>
+  </div>
+</div>
+
+<header class="header" data-header>
+  <div class="container-page header__inner">
+    <a class="logo" href="../../" aria-label="B2B портал агробизнеса — на главную">
+  <svg class="logo__mark" aria-hidden="true"><use href="../../assets/icons.svg#i-leaf"/></svg>
+  <span class="logo__text" aria-hidden="true">B2B ПОРТАЛ АГРОБИЗНЕСА</span>
+</a>
+
+    <button class="btn btn--primary header__catalog" type="button" aria-expanded="false" aria-controls="catalog-menu" data-catalog-toggle><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-menu"/></svg><span>Каталог<span class="header__catalog-more"> товаров</span></span></button>
+    <form class="header__search" role="search" action="../../search/" data-search>
+      <label class="visually-hidden" for="header-search">Поиск по каталогу</label>
+      <div class="field__box header__search-box">
+        <svg class="i header__search-icon" aria-hidden="true"><use href="../../assets/icons.svg#i-search"/></svg>
+        <input class="field__input" id="header-search" name="q" type="search" autocomplete="off" placeholder="Поиск по товарам, категориям, брендам, коду или штрихкоду" aria-keyshortcuts="Control+Slash" aria-expanded="false" aria-controls="header-search-suggest" aria-autocomplete="list">
+        <kbd class="header__kbd" aria-hidden="true">Ctrl + /</kbd>
+        <button class="header__clear" type="button" data-search-clear hidden aria-label="Очистить поиск"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-x"/></svg></button>
+        <div class="search-suggest" id="header-search-suggest" role="region" aria-label="Подсказки поиска" data-search-suggest hidden data-product-href="../../product/agro-sera-kormovaya-dobavka/" data-product-slug="agro-sera-kormovaya-dobavka">
+  <p class="search-suggest__count" data-search-suggest-count aria-live="polite"></p>
+  <ul class="search-suggest__list" data-search-suggest-list></ul>
+  <div class="search-suggest__empty" data-search-suggest-empty hidden>
+    <p class="search-suggest__empty-text" data-search-suggest-empty-text></p>
+  </div>
+  <a class="link search-suggest__more" href="#" data-search-suggest-more="" hidden=""></a>
+  <template data-search-suggest-row>
+    <li class="search-suggest__card" data-product-card data-code="">
+      <a class="search-suggest__photo" href="" tabindex="-1" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-image"/></svg></a>
+      <div class="search-suggest__body">
+        <a class="search-suggest__name" href="" data-search-suggest-name></a>
+        <p class="search-suggest__code code-1c" data-search-suggest-code></p>
+        <div class="search-suggest__tags" data-search-suggest-tags></div>
+        <div class="search-suggest__row">
+          <span class="search-suggest__stock" data-search-suggest-stock><span class="search-suggest__dot" aria-hidden="true"></span><span data-search-suggest-stock-text></span></span>
+          <span class="search-suggest__price"><span class="search-suggest__sum" data-search-suggest-price></span> <span class="search-suggest__min" data-search-suggest-min></span></span>
+        </div>
+        <p class="search-suggest__qty-label" id="search-suggest-qty-label-tpl">Кол-во упаковок</p>
+        <div class="search-suggest__actions">
+          <div class="stepper-wrap" data-stepper data-min="1" data-step="1" data-unit="">
+  <div class="stepper">
+    <button class="stepper__btn" type="button" data-step-down aria-label="Уменьшить на 1 "><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-minus"/></svg></button>
+    <input class="stepper__value" id="search-suggest-qty-tpl" name="search-suggest-qty-tpl" type="text" inputmode="numeric" value="1" aria-label="Количество, " aria-describedby="search-suggest-qty-tpl-note">
+    <button class="stepper__btn stepper__btn--plus" type="button" data-step-up aria-label="Увеличить на 1 "><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-plus"/></svg></button>
+  </div>
+  <p class="stepper__note" id="search-suggest-qty-tpl-note" data-step-note aria-live="polite" hidden></p>
+</div>
+
+          <button class="btn btn--primary btn--sm" type="button" data-cart-add=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-shopping-cart"/></svg>В корзину</button>
+
+          <button class="btn-icon btn-icon--ghost btn-icon--sm" type="button" aria-label="В избранное" data-fav="" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-heart"/></svg></button>
+
+        </div>
+      </div>
+    </li>
+  </template>
+</div>
+
+      </div>
+      <button class="btn-icon btn-icon--primary header__search-submit" type="button" aria-label="Найти" type="submit"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-search"/></svg></button>
+
+    </form>
+    <div class="header__actions">
+      <a class="btn-icon header__icon" href="../../favorites/" aria-label="Избранное"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-heart"/></svg><span class="counter header__counter" data-counter="favorites" hidden></span></a>
+      <a class="btn-icon header__icon" href="../../cart/" aria-label="Корзина"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-shopping-cart"/></svg><span class="counter header__counter" data-counter="cart" hidden></span></a>
+    </div>
+    <a class="account" href="../../login/" data-account="guest">
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-user"/></svg>
+      <span class="account__name">Личный кабинет</span>
+      <svg class="i account__chevron" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-down"/></svg>
+    </a>
+    <div class="dropdown dropdown--end account-menu" data-account="client" data-dropdown="menu">
+      <button class="account" type="button" id="account-menu" data-dropdown-trigger aria-haspopup="menu" aria-expanded="false" aria-controls="account-menu-list">
+        <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-building-2"/></svg>
+        <span class="account__name">ООО Ромашка</span>
+        <svg class="i account__chevron" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-down"/></svg>
+      </button>
+      <div class="menu account-menu__panel" id="account-menu-list" role="menu" aria-label="Меню кабинета: ООО Ромашка" hidden>
+        <a class="menu__item account-menu__item" href="../../account/" role="menuitem" tabindex="-1"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-user"/></svg><span>Личный кабинет</span></a>
+        <a class="menu__item account-menu__item" href="../../account/orders/" role="menuitem" tabindex="-1"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-package"/></svg><span>Мои заказы</span></a>
+        <a class="menu__item account-menu__item" href="../../quick-order/" role="menuitem" tabindex="-1"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-zap"/></svg><span>Быстрый заказ</span></a>
+        <a class="menu__item account-menu__item" href="../../favorites/" role="menuitem" tabindex="-1"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-heart"/></svg><span>Избранное</span></a>
+        <div class="account-menu__sep" role="separator"></div>
+        <button class="menu__item account-menu__item" type="button" role="menuitem" tabindex="-1" data-logout><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-log-out"/></svg><span>Выйти</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="catalog-menu" id="catalog-menu" role="dialog" aria-label="Меню каталога" data-catalog-menu hidden>
+  <ul class="catalog-menu__cats">
+    <li>
+      <button class="catalog-menu__cat" type="button" aria-expanded="true" aria-controls="catalog-menu-udobreniya" data-menu-cat><span>Удобрения</span><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-right"/></svg></button>
+    </li>
+    <li>
+      <a class="catalog-menu__cat" href="../../catalog/zashchita-rasteniy/" data-menu-cat>Средства защиты растений</a>
+    </li>
+    <li>
+      <button class="catalog-menu__cat" type="button" aria-expanded="false" aria-controls="catalog-menu-grunty-i-substraty" data-menu-cat><span>Грунты и субстраты</span><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-right"/></svg></button>
+    </li>
+    <li>
+      <a class="catalog-menu__cat" href="../../catalog/sredstva-dlya-pochvy/" data-menu-cat>Средства для почвы и органики</a>
+    </li>
+    <li>
+      <a class="catalog-menu__cat" href="../../catalog/sredstva-dlya-septikov/" data-menu-cat>Средства для септиков и выгребных ям</a>
+    </li>
+    <li>
+      <a class="catalog-menu__cat" href="../../catalog/korma/" data-menu-cat>Корма, кормовые добавки и товары для животных</a>
+    </li>
+    <li>
+      <a class="catalog-menu__cat" href="../../catalog/zashchita-ot-vrediteley/" data-menu-cat>Защита от вредителей</a>
+    </li>
+    <li>
+      <a class="catalog-menu__cat" href="../../catalog/kosmetika/" data-menu-cat>Косметика</a>
+    </li>
+  </ul>
+  <div class="catalog-menu__subs">
+    <section class="catalog-menu__section" id="catalog-menu-udobreniya" aria-labelledby="catalog-menu-udobreniya-title">
+      <div class="catalog-menu__head">
+        <p class="catalog-menu__title" id="catalog-menu-udobreniya-title">Удобрения</p>
+        <a class="link" href="../../catalog/udobreniya/">Все товары раздела</a>
+      </div>
+      <ul class="catalog-menu__grid" style="--rows-3: 4; --rows-2: 6; --rows-1: 12">
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/mineralnye/">Минеральные</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/organicheskie/">Органические</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/organomineralnye/">Органоминеральные</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/biologicheskie/">Биологические</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/stimulyatory-i-regulyatory-rosta/">Стимуляторы и регуляторы роста</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/raskisliteli-i-izvestkovye-materialy/">Раскислители и известковые материалы</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/mikroudobreniya/">Микроудобрения</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/guminovye/">Гуминовые</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/kompleksnye/">Комплексные</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/uluchshiteli-pochvy-razryhliteli/">Улучшители почвы / разрыхлители</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/drenazh/">Дренаж</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/udobreniya/vspomogatelnye-materialy/">Вспомогательные материалы</a></li>
+      </ul>
+    </section>
+    <section class="catalog-menu__section" id="catalog-menu-grunty-i-substraty" aria-labelledby="catalog-menu-grunty-i-substraty-title" hidden>
+      <div class="catalog-menu__head">
+        <p class="catalog-menu__title" id="catalog-menu-grunty-i-substraty-title">Грунты и субстраты</p>
+        <a class="link" href="../../catalog/grunty-i-substraty/">Все товары раздела</a>
+      </div>
+      <ul class="catalog-menu__grid" style="--rows-3: 2; --rows-2: 2; --rows-1: 4">
+        <li><a class="catalog-menu__sub" href="../../catalog/grunty-i-substraty/pitatelnye-grunty/">Питательные грунты</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/grunty-i-substraty/torf/">Торф</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/grunty-i-substraty/substraty/">Субстраты</a></li>
+        <li><a class="catalog-menu__sub" href="../../catalog/grunty-i-substraty/pochvouluchshiteli/">Почвоулучшители</a></li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+</header>
+
+<main class="page" id="main" tabindex="-1">
+<div class="product" data-product>
+  <div class="container-page product__layout">
+    <div class="product__gallery"><div class="pgallery" data-gallery>
+  <div class="pgallery__main">
+    <button class="btn-icon pgallery__arrow pgallery__arrow--prev" type="button" aria-label="Предыдущее фото" data-gallery-prev=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-left"/></svg></button>
+
+    <div class="pgallery__photo" aria-hidden="true"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-image"/></svg></div>
+    <button class="btn-icon pgallery__arrow pgallery__arrow--next" type="button" aria-label="Следующее фото" data-gallery-next=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-right"/></svg></button>
+
+    <span class="visually-hidden" aria-live="polite" data-gallery-status></span>
+  </div>
+  <div class="pgallery__strip">
+    <button class="pgallery__thumb" type="button" data-thumb="1" aria-current="true" aria-label="Показать фото 1 из 5">
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-image"/></svg>
+    </button>
+    <button class="pgallery__thumb" type="button" data-thumb="2" aria-label="Показать фото 2 из 5">
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-image"/></svg>
+    </button>
+    <button class="pgallery__thumb" type="button" data-thumb="3" aria-label="Показать фото 3 из 5">
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-image"/></svg>
+    </button>
+    <button class="pgallery__thumb" type="button" data-thumb="4" aria-label="Показать фото 4 из 5">
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-image"/></svg>
+    </button>
+    <button class="pgallery__thumb" type="button" data-thumb="5" aria-label="Ещё фото товара">
+      <span class="pgallery__more"><strong>+3</strong><small>фото</small></span>
+    </button>
+  </div>
+  <p class="pgallery__delivery"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-truck"/></svg>Быстрая доставка по РФ — отгрузим ваш заказ в кратчайшие сроки</p>
+</div>
+</div>
+    <div class="product__info">
+      <h1 class="product__title">Известняковая крупка</h1>
+      <div class="tag-crumbs">
+  <a class="tag-crumb" href="../../catalog/korma/">#Корма, кормовые добавки и товары для животных</a>
+</div>
+
+      <div class="product__ids">
+        <p class="product__id-row"><span class="product__id-label">Код</span><span class="code-1c">00-00012304</span><button class="btn-icon btn-icon--ghost btn-icon--sm" type="button" aria-label="Скопировать код" data-copy="00-00012304"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-copy"/></svg></button>
+</p>
+        <p class="product__id-row"><span class="product__id-label">Штрихкод</span><span class="code-1c">4601234123044</span><button class="btn-icon btn-icon--ghost btn-icon--sm" type="button" aria-label="Скопировать штрихкод" data-copy="4601234123044"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-copy"/></svg></button>
+</p>
+      </div>
+      <div class="product__meta">
+        <p class="product__meta-row"><span class="product__meta-label">Производитель</span> Кормовит</p>
+      </div>
+      <div class="product__facts">
+        <p class="product__fact"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-package"/></svg><span class="product__fact-label">Форма</span><strong>Гранулы</strong></p>
+      </div>
+    </div>
+    <div class="product__purchase"><div class="purchase" data-purchase data-code="00-00012304">
+
+  <p class="purchase__level" data-account="guest">Цена для вас <strong>Базовый опт</strong> — <a class="link" href="../../login/">войдите</a>, чтобы увидеть цену вашего уровня</p>
+  <div class="purchase__level" data-account="client">
+    <span data-level-normal>Цена для вас <strong>Средний опт</strong></span>
+    <span data-level-personal hidden>Цена по вашему соглашению</span>
+<div class="pop-anchor" data-popover>
+  <button class="btn-icon btn-icon--ghost btn-icon--sm" type="button" aria-label="Что означает уровень цены" aria-expanded="false" aria-controls="price-level-00-00012304" aria-haspopup="dialog" data-popover-trigger=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-circle-help"/></svg></button>
+
+  <div class="popover popover--wide" id="price-level-00-00012304" role="dialog" aria-labelledby="price-level-00-00012304-title" hidden>
+    <div class="popover__head">
+      <span class="popover__title" id="price-level-00-00012304-title">Ваш уровень цены</span>
+      <button class="btn-icon btn-icon--ghost btn-icon--sm" type="button" aria-label="Закрыть" data-popover-close=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-x"/></svg></button>
+
+    </div>
+        <p>Вы покупаете по ценам Средний опт. Следующий уровень — Крупный опт (цена на этот товар станет 19 ₽/кг).</p>
+    <a class="link" href="../../account/">Условия перехода на новый уровень — в Личном кабинете</a>
+
+  </div>
+</div>
+  </div>
+
+  <p class="purchase__sum"><span class="purchase__price" data-price>22 ₽</span> / кг</p>
+  <p class="purchase__vat">В т.ч. НДС 20%</p>
+
+  <div class="purchase__badges">
+    <span class="badge badge--in"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg>В наличии</span>
+
+    <span class="badge badge--limit">Минимальный заказ: 25 кг</span>
+
+    <span class="badge badge--limit">Кратность: 25 кг</span>
+
+  </div>
+
+  <div class="purchase__qty">
+    <p class="purchase__qty-label">Количество</p>
+    <div class="stepper-wrap" data-stepper data-min="25" data-step="25" data-unit="кг">
+  <div class="stepper">
+    <button class="stepper__btn" type="button" data-step-down aria-label="Уменьшить на 25 кг"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-minus"/></svg></button>
+    <input class="stepper__value" id="qty-00-00012304" name="qty-00-00012304" type="text" inputmode="numeric" value="25" aria-label="Количество, кг" aria-describedby="qty-00-00012304-note">
+    <button class="stepper__btn stepper__btn--plus" type="button" data-step-up aria-label="Увеличить на 25 кг"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-plus"/></svg></button>
+  </div>
+  <p class="stepper__note" id="qty-00-00012304-note" data-step-note aria-live="polite" hidden></p>
+</div>
+
+  </div>
+
+  <button class="btn btn--primary btn--lg btn--block" type="button" data-cart-add=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-shopping-cart"/></svg>В корзину</button>
+
+  <div class="purchase__secondary">
+    <a class="btn btn--secondary" href="../../quick-order/"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-zap"/></svg>Быстрый заказ</a>
+
+    <button class="btn btn--secondary" type="button" data-fav-btn="" aria-pressed="false"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-heart"/></svg>В избранное</button>
+
+  </div>
+</div>
+</div>
+  </div>
+  <div class="container-page ptabs-wrap"><div class="ptabs">
+  <div class="tabs" role="tablist" aria-label="Вкладки карточки товара" data-tabs>
+  <button class="tab" type="button" role="tab" id="ptabs-00-00012304-tab-0" aria-controls="ptabs-00-00012304-panel-0" aria-selected="true" tabindex="0">
+Характеристики  </button>
+  <button class="tab" type="button" role="tab" id="ptabs-00-00012304-tab-1" aria-controls="ptabs-00-00012304-panel-1" aria-selected="false" tabindex="-1">
+Описание  </button>
+  <button class="tab" type="button" role="tab" id="ptabs-00-00012304-tab-2" aria-controls="ptabs-00-00012304-panel-2" aria-selected="false" tabindex="-1">
+Состав  </button>
+  <button class="tab" type="button" role="tab" id="ptabs-00-00012304-tab-3" aria-controls="ptabs-00-00012304-panel-3" aria-selected="false" tabindex="-1">
+Применение  </button>
+  <button class="tab" type="button" role="tab" id="ptabs-00-00012304-tab-4" aria-controls="ptabs-00-00012304-panel-4" aria-selected="false" tabindex="-1">
+<svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-paperclip"/></svg>Документы  </button>
+</div>
+
+<div class="tab-panel" role="tabpanel" id="ptabs-00-00012304-panel-0" aria-labelledby="ptabs-00-00012304-tab-0" tabindex="0"><div class="ptab-chars ptab-chars--single">
+  <div class="ptab-panel">
+    <h2 class="ptab-panel__title">Характеристики</h2>
+    <dl class="ptab-table">
+      <div class="ptab-row"><dt>Тип товара</dt><dd>Минеральные добавки</dd></div>
+      <div class="ptab-row"><dt>Вид животного</dt><dd>Птица</dd></div>
+      <div class="ptab-row"><dt>Форма выпуска</dt><dd>Гранулы</dd></div>
+      <div class="ptab-row"><dt>Производитель</dt><dd>Кормовит</dd></div>
+    </dl>
+    <div class="acc" data-accordion>
+<div class="acc__item">
+  <h3><button class="acc__head" type="button" id="ptab-all-00-00012304-head" aria-expanded="false" aria-controls="ptab-all-00-00012304-body" data-acc-id="ptab-all-00-00012304">Все характеристики<svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-down"/></svg></button></h3>
+  <div class="acc__body" id="ptab-all-00-00012304-body" role="region" aria-labelledby="ptab-all-00-00012304-head" hidden>      <dl class="ptab-table">
+        <div class="ptab-row"><dt>Единица хранения</dt><dd>кг</dd></div>
+        <div class="ptab-row"><dt>Кратность</dt><dd>25 кг</dd></div>
+        <div class="ptab-row"><dt>Минимальный заказ</dt><dd>25 кг</dd></div>
+      </dl>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="tab-panel" role="tabpanel" id="ptabs-00-00012304-panel-1" aria-labelledby="ptabs-00-00012304-tab-1" tabindex="0" hidden><div class="empty">
+  <span class="empty__icon" aria-hidden="true"><svg><use href="../../assets/icons.svg#i-info"/></svg></span>
+  <h3 class="empty__title">Описание уточняется</h3>
+  <p class="empty__text">Подробное описание товара появится позже.</p>
+</div>
+
+</div>
+<div class="tab-panel" role="tabpanel" id="ptabs-00-00012304-panel-2" aria-labelledby="ptabs-00-00012304-tab-2" tabindex="0" hidden><div class="empty">
+  <span class="empty__icon" aria-hidden="true"><svg><use href="../../assets/icons.svg#i-info"/></svg></span>
+  <h3 class="empty__title">Состав уточняется</h3>
+  <p class="empty__text">Информация о составе появится позже.</p>
+</div>
+
+</div>
+<div class="tab-panel" role="tabpanel" id="ptabs-00-00012304-panel-3" aria-labelledby="ptabs-00-00012304-tab-3" tabindex="0" hidden><div class="empty">
+  <span class="empty__icon" aria-hidden="true"><svg><use href="../../assets/icons.svg#i-info"/></svg></span>
+  <h3 class="empty__title">Инструкция по применению уточняется</h3>
+  <p class="empty__text">Рекомендации по применению появятся позже.</p>
+</div>
+
+</div>
+<div class="tab-panel" role="tabpanel" id="ptabs-00-00012304-panel-4" aria-labelledby="ptabs-00-00012304-tab-4" tabindex="0" hidden><div class="empty">
+  <span class="empty__icon" aria-hidden="true"><svg><use href="../../assets/icons.svg#i-file-text"/></svg></span>
+  <h3 class="empty__title">Документов пока нет</h3>
+  <p class="empty__text">Файлы по этому товару появятся позже.</p>
+</div>
+
+</div>
+</div>
+</div>
+  <div class="pbuy-bar" data-buybar data-code="00-00012304">
+  <div class="pbuy-bar__row">
+    <p class="pbuy-bar__price"><span class="pbuy-bar__sum" data-price>22 ₽</span><span class="pbuy-bar__vat"> / кг, в т.ч. НДС 20%</span></p>
+    <div class="stepper-wrap" data-stepper data-min="25" data-step="25" data-unit="кг">
+  <div class="stepper">
+    <button class="stepper__btn" type="button" data-step-down aria-label="Уменьшить на 25 кг"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-minus"/></svg></button>
+    <input class="stepper__value" id="qty-bar-00-00012304" name="qty-bar-00-00012304" type="text" inputmode="numeric" value="25" aria-label="Количество, кг" aria-describedby="qty-bar-00-00012304-note">
+    <button class="stepper__btn stepper__btn--plus" type="button" data-step-up aria-label="Увеличить на 25 кг"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-plus"/></svg></button>
+  </div>
+  <p class="stepper__note" id="qty-bar-00-00012304-note" data-step-note aria-live="polite" hidden></p>
+</div>
+
+  </div>
+  <button class="btn btn--primary btn--lg btn--block" type="button" data-cart-add=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-shopping-cart"/></svg>В корзину</button>
+
+</div>
+
+</div>
+</main>
+<section class="perks" aria-label="Преимущества">
+  <ul class="container-page perks__list">
+    <li class="perks__cell">
+      <svg class="i perks__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-factory"/></svg>
+      <div>
+        <p class="perks__title">Прямые поставки</p>
+<p class="perks__text">от производителей</p>      </div>
+    </li>
+    <li class="perks__cell">
+      <svg class="i perks__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-layers"/></svg>
+      <div>
+        <p class="perks__title">Профессиональный ассортимент</p>
+<p class="perks__text">товары для растений и животных</p>      </div>
+    </li>
+    <li class="perks__cell">
+      <svg class="i perks__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-briefcase"/></svg>
+      <div>
+        <p class="perks__title">Работаем с B2B</p>
+<p class="perks__text">от малого опта до сетевых клиентов</p>      </div>
+    </li>
+    <li class="perks__cell">
+      <svg class="i perks__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-package-check"/></svg>
+      <div>
+        <p class="perks__title">Единый поставщик</p>
+<p class="perks__text">заказ товаров из разных категорий</p>      </div>
+    </li>
+  </ul>
+</section>
+<footer class="footer">
+  <div class="container-page">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="../../" aria-label="B2B портал агробизнеса — на главную">
+  <svg class="logo__mark" aria-hidden="true"><use href="../../assets/icons.svg#i-leaf"/></svg>
+  <span class="logo__text" aria-hidden="true">B2B ПОРТАЛ АГРОБИЗНЕСА</span>
+</a>
+
+        <p class="footer__about">Профессиональный портал для оптовых покупателей сельхозтоваров, удобрений и средств защиты растений</p>
+        <ul class="footer__social" aria-label="Мы в соцсетях">
+          <li><span class="btn-icon btn-icon--sm footer__social-link" role="img" aria-label="Telegram"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-send"/></svg></span></li>
+          <li><span class="btn-icon btn-icon--sm footer__social-link" role="img" aria-label="WhatsApp"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-message-circle"/></svg></span></li>
+          <li><span class="btn-icon btn-icon--sm footer__social-link" role="img" aria-label="ВКонтакте"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-users"/></svg></span></li>
+          <li><span class="btn-icon btn-icon--sm footer__social-link" role="img" aria-label="YouTube"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-play"/></svg></span></li>
+        </ul>
+      </div>
+      <nav class="footer__nav" aria-label="Разделы портала">
+        <a class="footer__link" href="../../catalog/">Каталог</a>
+        <a class="footer__link" href="../../delivery/">Доставка и оплата</a>
+        <a class="footer__link" href="../../documents/">Документы</a>
+        <a class="footer__link" href="../../cooperation/">Сотрудничество</a>
+        <a class="footer__link" href="../../contacts/">Контакты</a>
+      </nav>
+      <div class="footer__contacts">
+        <a class="footer__phone" href="tel:88005554545"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-phone"/></svg>8 (800) 555-45-45</a>
+        <a class="footer__mail" href="mailto:sale@b2bzakup.ru"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-mail"/></svg>sale@b2bzakup.ru</a>
+        <button class="link" type="button" data-call-open="">Заказать звонок</button>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© B2B Портал Агробизнеса. Все права защищены</p>
+      <div class="footer__docs">
+        <a class="footer__doc" href="../../privacy/">Политика в отношении обработки персональных данных</a>
+        <a class="footer__doc" href="../../terms/">Пользовательское соглашение</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="call" data-dialog hidden>
+  <div class="modal modal--wide" role="dialog" aria-modal="true" aria-labelledby="call-title">
+    <div class="modal__split">
+      <div class="modal__main">
+        <div class="modal__head"><h2 class="modal__title" id="call-title">Заказать звонок</h2><button class="btn-icon btn-icon--ghost" type="button" aria-label="Закрыть" data-dialog-close=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-x"/></svg></button>
+</div>
+        <div class="modal__body"><form class="call" data-call-form novalidate>
+  <p class="call__lead">Оставьте свои контакты, и наш менеджер свяжется с вами в ближайшее время</p>
+  <div class="field">
+  <label class="field__label" for="call-name">Ваше имя<span class="field__req" aria-hidden="true">*</span></label>
+
+  <div class="field__box">
+    <input class="field__input" id="call-name" name="call-name" type="text" value="" required aria-required="true" autocomplete="name">
+  </div>
+</div>
+
+  <div class="field">
+  <label class="field__label" for="call-phone">Телефон<span class="field__req" aria-hidden="true">*</span></label>
+
+  <div class="field__box">
+    <input class="field__input" id="call-phone" name="call-phone" type="tel" value="" placeholder="+7 (___) ___-__-__" aria-describedby="call-phone-hint" required aria-required="true" autocomplete="tel" inputmode="tel" data-phone="">
+  </div>
+<p class="field__hint" id="call-phone-hint">Укажите номер телефона для связи</p></div>
+
+  <div>
+    <div class="dropdown dropdown--block" data-dropdown="select">
+  <span class="field__label" id="call-time-label">Удобное время для звонка</span>
+  <div class="field">
+    <button class="field__box dropdown__trigger" type="button" id="call-time" data-dropdown-trigger aria-haspopup="listbox" aria-expanded="false" aria-controls="call-time-list" aria-labelledby="call-time-label call-time">
+      <span class="dropdown__value" data-dropdown-value>10:00–11:00</span>
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-down"/></svg>
+    </button>
+  </div>
+  <div class="menu" id="call-time-list" hidden>
+    <ul class="menu__list" role="listbox" aria-labelledby="call-time-label">
+      <li class="menu__item" role="option" tabindex="-1" data-value="09:00–10:00" aria-selected="false"><span>09:00–10:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="10:00–11:00" aria-selected="true"><span>10:00–11:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="11:00–12:00" aria-selected="false"><span>11:00–12:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="12:00–13:00" aria-selected="false"><span>12:00–13:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="13:00–14:00" aria-selected="false"><span>13:00–14:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="14:00–15:00" aria-selected="false"><span>14:00–15:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="15:00–16:00" aria-selected="false"><span>15:00–16:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="16:00–17:00" aria-selected="false"><span>16:00–17:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+      <li class="menu__item" role="option" tabindex="-1" data-value="17:00–18:00" aria-selected="false"><span>17:00–18:00</span><svg class="i i--check" aria-hidden="true"><use href="../../assets/icons.svg#i-check"/></svg></li>
+    </ul>
+  </div>
+</div>
+
+    <p class="field__hint">Мы позвоним вам в выбранное время в рабочие часы</p>
+  </div>
+  <div class="field field--area">
+  <div class="field__top"><label class="field__label" for="call-comment">Комментарий</label>
+<span class="field__aside">Необязательно</span></div>
+  <div class="field__box">
+    <textarea class="field__input" id="call-comment" name="call-comment" maxlength="300" aria-describedby="call-comment-count" data-count></textarea>
+  </div>
+<p class="field__count" id="call-comment-count" data-count-out>0 / 300</p></div>
+
+  <div class="call__consent">
+    <label class="check">
+  <input class="check__input" type="checkbox" name="consent" id="call-consent" required="" aria-required="true" aria-describedby="call-consent-hint">
+  <span class="check__box" aria-hidden="true"><svg class="i"><use href="../../assets/icons.svg#i-check"/></svg></span>
+  <span class="check__text">Я согласен на обработку персональных данных</span>
+</label>
+
+    <p class="call__docs"><a class="link" href="../../consent/">Согласие на обработку персональных данных</a><span aria-hidden="true">·</span><a class="link" href="../../privacy/">Политика конфиденциальности</a></p>
+    <p class="field__hint field__hint--error" id="call-consent-hint" role="alert" hidden></p>
+  </div>
+  <div class="call__submit">
+    <button class="btn btn--primary btn--lg btn--block" type="submit"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-phone"/></svg>Заказать звонок</button>
+
+    <p class="call__safe"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-shield-check"/></svg>Ваши данные в безопасности</p>
+  </div>
+</form>
+<div class="call__done" data-call-success hidden>
+  <div class="alert alert--success" role="status">
+  <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-circle-check"/></svg>
+  <div class="alert__body">
+<p class="alert__title">Заявка принята</p><p class="alert__text">Менеджер перезвонит вам в выбранное время в рабочие часы</p>  </div>
+</div>
+
+  <div class="call__done-foot"><button class="btn btn--neutral" type="button" data-dialog-close="">Закрыть</button>
+</div>
+</div>
+</div>
+      </div>
+      <div class="modal__promo"><div class="call-promo">
+  <div class="call-promo__art">Иллюстрация</div>
+  <p class="call-promo__title">Мы на связи!</p>
+  <ul class="call-promo__list">
+    <li class="call-promo__item">
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-zap"/></svg>
+      <div><p class="call-promo__name">Быстро</p><p class="call-promo__text">перезвоним в течение 15 минут</p></div>
+    </li>
+    <li class="call-promo__item">
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-award"/></svg>
+      <div><p class="call-promo__name">Профессионально</p><p class="call-promo__text">опытные менеджеры в сфере агробизнеса</p></div>
+    </li>
+    <li class="call-promo__item">
+      <svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-lock"/></svg>
+      <div><p class="call-promo__name">Надёжно</p><p class="call-promo__text">данные не передаются третьим лицам</p></div>
+    </li>
+  </ul>
+  <p class="call-promo__text">Звонки принимаем Пн–Пт: 09:00–18:00, Сб–Вс: выходной</p>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+<section class="cookie" data-cookie aria-label="Уведомление о cookie" hidden>
+  <div class="container-page cookie__inner">
+    <svg class="i cookie__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-cookie"/></svg>
+    <p class="cookie__text">Мы используем cookie, чтобы сайт работал и чтобы понимать, как им пользуются <a class="link" href="../../privacy/">Политика конфиденциальности</a></p>
+    <button class="btn btn--primary cookie__accept" type="button" data-cookie-accept="">Принять</button>
+
+  </div>
+</section>
+
+<nav class="tabbar" aria-label="Основные разделы">
+  <a class="tabbar__item" href="../../">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-house"/></svg></span>
+  <span class="tabbar__label">Главная</span>
+</a>
+  <button class="tabbar__item" type="button" aria-current="page" data-dialog-open="catalog-sheet" aria-haspopup="dialog">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-layout-grid"/></svg></span>
+  <span class="tabbar__label">Каталог</span>
+</button>
+  <button class="tabbar__item" type="button" data-tab-search="" data-href="../../search/">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-search"/></svg></span>
+  <span class="tabbar__label">Поиск</span>
+</button>
+<a class="tabbar__item" href="../../cart/" data-counted="Корзина">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-shopping-cart"/></svg><span class="counter tabbar__counter" data-counter="cart" hidden></span></span>
+  <span class="tabbar__label">Корзина</span>
+</a>  <a class="tabbar__item" href="../../login/" data-account="guest">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-user"/></svg></span>
+  <span class="tabbar__label">Профиль</span>
+</a>
+  <a class="tabbar__item" href="../../account/" data-account="client">
+  <span class="tabbar__icon"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-user"/></svg></span>
+  <span class="tabbar__label">Профиль</span>
+</a>
+</nav>
+
+<div class="overlay overlay--sheet" id="catalog-sheet" data-dialog data-catalog-sheet hidden>
+  <div class="sheet catalog-sheet" role="dialog" aria-modal="true" aria-labelledby="catalog-sheet-title">
+    <div class="catalog-sheet__screen" data-sheet-screen="root">
+      <div class="sheet__head">
+        <h2 class="sheet__title" id="catalog-sheet-title">Каталог</h2>
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Закрыть" data-dialog-close=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-x"/></svg></button>
+
+      </div>
+      <div class="sheet__body catalog-sheet__body">
+        <ul class="catalog-sheet__list">
+          <li>
+            <button class="catalog-sheet__row" type="button" aria-controls="catalog-sheet-udobreniya" data-sheet-open><span>Удобрения</span><svg class="i catalog-sheet__chevron" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-right"/></svg></button>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../../catalog/zashchita-rasteniy/">Средства защиты растений</a>
+          </li>
+          <li>
+            <button class="catalog-sheet__row" type="button" aria-controls="catalog-sheet-grunty-i-substraty" data-sheet-open><span>Грунты и субстраты</span><svg class="i catalog-sheet__chevron" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-right"/></svg></button>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../../catalog/sredstva-dlya-pochvy/">Средства для почвы и органики</a>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../../catalog/sredstva-dlya-septikov/">Средства для септиков и выгребных ям</a>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../../catalog/korma/">Корма, кормовые добавки и товары для животных</a>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../../catalog/zashchita-ot-vrediteley/">Защита от вредителей</a>
+          </li>
+          <li>
+            <a class="catalog-sheet__row" href="../../catalog/kosmetika/">Косметика</a>
+          </li>
+        </ul>
+        <ul class="catalog-sheet__list catalog-sheet__links" aria-label="Информация для покупателей">
+          <li><a class="catalog-sheet__row" href="../../delivery/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-truck"/></svg><span>Доставка и оплата</span></a></li>
+          <li><a class="catalog-sheet__row" href="../../documents/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-file-text"/></svg><span>Документы</span></a></li>
+          <li><a class="catalog-sheet__row" href="../../articles/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-newspaper"/></svg><span>Статьи</span></a></li>
+          <li><a class="catalog-sheet__row" href="../../cooperation/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-handshake"/></svg><span>Сотрудничество</span></a></li>
+          <li><a class="catalog-sheet__row" href="../../contacts/"><svg class="i catalog-sheet__icon" aria-hidden="true"><use href="../../assets/icons.svg#i-map"/></svg><span>Контакты</span></a></li>
+        </ul>
+        <div class="catalog-sheet__contacts">
+          <a class="phone catalog-sheet__phone" href="tel:88005554545"><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-phone"/></svg>8 (800) 555-45-45</a>
+          <button class="link" type="button" data-call-open="">Заказать звонок</button>
+        </div>
+      </div>
+    </div>
+    <section class="catalog-sheet__screen" id="catalog-sheet-udobreniya" aria-labelledby="catalog-sheet-udobreniya-title" data-sheet-screen hidden>
+      <div class="sheet__head catalog-sheet__head">
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Назад" data-sheet-back=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-left"/></svg></button>
+
+        <h2 class="sheet__title" id="catalog-sheet-udobreniya-title">Удобрения</h2>
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Закрыть" data-dialog-close=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-x"/></svg></button>
+
+      </div>
+      <div class="sheet__body catalog-sheet__body">
+        <div class="catalog-sheet__all"><a class="link" href="../../catalog/udobreniya/">Все товары раздела</a></div>
+        <ul class="catalog-sheet__list">
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/mineralnye/">Минеральные</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/organicheskie/">Органические</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/organomineralnye/">Органоминеральные</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/biologicheskie/">Биологические</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/stimulyatory-i-regulyatory-rosta/">Стимуляторы и регуляторы роста</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/raskisliteli-i-izvestkovye-materialy/">Раскислители и известковые материалы</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/mikroudobreniya/">Микроудобрения</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/guminovye/">Гуминовые</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/kompleksnye/">Комплексные</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/uluchshiteli-pochvy-razryhliteli/">Улучшители почвы / разрыхлители</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/drenazh/">Дренаж</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/udobreniya/vspomogatelnye-materialy/">Вспомогательные материалы</a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="catalog-sheet__screen" id="catalog-sheet-grunty-i-substraty" aria-labelledby="catalog-sheet-grunty-i-substraty-title" data-sheet-screen hidden>
+      <div class="sheet__head catalog-sheet__head">
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Назад" data-sheet-back=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-chevron-left"/></svg></button>
+
+        <h2 class="sheet__title" id="catalog-sheet-grunty-i-substraty-title">Грунты и субстраты</h2>
+        <button class="btn-icon btn-icon--ghost" type="button" aria-label="Закрыть" data-dialog-close=""><svg class="i" aria-hidden="true"><use href="../../assets/icons.svg#i-x"/></svg></button>
+
+      </div>
+      <div class="sheet__body catalog-sheet__body">
+        <div class="catalog-sheet__all"><a class="link" href="../../catalog/grunty-i-substraty/">Все товары раздела</a></div>
+        <ul class="catalog-sheet__list">
+          <li><a class="catalog-sheet__row" href="../../catalog/grunty-i-substraty/pitatelnye-grunty/">Питательные грунты</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/grunty-i-substraty/torf/">Торф</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/grunty-i-substraty/substraty/">Субстраты</a></li>
+          <li><a class="catalog-sheet__row" href="../../catalog/grunty-i-substraty/pochvouluchshiteli/">Почвоулучшители</a></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>
