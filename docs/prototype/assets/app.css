@@ -3,19 +3,19 @@
 /* ---- css/00-tokens.css ---- */
 /* Сгенерировано tools/build-prototype.py из design/tokens.css. Руками не править. */
 :root {
-  --color-primary: #1f6f4a;
+  --color-primary: #007a24;
   --color-text: #1c1c1c;
   --color-text-muted: #8a94a6;
-  --color-bg: #f7f9fc;
+  --color-bg: #f6f8f6;
   --color-surface: #ffffff;
   --color-border: #e5e7eb;
   --color-warning: #ffb020;
   --color-danger: #e5484d;
   --color-info: #2a80d9;
-  --color-primary-hover: #19593c;
-  --color-primary-active: #12452e;
-  --color-primary-soft: #e9f3ee;
-  --color-primary-pressed: #d7e9e0;
+  --color-primary-hover: #00691f;
+  --color-primary-active: #00561a;
+  --color-primary-soft: #ecf5ec;
+  --color-primary-pressed: #dceedf;
   --color-warning-soft: #fff7e8;
   --color-danger-soft: #fdeced;
   --color-danger-pressed: #f8d5d6;
@@ -24,13 +24,16 @@
   --color-info-pressed: #d6e6fa;
   --color-neutral: #f1f3f7;
   --color-neutral-pressed: #d9dde4;
-  --color-panel: #edf1f6;
+  --color-primary-deep: #004f1e;
+  --color-leaf: #3daa4f;
+  --color-section-green: #f2f8f2;
+  --color-panel: #eef2ef;
   --color-overlay: #1c1c1c66;
   --color-warning-ink: #9a5b00;
   --color-danger-ink: #c13438;
   --color-info-ink: #1d63ac;
   --color-text-muted-ink: #5f6673;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
   --text-h1: 2rem;
   --text-h1--line-height: 1.2;
@@ -839,6 +842,7 @@ a.badge--tag:hover { color: var(--color-text); }
 .brand-hero__about { font-size: var(--text-body); color: var(--color-text-muted-ink); }
 
 .brand-chip-row { display: flex; align-items: center; gap: 16px; }
+.brand-chip-row .link { flex: none; white-space: nowrap; }
 
 .brand-card {
   display: flex;
@@ -1851,6 +1855,7 @@ a.badge--tag:hover { color: var(--color-text); }
   gap: 12px;
   height: var(--spacing-control-md);
 }
+.cat-filters__head .link { flex: none; white-space: nowrap; }
 .cat-filters__title,
 .mcart__title {
   font-size: var(--text-body);
@@ -2168,7 +2173,7 @@ a.badge--tag:hover { color: var(--color-text); }
 .step__text { font-size: var(--text-caption); color: var(--color-text-muted-ink); }
 
 /* ---------------------------------------------------------------- уровни сотрудничества */
-.levels-panel { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 24px; background: var(--color-primary-soft); border-radius: var(--radius-lg); text-align: center; }
+.levels-panel { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 24px; background: var(--color-section-green); border-radius: var(--radius-lg); text-align: center; }
 .levels-panel__subtitle { font-size: var(--text-body); color: var(--color-text-muted-ink); }
 .levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; width: 100%; list-style: none; padding: 0; text-align: left; }
 .level-card { display: flex; flex-direction: column; gap: 8px; padding: 20px; background: var(--color-surface); border-radius: var(--radius-md); }
@@ -2195,8 +2200,9 @@ a.badge--tag:hover { color: var(--color-text); }
 .contact-card__line { font-size: var(--text-caption); color: var(--color-text-muted-ink); }
 
 /* ---------------------------------------------------------------- CTA-полоса */
-.cta-strip { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px; background: var(--color-primary-soft); border-radius: var(--radius-lg); }
+.cta-strip { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px; background: var(--color-section-green); border-radius: var(--radius-lg); }
 .cta-strip__text { display: flex; flex-direction: column; gap: 4px; }
+.cta-strip > .btn { flex: none; }
 .cta-strip__title { font-size: var(--text-cta-title); font-weight: 600; }
 .cta-strip__lead { font-size: var(--text-body); color: var(--color-text-muted-ink); }
 .cta-strip--contacts { align-items: flex-start; }
@@ -2346,9 +2352,9 @@ html[data-locked] { overflow: hidden; }
 .modal__body { margin-top: 12px; color: var(--color-text-muted-ink); }
 .modal__foot { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 
-/* Окно 960: форма слева, промо-панель primary-soft справа, пропорция 7 · 5 */
+/* Окно 960: форма слева, промо-панель section-green справа, пропорция 7 · 5 */
 .modal__split { display: grid; grid-template-columns: 7fr 5fr; }
-.modal__promo { padding: 32px; background: var(--color-primary-soft); }
+.modal__promo { padding: 32px; background: var(--color-section-green); }
 .modal__main { padding: 24px; }
 
 /* Шторка справа: 360 на планшете и десктопе, на всю ширину до 767 */
@@ -2837,7 +2843,7 @@ html[data-locked] { overflow: hidden; }
   line-height: 1;
   white-space: nowrap;
 }
-.logo__mark { width: 24px; height: 24px; flex: none; color: var(--color-primary); }
+.logo__mark { width: 24px; height: 24px; flex: none; color: var(--color-leaf); }
 
 /* ---------------------------------------------------------------- служебная строка */
 .topbar {
@@ -2989,6 +2995,8 @@ html[data-locked] { overflow: hidden; }
 @media (width < 1320px) {
   .header-light__phone { display: none; }
   .header-light__cta { margin-left: auto; }
+  /* «Подключить компанию» не оставляет места ссылкам — они есть в подвале и на странице */
+  .header--cta-long .header-light__nav { display: none; }
 }
 
 /* ---------------------------------------------------------------- 768–1023 */
@@ -3000,8 +3008,6 @@ html[data-locked] { overflow: hidden; }
     overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
   }
   .header-light__nav { margin-left: 0; }
-  /* «Подключить компанию» не оставляет места ссылкам — они есть в подвале и на странице */
-  .header--cta-long .header-light__nav { display: none; }
 }
 
 /* ---------------------------------------------------------------- до 767 (ДС 9.11) */
@@ -3072,7 +3078,7 @@ html[data-locked] { overflow: hidden; }
 .home-panel { padding: 16px; border-radius: var(--radius-lg); }
 .home-panel--white { background: var(--color-surface); border: 1px solid var(--color-border); }
 .home-panel--panel { background: var(--color-panel); }
-.home-panel--soft { background: var(--color-primary-soft); }
+.home-panel--soft { background: var(--color-section-green); }
 
 /* ---------------------------------------------------------------- полоса пунктов */
 .points { --line: var(--color-surface); display: grid; grid-template-columns: repeat(var(--points), minmax(0, 1fr)); list-style: none; padding: 0; }
@@ -3194,7 +3200,7 @@ html[data-locked] { overflow: hidden; }
   flex-direction: column;
   gap: 12px;
   padding: 24px;
-  background: var(--color-primary-soft);
+  background: var(--color-section-green);
   border-radius: var(--radius-lg);
 }
 .sol-promo__title { font-size: var(--text-promo); line-height: var(--text-h1--line-height); }
@@ -3546,6 +3552,9 @@ html[data-locked] { overflow: hidden; }
 }
 
 @media (width < 1024px) {
+  /* Колонка контента кабинета 441: пагинация в столбик, как на телефоне */
+  .orders-pager { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+  .orders-pager .cat-pager__per { justify-self: center; }
   .order-row__bottom { flex-direction: column; align-items: stretch; }
   .order-row__actions > .btn { flex: 1; }
   .orders-toolbar { flex-direction: column; }
@@ -3773,9 +3782,12 @@ html[data-locked] { overflow: hidden; }
 /* Голубые пилюли-ссылки на разделы каталога — отдельный компонент, не «тег свойства» 7.3 (тот серый). */
 .tag-crumbs { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag-crumb {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   height: 28px;
+  line-height: 28px;
   padding-inline: 10px;
   border-radius: var(--radius-md);
   background: var(--color-info-soft);
@@ -3787,7 +3799,7 @@ html[data-locked] { overflow: hidden; }
 .tag-crumb:hover { background: var(--color-info-pressed); }
 
 /* ------------------------------------------------------------------ данные (центральная колонка) */
-.product__title { margin-bottom: 4px; font-size: var(--text-h1); font-weight: 600; line-height: var(--text-h1--line-height); }
+.product__title { overflow-wrap: break-word; hyphens: auto; margin-bottom: 4px; font-size: var(--text-h1); font-weight: 600; line-height: var(--text-h1--line-height); }
 .product__info { display: flex; flex-direction: column; gap: 16px; }
 
 .product__ids { display: flex; flex-direction: column; gap: 8px; }
@@ -4184,7 +4196,7 @@ a.variant-tile:hover { border-color: var(--color-primary); }
 .qr-table .cell-numeric { text-align: right; }
 .qr-col-n { width: 28px; }
 .qr-col-code { width: 110px; }
-.qr-col-req { width: 76px; }
+.qr-col-req { width: 80px; }
 .qr-col-avail { width: 120px; }
 .qr-col-price { width: 84px; }
 .qr-col-sum { width: 92px; }

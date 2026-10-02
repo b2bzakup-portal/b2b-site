@@ -7,13 +7,13 @@
    ========================================================================== */
 
 :root {
-  /* Утверждено заказчиком */
-  --primary: #1f6f4a;
+  /* Палитра v2 */
+  --primary: #007a24;
   --text: #1c1c1c;
   --text-muted: #8a94a6;
   --text-muted-ink: #5f6673;
-  --bg: #f7f9fc;
-  --panel: #edf1f6;
+  --bg: #f6f8f6;
+  --panel: #eef2ef;
   --surface: #ffffff;
   --border: #e5e7eb;
   --warning: #ffb020;
@@ -21,10 +21,13 @@
   --info: #2a80d9;
 
   /* Производные */
-  --primary-hover: #19593c;
-  --primary-active: #12452e;
-  --primary-soft: #e9f3ee;
-  --primary-pressed: #d7e9e0;
+  --primary-hover: #00691f;
+  --primary-active: #00561a;
+  --primary-soft: #ecf5ec;
+  --primary-pressed: #dceedf;
+  --primary-deep: #004f1e;
+  --leaf: #3daa4f;
+  --section-green: #f2f8f2;
   --warning-soft: #fff7e8;
   --danger-soft: #fdeced;
   --danger-pressed: #f8d5d6;
@@ -53,7 +56,7 @@
   --container-pad: 24px;
   --grid-gutter: 24px;
 
-  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
 
   --topbar-h: 64px;
