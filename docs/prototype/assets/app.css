@@ -304,6 +304,7 @@ h3 { font-size: var(--text-h3); line-height: var(--text-h3--line-height); font-w
 .dash-card__title--sm { font-size: var(--text-body); }
 .dash-card__note { font-size: var(--text-caption); color: var(--color-text-muted-ink); }
 .dash-card__value { font-size: var(--text-h2); font-weight: 600; line-height: 1.2; }
+.dash-card__value--sum { color: var(--color-primary-deep); }
 .dash-card__foot { display: grid; gap: 2px; }
 .dash-card__link { font-size: var(--text-body); font-weight: 500; color: var(--color-primary); }
 .dash-card__link:hover { text-decoration: underline; }
@@ -1115,7 +1116,7 @@ a.badge--tag:hover { color: var(--color-text); }
 .cart-summary__totals { display: grid; gap: 4px; }
 .cart-summary__title { font-size: var(--text-h3); font-weight: 600; }
 .cart-summary__count { font-size: var(--text-caption); color: var(--color-text-muted-ink); }
-.cart-summary__sum { margin-top: 4px; font-size: var(--text-cart-sum); line-height: 1.25; font-weight: 600; }
+.cart-summary__sum { margin-top: 4px; font-size: var(--text-cart-sum); line-height: 1.25; font-weight: 600; color: var(--color-primary-deep); }
 .cart-summary__vat { font-size: var(--text-caption); color: var(--color-text-muted); }
 .cart-summary__total {
   display: flex;
@@ -1142,7 +1143,7 @@ a.badge--tag:hover { color: var(--color-text); }
 }
 .cart-bar__row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
 .cart-bar__count { font-size: var(--text-caption); color: var(--color-text-muted-ink); }
-.cart-bar__sum { font-size: var(--text-h2); line-height: var(--text-h2--line-height); font-weight: 600; }
+.cart-bar__sum { font-size: var(--text-h2); line-height: var(--text-h2--line-height); font-weight: 600; color: var(--color-primary-deep); }
 .cart-bar__vat { font-size: var(--text-counter); color: var(--color-text-muted); }
 
 /* ---------------------------------------------------------------- пустая корзина */
@@ -1916,7 +1917,7 @@ a.badge--tag:hover { color: var(--color-text); }
   font-size: var(--text-body);
 }
 .mcart__total[hidden] { display: none; }
-.mcart__total-sum { font-size: var(--text-cart-total); font-weight: 600; }
+.mcart__total-sum { font-size: var(--text-cart-total); font-weight: 600; color: var(--color-primary-deep); }
 .mcart__actions { display: grid; gap: 12px; }
 
 /* ---------------------------------------------------------------- пагинация */
@@ -3128,7 +3129,7 @@ html[data-locked] { overflow: hidden; }
 }
 .hero__text { position: relative; width: min(624px, 100%); padding-left: 48px; box-sizing: content-box; }
 .hero__title { font-size: var(--text-h1); line-height: var(--text-h1--line-height); }
-.hero__accent { color: var(--color-primary); }
+.hero__accent { color: var(--color-primary-deep); }
 .hero__lead { margin-top: 24px; font-size: var(--text-h3); line-height: var(--text-body--line-height); color: var(--color-text); }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
 .hero__terms { position: relative; margin-top: -64px; }
@@ -3475,7 +3476,7 @@ html[data-locked] { overflow: hidden; }
 .order-card__sums dd { font-weight: 500; white-space: nowrap; }
 .order-card__total { margin-top: 8px; }
 .order-card__total dt { font-size: var(--text-body); font-weight: 600; color: var(--color-text); }
-.order-card__total dd { font-size: var(--text-h2); font-weight: 600; }
+.order-card__total dd { font-size: var(--text-h2); font-weight: 600; color: var(--color-primary-deep); }
 
 .order-comp { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 .order-comp__title { font-size: var(--text-h2-mobile); font-weight: 600; }
@@ -4169,7 +4170,7 @@ a.variant-tile:hover { border-color: var(--color-primary); }
 .qr-body { display: grid; gap: 12px; }
 .qr-table-wrap { display: grid; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; }
 .qr-table-wrap[hidden] { display: none; }
-.qr-scroll { overflow-x: auto; }
+.qr-scroll { position: relative; overflow-x: auto; } /* скрытые подписи строк позиционируются отсюда и не дают прокрутки странице */
 .qr-table {
   width: 100%;
   min-width: 900px;
@@ -4252,7 +4253,7 @@ a.variant-tile:hover { border-color: var(--color-primary); }
 .qr-panel__totals { display: grid; gap: 4px; }
 .qr-panel__ready { font-size: var(--text-body); font-weight: 600; }
 .qr-panel__total { display: flex; align-items: baseline; gap: 8px; font-size: var(--text-body); color: var(--color-text-muted-ink); }
-.qr-panel__sum { font-size: var(--text-h2); line-height: var(--text-h2--line-height); font-weight: 600; color: var(--color-text); }
+.qr-panel__sum { font-size: var(--text-h2); line-height: var(--text-h2--line-height); font-weight: 600; color: var(--color-primary-deep); }
 .qr-panel__fresh { font-size: var(--text-small); color: var(--color-text-muted-ink); }
 .qr-panel__fresh-mobile { display: none; }
 .qr-panel__action { display: grid; justify-items: end; gap: 8px; }
