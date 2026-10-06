@@ -2130,8 +2130,9 @@ a.badge--tag:hover { color: var(--color-text); }
 /* ---------------------------------------------------------------- таблица на телефоне */
 /* Каталог на телефоне (ДС 9.15): те же <td data-col>, что у десктопной таблицы — лишние
    скрыты, строка — одна линия на сетке: чекбокс 16 · превью 24 и название 11 SemiBold ·
-   колонка 62 (цена 13, МЗП 11, наличие 11 SemiBold) · действия 92 (степпер 60 × 28 и
-   «В корзину» 28), поля 10 / 6, промежуток 4; избранного в строке нет. Шапка — чекбокс,
+   колонка 62 (цена 13, МЗП 11, наличие 11 SemiBold) · действия 108 (степпер 74 × 28, промежуток 6,
+   «В корзину» 28; части не сжимаются, иначе «+» уходит под корзину), поля 10 / 6, промежуток 4;
+   избранного в строке нет. Шапка — чекбокс,
    «Наименование» и «Цена, ₽» со стрелкой сортировки; воронок нет — фильтры в шторке. */
 .th-label--short { display: none; }
 
@@ -2149,7 +2150,7 @@ a.badge--tag:hover { color: var(--color-text); }
   .cat-table thead tr,
   .cat-table__row {
     display: grid;
-    grid-template-columns: 16px minmax(0, 1fr) 62px 92px;
+    grid-template-columns: 16px minmax(0, 1fr) 62px 108px;
     column-gap: 4px;
     align-items: center;
     padding: 10px 6px;
@@ -2179,9 +2180,10 @@ a.badge--tag:hover { color: var(--color-text); }
   .cat-product__name { font-size: var(--text-table-compact); }
   .cat-table[data-cols] .cat-product__type { display: none; }
 
-  .cat-table__buttons { gap: 4px; }
-  .cat-table .stepper__btn { width: 18px; }
-  .cat-table .stepper__value { width: 22px; }
+  .cat-table__buttons { gap: 6px; }
+  .cat-table__buttons > * { flex: none; }
+  .cat-table .stepper__btn { width: 24px; }
+  .cat-table .stepper__value { width: 24px; }
   .cat-table__row .pcard__fav { display: none; }
 }
 

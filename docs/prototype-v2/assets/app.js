@@ -458,7 +458,7 @@
 /* Корзина и оформление [data-cart-page]. Состав — B2B.store.cart, строки таблицы
    собираются по <template> и не пересоздаются при каждом изменении (как в мини-корзине):
    у степпера в фокусе значение не сбивается, отметки строк сохраняются.
-   Цена строки — по уровню пользователя (B2B.price), НДС 20 % справочно, уже в сумме.
+   Цена строки — по уровню пользователя (B2B.price), НДС справочно, уже в сумме; ставка — DEMO.tax.vat, null — строки НДС нет.
    Фасовка — варианты того же товара (общий group): количество переносится, если подходит
    под МЗП и кратность новой фасовки, иначе поднимается до ближайшего допустимого.
    «Оформить заказ» недоступна, пока у строки нарушен МЗП или у выбранной доставки
@@ -628,7 +628,8 @@
       var codes = Object.keys(cart).filter(function (c) { return B2B.product(c); });
       var sum = codes.reduce(function (s, c) { return s + B2B.price(B2B.product(c)).value * cart[c]; }, 0);
       var count = plural(codes.length, 'позиция', 'позиции', 'позиций');
-      var vat = 'НДС 20%: ' + B2B.rub(sum * 20 / 120);
+      var rate = (window.DEMO.tax || {}).vat;
+      var vat = rate ? 'НДС ' + rate + '%: ' + B2B.rub(sum * rate / (100 + rate)) : '';
       root.querySelectorAll('[data-cart-count]').forEach(function (el) { el.textContent = count; });
       root.querySelectorAll('[data-cart-sum-total], [data-cart-total]').forEach(function (el) { el.textContent = B2B.rub(sum); });
       root.querySelectorAll('[data-cart-vat]').forEach(function (el) { el.textContent = vat; });
@@ -1610,7 +1611,7 @@
 /* ---- js/pages/order-done.js ---- */
 /* «Заказ принят»: число позиций и суммы последнего оформленного заказа — setting('lastOrder')
    {count, sum}, его пишет корзина по «Оформить заказ» (cart.js). Без него остаются числа
-   демо-данных из разметки. НДС справочно, уже в сумме: sum × 20 / 120, как в корзине. */
+   демо-данных из разметки. НДС справочно, уже в сумме: sum × ставка / (100 + ставка), как в корзине. */
 (function () {
   'use strict';
 
@@ -1621,7 +1622,8 @@
     if (!last || !last.count) return;
     root.querySelector('[data-done-count]').textContent = last.count;
     root.querySelector('[data-done-sum]').textContent = B2B.rub(last.sum);
-    root.querySelector('[data-done-vat]').textContent = B2B.rub(last.sum * 20 / 120);
+    var rate = (window.DEMO.tax || {}).vat;
+    if (rate) root.querySelector('[data-done-vat]').textContent = B2B.rub(last.sum * rate / (100 + rate));
     root.querySelector('[data-done-total]').textContent = B2B.rub(last.sum);
   });
 })();
