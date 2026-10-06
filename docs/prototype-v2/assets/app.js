@@ -245,6 +245,21 @@
     return '<svg class="i ' + (cls || '') + '" aria-hidden="true"><use href="' + B2B.iconsUrl + '#i-' + name + '"/></svg>';
   };
 
+  /* «В корзину» [data-cart-add] в состоянии «в корзине» (ДС 5): data-in-cart красит кнопку
+     в primary-soft, корзина меняется на галочку, у текстовой кнопки — подпись «В корзине».
+     Кнопка остаётся рабочей: повторный клик прибавляет ещё. */
+  B2B.markInCart = function (btn, on, name) {
+    btn.toggleAttribute('data-in-cart', on);
+    var use = btn.querySelector('use');
+    if (use) use.setAttribute('href', B2B.iconsUrl + '#i-' + (on ? 'check' : 'shopping-cart'));
+    if (btn.classList.contains('btn-icon')) {
+      btn.setAttribute('aria-label', (on ? 'В корзине, добавить ещё' : 'В корзину') + (name ? ': ' + name : ''));
+    } else {
+      var t = btn.lastChild;
+      if (t && t.nodeType === 3) t.nodeValue = on ? 'В корзине' : 'В корзину';
+    }
+  };
+
   B2B.on = function (selector, init) { modules.push([selector, init]); };
 
   // Метка «уже запущен» — по номеру модуля: два модуля на одном селекторе запускаются оба
@@ -1741,6 +1756,7 @@
    «В корзину» есть в двух местах — [data-purchase] и [data-buybar], каждое со своим
    степпером (панели не синхронизированы, это два независимых способа задать «сколько
    добавить»); клик прибавляет значение своего степпера к тому, что уже в корзине.
+   Товар уже в корзине — обе кнопки в состоянии «в корзине» (B2B.markInCart).
    «?» у уровня цены раскрывает плашку уровня [data-level-toggle].
    Полоса покупки на телефоне видна, когда блок покупки ушёл из окна. */
 (function () {
@@ -1785,6 +1801,11 @@
         personal.hidden = !price.personal;
       }
       if (fav) fav.setAttribute('aria-pressed', B2B.store.isFavorite(code) ? 'true' : 'false');
+      var inCart = B2B.store.cartQty(code) > 0;
+      [purchase, bar].forEach(function (box) {
+        var b = box && box.querySelector('[data-cart-add]');
+        if (b) B2B.markInCart(b, inCart);
+      });
     }
 
     if (fav) fav.addEventListener('click', function () { B2B.store.toggleFavorite(code); });
@@ -3358,7 +3379,8 @@
    без «/ ед.». «В корзину» [data-cart-add] прибавляет количество из степпера рядом
    (вариант compact без степпера — прибавляет МЗП) к тому, что уже в корзине: степпер
    тут не отражает содержимое корзины, а задаёт «сколько добавить». Невалидное
-   количество (b2b:qty от [data-stepper]) гасит кнопку. */
+   количество (b2b:qty от [data-stepper]) гасит кнопку. Товар уже в корзине — кнопка
+   в состоянии «в корзине» (B2B.markInCart). */
 (function () {
   'use strict';
 
@@ -3379,6 +3401,7 @@
         fav.setAttribute('aria-pressed', on ? 'true' : 'false');
         fav.setAttribute('aria-label', (on ? 'Убрать из избранного: ' : 'В избранное: ') + (p ? p.name : ''));
       }
+      if (add) B2B.markInCart(add, B2B.store.cartQty(code) > 0, p ? p.name : '');
     }
 
     if (fav) fav.addEventListener('click', function () { B2B.store.toggleFavorite(code); });

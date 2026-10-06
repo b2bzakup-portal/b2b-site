@@ -1218,6 +1218,11 @@ a.badge--tag:hover { color: var(--color-text); }
 .btn--danger:hover, .btn--danger.is-hover { background: var(--color-danger-soft); }
 .btn--danger:active, .btn--danger.is-active { background: var(--color-danger-pressed); border-color: var(--color-danger-ink); color: var(--color-danger-ink); }
 
+/* «В корзине» (ДС 5): товар уже добавлен — мягкая заливка, галочка, кнопка рабочая */
+.btn--primary[data-in-cart] { background: var(--color-primary-soft); border-color: var(--color-primary-soft); color: var(--color-primary); }
+.btn--primary[data-in-cart]:hover { background: var(--color-primary-pressed); border-color: var(--color-primary-pressed); }
+.btn--primary[data-in-cart]:active { background: var(--color-primary-pressed); border-color: var(--color-primary-pressed); color: var(--color-primary-active); }
+
 .btn:disabled, .btn[aria-disabled="true"] {
   background: var(--color-neutral); border-color: transparent; color: var(--color-text-muted); cursor: not-allowed;
 }
@@ -1247,6 +1252,10 @@ a.badge--tag:hover { color: var(--color-text); }
 .btn-icon--primary { background: var(--color-primary); border-color: var(--color-primary); color: var(--color-surface); }
 .btn-icon--primary:hover, .btn-icon--primary.is-hover { background: var(--color-primary-hover); border-color: var(--color-primary-hover); color: var(--color-surface); }
 .btn-icon--primary:active, .btn-icon--primary.is-active { background: var(--color-primary-active); border-color: var(--color-primary-active); color: var(--color-surface); }
+
+.btn-icon--primary[data-in-cart] { background: var(--color-primary-soft); border-color: var(--color-primary-soft); color: var(--color-primary); }
+.btn-icon--primary[data-in-cart]:hover { background: var(--color-primary-pressed); border-color: var(--color-primary-pressed); color: var(--color-primary); }
+.btn-icon--primary[data-in-cart]:active { background: var(--color-primary-pressed); border-color: var(--color-primary-pressed); color: var(--color-primary-active); }
 
 .btn-icon--accent { color: var(--color-primary); }
 .btn-icon--accent:hover, .btn-icon--accent.is-hover { background: var(--color-primary-soft); color: var(--color-primary); }
@@ -2835,6 +2844,31 @@ a.badge--tag:hover { color: var(--color-text); }
   .content-hero__title { font-size: var(--text-h1-mobile); }
 }
 
+/* ---------------------------------------------------------------- сетка из линий
+   «Кому мы подходим» и «Почему с нами удобно работать»: ячейки вплотную, между ними
+   вертикальная линия border, как в полосе преимуществ (ячейка 4.5); у первой ячейки
+   ряда линии нет. Шесть в ряд, 1024–1319 — три, на телефоне — две. */
+.segments.segments--lined,
+.content-cards.content-cards--lined { column-gap: 0; }
+.segments--lined > li,
+.content-cards--lined > li { border-left: 1px solid var(--color-border); }
+.segments--lined > li:nth-child(6n + 1),
+.content-cards--lined > li:nth-child(6n + 1) { border-left: 0; }
+
+@media (width < 1320px) {
+  .segments--lined > li:nth-child(n),
+  .content-cards--lined > li:nth-child(n) { border-left: 1px solid var(--color-border); }
+  .segments--lined > li:nth-child(3n + 1),
+  .content-cards--lined > li:nth-child(3n + 1) { border-left: 0; }
+}
+
+@media (width < 768px) {
+  .segments--lined > li:nth-child(n),
+  .content-cards--lined > li:nth-child(n) { border-left: 1px solid var(--color-border); }
+  .segments--lined > li:nth-child(2n + 1),
+  .content-cards--lined > li:nth-child(2n + 1) { border-left: 0; }
+}
+
 /* ---- css/20-components/cookie.css ---- */
 /* Уведомление о cookie (ДС 9.10): прилипает к низу окна, содержимое в контейнере.
    surface, линия сверху, тень прилипающей панели, поля 16 / 24, промежуток 10.
@@ -3810,9 +3844,8 @@ html[data-locked] { overflow: hidden; }
 .points__title { font-size: var(--text-body); font-weight: 600; line-height: var(--text-table--line-height); color: var(--color-text); }
 .points__text { margin-top: 2px; font-size: var(--text-caption); line-height: var(--text-table--line-height); color: var(--color-text-muted-ink); }
 
-/* «Для кого наш портал»: иконка 44, название 13 SemiBold, ячейки через 16 без линий */
-.points--segments { column-gap: 16px; }
-.points--segments .points__cell:nth-child(n) { padding-inline: 0; border-left: 0; }
+/* «Для кого наш портал»: иконка 44, название 13 SemiBold; ячейки и линии — как у остальных полос */
+.points--segments .points__cell { align-items: center; }
 .points--segments .points__icon { width: var(--spacing-icon-segment); height: var(--spacing-icon-segment); }
 .points--segments .points__title { font-size: var(--text-caption); }
 
@@ -4462,6 +4495,8 @@ html[data-locked] { overflow: hidden; }
 
 .pcard__fav .i { color: var(--color-text-muted); }
 .pcard__fav[aria-pressed="true"] .i { color: var(--color-primary); }
+/* В избранном сердце залито primary везде: карточки, таблица, подсказка поиска (ДС 9.12) */
+[data-fav][aria-pressed="true"] use, [data-fav-btn][aria-pressed="true"] use { fill: currentColor; }
 
 /* ---------------------------------------------------------------- сетка */
 /* Бейдж наличия 22 без иконки, 11 SemiBold; сердце 20 в зоне 24 без рамки */
@@ -4636,23 +4671,21 @@ html[data-locked] { overflow: hidden; }
 
 .product__facts {
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  justify-content: space-between;
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   padding-top: 20px;
   border-top: 1px solid var(--color-border);
 }
-.product__fact { display: flex; align-items: center; gap: 8px; }
+/* Три равные части, разделённые линией border (ячейка 4.5); факт столбиком по центру своей трети */
+.product__fact { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-inline: 8px; border-left: 1px solid var(--color-border); text-align: center; }
+.product__fact:first-child { border-left: 0; }
 .product__fact .i { flex: none; width: 28px; height: 28px; color: var(--color-primary); }
-.product__fact > span { display: flex; flex-direction: column; }
+.product__fact > span { display: flex; flex-direction: column; align-items: center; }
 .product__fact-label { font-size: var(--text-counter); color: var(--color-text-muted-ink); }
 .product__fact strong { font-size: var(--text-caption); font-weight: 600; color: var(--color-text); }
 
 @media (width < 768px) {
   .product__title { font-size: var(--text-product-h1-mobile); }
   .product__prop dt { width: 120px; }
-  .product__facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .product__fact { flex-direction: column; align-items: flex-start; }
 }
 
 /* ------------------------------------------------------------------ блок покупки */
@@ -5451,6 +5484,7 @@ mark.search-hit {
 .search-suggest__min { font-size: var(--text-small); color: var(--color-text-muted-ink); }
 .search-suggest__actions .stepper-wrap { flex: none; }
 .search-suggest__fav { color: var(--color-text-muted); }
+.search-suggest__fav[aria-pressed="true"] { color: var(--color-primary); }
 
 .search-suggest__empty { padding: 16px; text-align: center; }
 .search-suggest__empty[hidden] { display: none; }
@@ -6069,7 +6103,6 @@ mark.search-hit {
 .cat-toolbar--fav .cat-toolbar__sort { margin-left: auto; }
 
 .catalog--fav .pcard__fav[aria-pressed="true"] { background: var(--color-primary-soft); border-radius: var(--radius-md); }
-.catalog--fav .pcard__fav[aria-pressed="true"] use { fill: currentColor; }
 
 .fav-empty { display: grid; gap: 48px; }
 .fav-empty[hidden] { display: none; }
