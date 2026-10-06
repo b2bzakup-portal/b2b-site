@@ -3931,10 +3931,10 @@ html[data-locked] { overflow: hidden; }
 .home-track > li { scroll-snap-align: start; min-width: 0; }
 .home-track--grid { grid-auto-columns: calc((100% - 3 * 24px) / 4); }
 .home-track--row { display: none; }
-/* Полка прокручивается и обрезала бы подъём и тень карточки под курсором (ДС 9.12):
+/* Полка прокручивается и обрезала бы тень карточки под курсором (ДС 9.12):
    запас полями, смещение назад отрицательными отступами — раскладка не меняется */
 @media (hover: hover) and (pointer: fine) {
-  .home-track { margin: -8px -24px -32px; padding: 8px 24px 32px; scroll-padding-inline: 24px; }
+  .home-track { margin: -16px -24px -32px; padding: 16px 24px 32px; scroll-padding-inline: 24px; }
 }
 
 /* ---------------------------------------------------------------- ассортиментные решения */
@@ -4562,22 +4562,12 @@ html[data-locked] { overflow: hidden; }
 .pcard--row .stepper__value { flex: 1; width: auto; min-width: 0; }
 
 /* ---------------------------------------------------------------- наведение */
-/* ДС 9.12: под курсором мыши карточка приподнимается на 4 px и получает тень
-   shadow-card-hover; в покое — без тени. Только у устройств с мышью: на тач-экранах
-   наведения нет, иначе карточка «залипнет» после тапа. Движутся только transform
-   и box-shadow. При «уменьшить движение» — тень без сдвига и без перехода. */
+/* ДС 9.12: под курсором мыши у карточки плавно проявляется тень shadow-card-hover,
+   карточка остаётся на месте; в покое — без тени. Только у устройств с мышью:
+   на тач-экранах наведения нет, иначе тень «залипнет» после тапа. */
 @media (hover: hover) and (pointer: fine) {
-  .pcard {
-    transition: transform var(--duration-hover) var(--ease-out), box-shadow var(--duration-hover) var(--ease-out);
-  }
-  .pcard:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-card-hover);
-  }
-}
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: reduce) {
-  .pcard { transition: none; }
-  .pcard:hover { transform: none; }
+  .pcard { transition: box-shadow var(--duration-hover) var(--ease-out); }
+  .pcard:hover { box-shadow: var(--shadow-card-hover); }
 }
 
 /* ---- css/20-components/product.css ---- */
