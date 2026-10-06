@@ -2062,6 +2062,13 @@ a.badge--tag:hover { color: var(--color-text); }
 .cat-table .pcard__fav .i { color: var(--color-text-muted); }
 .cat-table .pcard__fav[aria-pressed="true"] .i { color: var(--color-primary); }
 
+/* Наведение (ДС 8): под курсором мыши у строки плавно проявляется та же тень, что у карточки
+   товара; строка поднимается над соседями, чтобы тень легла поверх них и закреплённых колонок */
+@media (hover: hover) and (pointer: fine) {
+  .cat-table__row { transition: box-shadow var(--duration-hover) var(--ease-out); }
+  .cat-table__row:hover { position: relative; z-index: 4; box-shadow: var(--shadow-card-hover); }
+}
+
 /* Ошибка красит строку (ДС 8 п. 5): заливка, «В корзину» гаснет до нейтральной */
 .cat-table__row[data-invalid] td { background: var(--color-danger-row); }
 
