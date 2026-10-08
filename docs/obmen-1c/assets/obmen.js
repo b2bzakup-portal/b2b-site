@@ -271,16 +271,23 @@
   });
 
   // Подсветка текущего раздела в оглавлении
-  var links = document.querySelectorAll('.sidebar a');
+  var links = document.querySelectorAll('.secnav a');
+  var strip = document.querySelector('.secnav__list');
   var map = {};
   links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
-        links.forEach(function (a) { a.classList.remove('is-active'); });
+        links.forEach(function (a) { a.classList.remove('is-active'); a.removeAttribute('aria-current'); });
         var link = map[entry.target.id];
-        if (link) link.classList.add('is-active');
+        if (!link) return;
+        link.classList.add('is-active');
+        link.setAttribute('aria-current', 'true');
+        // На узком экране полоса прокручивается — держим активный пункт в поле зрения
+        if (strip && strip.scrollWidth > strip.clientWidth) {
+          strip.scrollTo({ left: link.offsetLeft - 16, behavior: 'smooth' });
+        }
       });
     }, { rootMargin: '-30% 0px -60% 0px' });
     document.querySelectorAll('main .section').forEach(function (s) { observer.observe(s); });
