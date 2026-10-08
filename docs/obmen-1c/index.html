@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Обмен с 1С — B2B-портал агробизнеса b2bzakup.ru</title>
+<meta name="description" content="Как сайт и 1С будут обмениваться данными: схема, кто чем владеет, вопросы к обсуждению.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23007A24'/%3E%3Cpath d='M9 21c0-6 4-10 14-11-1 9-5 12-11 12H9z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/obmen.css">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true" focusable="false">
+<symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
+<symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-merge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="../design-system/index.html" aria-label="B2B-портал агробизнеса">
+      <span class="brand__mark"><svg><use href="#i-leaf"/></svg></span>
+      <span class="brand__text">B2B-портал агробизнеса</span>
+    </a>
+    <nav class="topnav">
+      <a href="../design-system/index.html"><span class="topnav__full">Дизайн-система</span><span class="topnav__short">Система</span></a>
+      <a href="../design-system/references.html">Референсы</a>
+      <a href="../design-system/pages.html">Макеты</a>
+      <a href="../progress/index.html">Ход работ</a>
+      <span class="version-chip">Созвон 08.10.2026</span>
+    </nav>
+  </div>
+</header>
+
+<div class="container layout">
+
+<aside class="sidebar">
+  <div class="sidebar__title">Разделы</div>
+  <nav>
+    <a href="#scheme"><span>01</span>Схема обмена</a>
+    <a href="#session"><span>02</span>Сеанс обмена</a>
+    <a href="#owners"><span>03</span>Кто чем владеет</a>
+    <a href="#api"><span>04</span>Обмен или API</a>
+    <a href="#forks"><span>05</span>Что решаем</a>
+    <a href="#questions"><span>06</span>Вопросы</a>
+    <a href="#road"><span>07</span>Порядок работ</a>
+    <a href="#glossary"><span>08</span>Словарик</a>
+  </nav>
+</aside>
+
+<main>
+
+<header class="hero">
+  <div class="eyebrow">Интеграция с 1С:Комплексная автоматизация</div>
+  <h1>Как сайт и 1С будут обмениваться данными</h1>
+  <p>Схема на одну страницу для общего разговора: что откуда берётся, как часто обновляется и какие решения нам нужно принять вместе, чтобы запустить обмен.</p>
+  <div class="hero__meta">
+    <span class="badge badge--tag">Сайт — собственная разработка, не Битрикс</span>
+    <span class="badge badge--tag">Только юрлица и ИП</span>
+    <span class="badge badge--tag">Один склад</span>
+  </div>
+
+  <div class="thesis">
+    <div class="thesis__item">
+      <b><i class="dot dot--1c"></i>1С — учёт</b>
+      <p>Товары, цены, остатки, клиенты, заказы и долги. Всё, что связано с деньгами и складом, живёт в 1С и правится там.</p>
+    </div>
+    <div class="thesis__item">
+      <b><i class="dot dot--site"></i>Сайт — витрина</b>
+      <p>Карточки товаров, объединение фасовок в один товар, тексты, поиск, корзина, личный кабинет и пароли клиентов.</p>
+    </div>
+    <div class="thesis__item">
+      <b><i class="dot dot--talk"></i>У каждого поля один хозяин</b>
+      <p>Если цена живёт в 1С, на сайте её руками не правят, и наоборот. Две правды об одних данных — главный источник ошибок в интеграциях.</p>
+    </div>
+  </div>
+</header>
+
+<!-- 01 -->
+<section class="section" id="scheme">
+  <div class="section__head">
+    <div class="section__num">01</div>
+    <h2>Схема обмена</h2>
+    <p>Основа — штатный механизм 1С «Обмен с сайтами» и стандартный формат CommerceML: на нём же работают интернет-магазины на Битриксе. Инициатор всегда 1С: по расписанию она сама приходит на сайт, привозит свежие данные и забирает заказы. Сайт к базе 1С не обращается.</p>
+  </div>
+
+  <div class="flow">
+    <svg class="flow__wide" viewBox="0 0 900 330" role="img" aria-label="1С по расписанию отправляет на сайт каталог, цены и остатки, забирает заказы и возвращает статусы">
+      <defs>
+        <marker id="hd-down" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" class="lane-head--down"/></marker>
+        <marker id="hd-up" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" class="lane-head--up"/></marker>
+        <marker id="hd-back" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" class="lane-head--back"/></marker>
+      </defs>
+
+      <rect class="sys sys--1c" x="10" y="20" width="230" height="290" rx="14"/>
+      <text class="sys-title" x="34" y="62">1С</text>
+      <text class="sys-sub" x="34" y="84">Комплексная автоматизация</text>
+      <text class="sys-item" x="34" y="130">номенклатура</text>
+      <text class="sys-item" x="34" y="154">типы цен · соглашения</text>
+      <text class="sys-item" x="34" y="178">остатки на складе</text>
+      <text class="sys-item" x="34" y="202">контрагенты · ИНН / КПП</text>
+      <text class="sys-item" x="34" y="226">заказы клиентов</text>
+      <text class="sys-item" x="34" y="250">оплаты · долги</text>
+
+      <rect class="sys sys--site" x="660" y="20" width="230" height="290" rx="14"/>
+      <text class="sys-title" x="684" y="62">Сайт</text>
+      <text class="sys-sub" x="684" y="84">b2bzakup.ru</text>
+      <text class="sys-item" x="684" y="130">каталог и карточки</text>
+      <text class="sys-item" x="684" y="154">товар с фасовками</text>
+      <text class="sys-item" x="684" y="178">цена для клиента</text>
+      <text class="sys-item" x="684" y="202">корзина · заказы</text>
+      <text class="sys-item" x="684" y="226">личный кабинет</text>
+      <text class="sys-item" x="684" y="250">учётные записи</text>
+
+      <line class="wall" x1="450" y1="14" x2="450" y2="316"/>
+
+      <!-- каталог → -->
+      <path id="lane-catalog" class="lane lane--down" d="M244 104 H654" marker-end="url(#hd-down)"/>
+      <text class="lane-label" x="450" y="92" text-anchor="middle">Каталог · цены · остатки · фото</text>
+      <text class="lane-when" x="450" y="124" text-anchor="middle">раз в час · 1С → сайт</text>
+
+      <!-- заказы ← -->
+      <path id="lane-orders" class="lane lane--up" d="M654 186 H244" marker-end="url(#hd-up)"/>
+      <text class="lane-label" x="450" y="174" text-anchor="middle">Новые заказы и клиенты</text>
+      <text class="lane-when" x="450" y="206" text-anchor="middle">раз в 10 минут · сайт → 1С</text>
+
+      <!-- статусы → -->
+      <path id="lane-status" class="lane lane--back" d="M244 266 H654" marker-end="url(#hd-back)"/>
+      <text class="lane-label" x="450" y="254" text-anchor="middle">Статусы, итоговый состав, оплата</text>
+      <text class="lane-when" x="450" y="286" text-anchor="middle">раз в 10 минут · 1С → сайт</text>
+
+      <g class="packets">
+        <circle class="packet--down" r="5"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#lane-catalog"/></animateMotion></circle>
+        <circle class="packet--down" r="5"><animateMotion dur="3.2s" begin="1.6s" repeatCount="indefinite"><mpath href="#lane-catalog"/></animateMotion></circle>
+        <circle class="packet--up" r="5"><animateMotion dur="2.6s" begin="0.4s" repeatCount="indefinite"><mpath href="#lane-orders"/></animateMotion></circle>
+        <circle class="packet--back" r="5"><animateMotion dur="2.6s" begin="1.2s" repeatCount="indefinite"><mpath href="#lane-status"/></animateMotion></circle>
+      </g>
+    </svg>
+
+    <svg class="flow__narrow" viewBox="0 0 340 560" role="img" aria-label="1С по расписанию отправляет на сайт каталог, цены и остатки, забирает заказы и возвращает статусы">
+      <defs>
+        <marker id="hd-down-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" class="lane-head--down"/></marker>
+        <marker id="hd-up-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" class="lane-head--up"/></marker>
+        <marker id="hd-back-n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 10 5 0 10z" class="lane-head--back"/></marker>
+      </defs>
+      <rect class="sys sys--1c" x="4" y="4" width="332" height="112" rx="14"/>
+      <text class="sys-title" x="24" y="42">1С</text>
+      <text class="sys-sub" x="24" y="64">Комплексная автоматизация</text>
+      <text class="sys-item" x="24" y="94">товары · цены · остатки · заказы</text>
+
+      <path id="n-catalog" class="lane lane--down" d="M60 122 V438" marker-end="url(#hd-down-n)"/>
+      <path id="n-orders" class="lane lane--up" d="M170 438 V122" marker-end="url(#hd-up-n)"/>
+      <path id="n-status" class="lane lane--back" d="M280 122 V438" marker-end="url(#hd-back-n)"/>
+
+      <text class="lane-label" x="72" y="206">Каталог,</text>
+      <text class="lane-label" x="72" y="224">цены,</text>
+      <text class="lane-label" x="72" y="242">остатки</text>
+      <text class="lane-when" x="72" y="264">раз в час</text>
+
+      <text class="lane-label" x="182" y="300">Заказы</text>
+      <text class="lane-when" x="182" y="320">10 мин</text>
+
+      <text class="lane-label" x="270" y="206" text-anchor="end">Статусы,</text>
+      <text class="lane-label" x="270" y="224" text-anchor="end">оплата</text>
+      <text class="lane-when" x="270" y="246" text-anchor="end">10 мин</text>
+
+      <rect class="sys sys--site" x="4" y="444" width="332" height="112" rx="14"/>
+      <text class="sys-title" x="24" y="482">Сайт</text>
+      <text class="sys-sub" x="24" y="504">b2bzakup.ru</text>
+      <text class="sys-item" x="24" y="534">каталог · корзина · кабинет</text>
+
+      <g class="packets">
+        <circle class="packet--down" r="5"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#n-catalog"/></animateMotion></circle>
+        <circle class="packet--up" r="5"><animateMotion dur="2.6s" begin="0.6s" repeatCount="indefinite"><mpath href="#n-orders"/></animateMotion></circle>
+        <circle class="packet--back" r="5"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite"><mpath href="#n-status"/></animateMotion></circle>
+      </g>
+    </svg>
+
+    <div class="flow__legend">
+      <span><i class="dot dot--1c"></i>1С отдаёт сайту</span>
+      <span><i class="dot dot--site"></i>сайт отдаёт 1С</span>
+      <span><i class="dot dot--talk"></i>1С возвращает итог по заказу</span>
+      <button class="flow__toggle" type="button" data-flow-toggle>Остановить анимацию</button>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="section" id="session">
+  <div class="section__head">
+    <div class="section__num">02</div>
+    <h2>Один сеанс обмена</h2>
+    <p>Так выглядит каждый сеанс по расписанию. Андрей один раз указывает в 1С адрес сайта, логин, пароль и расписание («Администрирование → Интеграция с другими программами → Обмен с сайтами»), дальше всё идёт само.</p>
+  </div>
+
+  <ol class="steps">
+    <li class="step">
+      <span class="step__num">1</span>
+      <span class="step__dir">1С → сайт</span>
+      <b>Представляется</b>
+      <p>«Я 1С, вот логин и пароль». Сайт пускает только её.</p>
+    </li>
+    <li class="step">
+      <span class="step__num">2</span>
+      <span class="step__dir">1С → сайт</span>
+      <b>Передаёт файлы</b>
+      <p><code>import.xml</code> — товары и группы, <code>offers.xml</code> — цены по типам цен и остатки, плюс картинки.</p>
+    </li>
+    <li class="step">
+      <span class="step__num">3</span>
+      <span class="step__dir">на сайте</span>
+      <b>Сайт раскладывает</b>
+      <p>Обновляет товары, цены и остатки у себя. Группы фасовок, собранные на сайте, не трогает.</p>
+    </li>
+    <li class="step">
+      <span class="step__num">4</span>
+      <span class="step__dir">сайт → 1С</span>
+      <b>Забирает заказы</b>
+      <p>«Есть новые заказы?» По каждому в 1С создаётся «Заказ клиента», клиент ищется по ИНН и КПП.</p>
+    </li>
+    <li class="step">
+      <span class="step__num">5</span>
+      <span class="step__dir">1С → сайт</span>
+      <b>Возвращает итог</b>
+      <p>Статус заказа, итоговый состав после менеджера и признак оплаты — клиент видит их в кабинете.</p>
+    </li>
+  </ol>
+
+  <div class="pros">
+    <div class="card">
+      <h3>Почему так удобно</h3>
+      <ul class="ticks ticks--yes">
+        <li><svg><use href="#i-check"/></svg>Штатная возможность 1С: настраивается без программирования.</li>
+        <li><svg><use href="#i-check"/></svg>Базу 1С не нужно открывать в интернет — сайт до неё не достаёт.</li>
+        <li><svg><use href="#i-check"/></svg>Если 1С на обновлении или выключена, сайт работает на последних данных.</li>
+        <li><svg><use href="#i-check"/></svg>Стандарт отрасли: так подключены тысячи магазинов.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Чего, по нашему опыту, нет «из коробки»</h3>
+      <ul class="ticks ticks--no">
+        <li><svg><use href="#i-minus"/></svg>Уровень конкретного клиента и его оборот за год.</li>
+        <li><svg><use href="#i-minus"/></svg>Индивидуальные цены по соглашениям — обмен передаёт цены по типам цен, а не по клиентам.</li>
+        <li><svg><use href="#i-minus"/></svg>Мгновенность: данные свежие на момент последнего сеанса.</li>
+        <li><svg><use href="#i-minus"/></svg>Возможно — статусы и оплата в нужном нам виде. Уточним вместе.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="section" id="owners">
+  <div class="section__head">
+    <div class="section__num">03</div>
+    <h2>Кто чем владеет</h2>
+    <p>Предложение по хозяевам данных. Строки «Обсуждаем» — то, что нужно решить на созвоне.</p>
+  </div>
+
+  <div class="filters" role="group" aria-label="Фильтр по хозяину данных">
+    <button class="filter" type="button" data-filter="all" aria-pressed="true">Все</button>
+    <button class="filter" type="button" data-filter="1c" aria-pressed="false"><i class="dot dot--1c"></i>1С</button>
+    <button class="filter" type="button" data-filter="site" aria-pressed="false"><i class="dot dot--site"></i>Сайт</button>
+    <button class="filter" type="button" data-filter="talk" aria-pressed="false"><i class="dot dot--talk"></i>Обсуждаем</button>
+  </div>
+
+  <div class="spec-scroll">
+    <table class="spec own">
+      <thead>
+        <tr><th>Данные</th><th>Хозяин</th><th>Как попадает</th><th>Комментарий</th></tr>
+      </thead>
+      <tbody>
+        <tr data-owner="1c"><td>Номенклатура: код, название, штрихкод, единица, вес</td><td><span class="badge badge--1c">1С</span></td><td>1С → сайт, раз в час</td><td>Каждая фасовка в 1С — отдельная позиция</td></tr>
+        <tr data-owner="1c"><td>Минимальный заказ и кратность</td><td><span class="badge badge--1c">1С</span></td><td>1С → сайт</td><td>Уточнить, где хранятся в 1С</td></tr>
+        <tr data-owner="site"><td>Объединение фасовок в один товар, категории витрины, фильтры</td><td><span class="badge badge--site">Сайт</span></td><td>Менеджер в админке</td><td>Новые позиции из 1С попадают в очередь «Требуют привязки»</td></tr>
+        <tr data-owner="talk"><td>Фото и описания</td><td><span class="badge badge--talk">Обсуждаем</span></td><td>1С → сайт при первой загрузке</td><td>Дальше ведёт сайт; повторный обмен не должен затирать правки</td></tr>
+        <tr data-owner="1c"><td>Остатки на складе</td><td><span class="badge badge--1c">1С</span></td><td>1С → сайт, раз в час</td><td>Числом на сайте не показываем — только статус наличия</td></tr>
+        <tr data-owner="1c"><td>Признак «есть у поставщика» → статус «Под заказ»</td><td><span class="badge badge--1c">1С</span></td><td>1С → сайт</td><td>Галочка в карточке номенклатуры</td></tr>
+        <tr data-owner="1c"><td>Цены трёх уровней: базовый, средний, крупный опт</td><td><span class="badge badge--1c">1С</span></td><td>Три типа цен → сайт</td><td>Типы цен нужно завести</td></tr>
+        <tr data-owner="talk"><td>Индивидуальные цены клиента</td><td><span class="badge badge--talk">Обсуждаем</span></td><td>Соглашения в 1С → ?</td><td>Штатно, вероятно, не выгружаются — см. раздел 05</td></tr>
+        <tr data-owner="talk"><td>Уровень клиента и оборот за год</td><td><span class="badge badge--talk">Обсуждаем</span></td><td>1С → ?</td><td>Считает 1С; как передать на сайт — решаем</td></tr>
+        <tr data-owner="1c"><td>Клиент: ИНН, КПП, реквизиты</td><td><span class="badge badge--1c">1С</span></td><td>Сайт → 1С вместе с заказом</td><td>1С находит существующего по ИНН и КПП, дубль не создаёт</td></tr>
+        <tr data-owner="site"><td>Учётная запись: логин, пароль, сотрудники клиента</td><td><span class="badge badge--site">Сайт</span></td><td>В 1С не уходит</td><td>Пароли в учётной системе не храним</td></tr>
+        <tr data-owner="site"><td>Заказ — как его отправил клиент</td><td><span class="badge badge--site">Сайт</span></td><td>Сайт → 1С, раз в 10 минут</td><td>Становится документом «Заказ клиента»</td></tr>
+        <tr data-owner="talk"><td>Заказ итоговый: статус, состав после менеджера, оплата</td><td><span class="badge badge--talk">Обсуждаем</span></td><td>1С → сайт</td><td>Какие статусы отдаёт штатный обмен — уточняем</td></tr>
+        <tr data-owner="1c"><td>Счета, УПД, закрывающие документы</td><td><span class="badge badge--1c">1С</span></td><td>В обмен не входят</td><td>Клиент получает от менеджера; в кабинет — позже</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="section" id="api">
+  <div class="section__head">
+    <div class="section__num">04</div>
+    <h2>Штатный обмен или API</h2>
+    <p>Штатный обмен — это тоже API поверх HTTP, просто запросы отправляет 1С, а сайт отвечает. Разница между способами — в том, кто кого спрашивает и сколько программирования нужно в 1С.</p>
+  </div>
+
+  <div class="ways">
+    <article class="way">
+      <span class="badge badge--success way__tag">Основа</span>
+      <h3>Штатный «Обмен с сайтами»</h3>
+      <p class="way__lead">1С по расписанию отправляет XML-файлы на сайт и забирает заказы.</p>
+      <div class="way__pic">
+        <svg viewBox="0 0 260 70" aria-hidden="true">
+          <rect class="box box--1c" x="2" y="14" width="70" height="42" rx="8"/><text class="t" x="37" y="40" text-anchor="middle">1С</text>
+          <rect class="box box--site" x="188" y="14" width="70" height="42" rx="8"/><text class="t" x="223" y="40" text-anchor="middle">Сайт</text>
+          <path class="ln" d="M76 30 H180"/><path class="hd" d="M180 25 188 30 180 35z"/>
+          <path class="ln" d="M184 44 H80"/><path class="hd" d="M80 39 72 44 80 49z"/>
+          <text class="s" x="130" y="22" text-anchor="middle">по расписанию</text>
+          <text class="s" x="130" y="62" text-anchor="middle">XML · CommerceML</text>
+        </svg>
+      </div>
+      <ul class="ticks ticks--yes">
+        <li><svg><use href="#i-check"/></svg>Настраивается без программирования</li>
+        <li><svg><use href="#i-check"/></svg>База 1С закрыта от интернета</li>
+      </ul>
+      <ul class="ticks ticks--no">
+        <li><svg><use href="#i-minus"/></svg>Только то, что заложено в формат</li>
+      </ul>
+    </article>
+
+    <article class="way">
+      <span class="badge badge--neutral way__tag">Если нужно «здесь и сейчас»</span>
+      <h3>Сайт спрашивает 1С</h3>
+      <p class="way__lead">HTTP-сервис или OData в 1С: сайт сам запрашивает данные в момент показа страницы.</p>
+      <div class="way__pic">
+        <svg viewBox="0 0 260 70" aria-hidden="true">
+          <rect class="box box--1c" x="2" y="14" width="70" height="42" rx="8"/><text class="t" x="37" y="40" text-anchor="middle">1С</text>
+          <rect class="box box--site" x="188" y="14" width="70" height="42" rx="8"/><text class="t" x="223" y="40" text-anchor="middle">Сайт</text>
+          <path class="ln" d="M184 30 H80"/><path class="hd" d="M80 25 72 30 80 35z"/>
+          <path class="ln" d="M76 44 H180"/><path class="hd" d="M180 39 188 44 180 49z"/>
+          <text class="s" x="130" y="22" text-anchor="middle">запрос</text>
+          <text class="s" x="130" y="62" text-anchor="middle">ответ · JSON</text>
+        </svg>
+      </div>
+      <ul class="ticks ticks--yes">
+        <li><svg><use href="#i-check"/></svg>Всегда актуальные данные</li>
+      </ul>
+      <ul class="ticks ticks--no">
+        <li><svg><use href="#i-minus"/></svg>1С нужно публиковать в интернете и защищать</li>
+        <li><svg><use href="#i-minus"/></svg>1С недоступна — на сайте нет цен</li>
+        <li><svg><use href="#i-minus"/></svg>Каждый метод пишет программист 1С</li>
+      </ul>
+    </article>
+
+    <article class="way">
+      <span class="badge badge--info way__tag">Для того, чего нет в обмене</span>
+      <h3>1С сама сообщает сайту</h3>
+      <p class="way__lead">При изменении в 1С отправляет короткое сообщение в API сайта: «у клиента сменился уровень», «заказ оплачен».</p>
+      <div class="way__pic">
+        <svg viewBox="0 0 260 70" aria-hidden="true">
+          <rect class="box box--1c" x="2" y="14" width="70" height="42" rx="8"/><text class="t" x="37" y="40" text-anchor="middle">1С</text>
+          <rect class="box box--site" x="188" y="14" width="70" height="42" rx="8"/><text class="t" x="223" y="40" text-anchor="middle">Сайт</text>
+          <path class="ln" d="M76 36 H180"/><path class="hd" d="M180 31 188 36 180 41z"/>
+          <text class="s" x="130" y="26" text-anchor="middle">при изменении</text>
+          <text class="s" x="130" y="56" text-anchor="middle">JSON</text>
+        </svg>
+      </div>
+      <ul class="ticks ticks--yes">
+        <li><svg><use href="#i-check"/></svg>База 1С по-прежнему закрыта</li>
+        <li><svg><use href="#i-check"/></svg>Сайт не зависит от доступности 1С</li>
+      </ul>
+      <ul class="ticks ticks--no">
+        <li><svg><use href="#i-minus"/></svg>Небольшая доработка в 1С</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="hybrid">
+    <span class="hybrid__icon"><svg><use href="#i-merge"/></svg></span>
+    <div>
+      <b>Предлагаем сочетание</b>
+      <p>Каталог, цены по уровням, остатки и заказы — штатным обменом. Уровень клиента, оборот, индивидуальные цены и, если понадобится, оплату — отдельным небольшим каналом. Как удобнее Андрею: <q>сайт спрашивает 1С</q> или <q>1С сама отправляет изменения</q>?</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="section" id="forks">
+  <div class="section__head">
+    <div class="section__num">05</div>
+    <h2>Что решаем на созвоне</h2>
+    <p>Пять развилок. По каждой — как задумано на сайте и что нужно услышать со стороны 1С.</p>
+  </div>
+
+  <article class="fork">
+    <div class="fork__head"><span class="fork__num">5.1</span><h3>Цена для конкретного клиента</h3></div>
+    <p>Вошедший клиент видит свою цену: цену своего уровня или цену по соглашению — какая из них ниже. Клиент всегда получает лучшую доступную цену.</p>
+
+    <div class="formula" aria-label="Цена клиента — меньшая из двух">
+      <span class="formula__op">min (</span>
+      <span class="formula__val">цена уровня клиента</span>
+      <span class="formula__op">,</span>
+      <span class="formula__val">индивидуальная цена</span>
+      <span class="formula__op">) =</span>
+      <span class="formula__val formula__val--res">цена для вас</span>
+    </div>
+
+    <div class="variants">
+      <div class="tabs" role="tablist" aria-label="Варианты передачи цен">
+        <button class="tab" type="button" role="tab" id="tab-a" aria-controls="var-a" aria-selected="true">А. Сайт считает сам</button>
+        <button class="tab" type="button" role="tab" id="tab-b" aria-controls="var-b" aria-selected="false" tabindex="-1">Б. Спрашивает 1С</button>
+        <button class="tab" type="button" role="tab" id="tab-c" aria-controls="var-c" aria-selected="false" tabindex="-1">В. Старт вручную</button>
+      </div>
+
+      <div class="variant" role="tabpanel" id="var-a" aria-labelledby="tab-a">
+        <div>
+          <h4>Сайт считает сам <span class="badge badge--success">Предлагаем</span></h4>
+          <p>Из 1С приходят три типа цен, а дополнительно — уровень клиента и его индивидуальные цены. Сайт выбирает меньшую. Это уже заложено в сайт.</p>
+          <ul class="ticks ticks--yes">
+            <li><svg><use href="#i-check"/></svg>Быстро, не зависит от доступности 1С</li>
+          </ul>
+          <ul class="ticks ticks--no">
+            <li><svg><use href="#i-minus"/></svg>Нужно дописать выгрузку уровня и индивидуальных цен</li>
+          </ul>
+        </div>
+        <div class="variant__pic">
+          <svg viewBox="0 0 300 150" aria-hidden="true">
+            <rect class="box box--1c" x="4" y="40" width="80" height="70" rx="8"/><text class="t" x="44" y="80" text-anchor="middle">1С</text>
+            <rect class="box box--site" x="216" y="40" width="80" height="70" rx="8"/><text class="t" x="256" y="72" text-anchor="middle">Сайт</text><text class="s" x="256" y="90" text-anchor="middle">min(…)</text>
+            <path class="ln" d="M88 52 H208"/><path class="hd" d="M208 47 216 52 208 57z"/><text class="s" x="150" y="44" text-anchor="middle">3 типа цен</text>
+            <path class="ln" d="M88 98 H208"/><path class="hd" d="M208 93 216 98 208 103z"/><text class="s" x="150" y="90" text-anchor="middle">уровень · инд. цены</text>
+            <text class="s" x="150" y="128" text-anchor="middle">доработка выгрузки</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="variant" role="tabpanel" id="var-b" aria-labelledby="tab-b" hidden>
+        <div>
+          <h4>Сайт спрашивает 1С в момент показа</h4>
+          <p>HTTP-сервис в 1С отвечает на вопрос «какая цена у клиента Х на товар Y». Вся логика цен остаётся в 1С.</p>
+          <ul class="ticks ticks--yes">
+            <li><svg><use href="#i-check"/></svg>Одна логика цен — в 1С</li>
+          </ul>
+          <ul class="ticks ticks--no">
+            <li><svg><use href="#i-minus"/></svg>1С должна быть доступна из интернета и отвечать быстро</li>
+            <li><svg><use href="#i-minus"/></svg>1С недоступна — на сайте нет цен</li>
+          </ul>
+        </div>
+        <div class="variant__pic">
+          <svg viewBox="0 0 300 150" aria-hidden="true">
+            <rect class="box box--1c" x="4" y="40" width="80" height="70" rx="8"/><text class="t" x="44" y="80" text-anchor="middle">1С</text>
+            <rect class="box box--site" x="216" y="40" width="80" height="70" rx="8"/><text class="t" x="256" y="80" text-anchor="middle">Сайт</text>
+            <path class="ln" d="M212 60 H92"/><path class="hd" d="M92 55 84 60 92 65z"/><text class="s" x="150" y="52" text-anchor="middle">цена для клиента?</text>
+            <path class="ln" d="M88 92 H208"/><path class="hd" d="M208 87 216 92 208 97z"/><text class="s" x="150" y="84" text-anchor="middle">ответ</text>
+            <text class="s" x="150" y="128" text-anchor="middle">на каждый показ страницы</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="variant" role="tabpanel" id="var-c" aria-labelledby="tab-c" hidden>
+        <div>
+          <h4>На старте — вручную в админке сайта</h4>
+          <p>Из 1С приходят только три типа цен. Уровни и индивидуальные цены менеджер ставит в админке сайта, пока доработка обмена не готова. Потом переключаемся на вариант А без переделки сайта.</p>
+          <ul class="ticks ticks--yes">
+            <li><svg><use href="#i-check"/></svg>Запуск обмена не ждёт доработок</li>
+          </ul>
+          <ul class="ticks ticks--no">
+            <li><svg><use href="#i-minus"/></svg>Временно две правды: нужна дисциплина менеджера</li>
+          </ul>
+        </div>
+        <div class="variant__pic">
+          <svg viewBox="0 0 300 150" aria-hidden="true">
+            <rect class="box box--1c" x="4" y="20" width="80" height="60" rx="8"/><text class="t" x="44" y="55" text-anchor="middle">1С</text>
+            <rect class="box box--site" x="216" y="40" width="80" height="70" rx="8"/><text class="t" x="256" y="80" text-anchor="middle">Сайт</text>
+            <rect class="box box--admin" x="4" y="96" width="80" height="44" rx="8"/><text class="t" x="44" y="123" text-anchor="middle">Админка</text>
+            <path class="ln" d="M88 50 H208"/><path class="hd" d="M208 45 216 50 208 55z"/><text class="s" x="150" y="42" text-anchor="middle">3 типа цен</text>
+            <path class="ln" d="M88 118 H208"/><path class="hd" d="M208 113 216 118 208 123z"/><text class="s" x="150" y="110" text-anchor="middle">уровень · инд. цены</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="fork__warn"><svg><use href="#i-alert"/></svg><span>По умолчанию 1С берёт индивидуальную цену, даже если цена уровня ниже. Тогда цена в счёте окажется выше цены на сайте. Нужно, чтобы 1С выставляла счёт по тому же правилу «меньшая из двух» — штатно или доработкой.</span></div>
+  </article>
+
+  <article class="fork">
+    <div class="fork__head"><span class="fork__num">5.2</span><h3>Уровень клиента и «До следующего уровня»</h3></div>
+    <p>Уровень считает 1С по оплатам за календарный год, правила и пороги живут в 1С. В кабинете клиент видит текущий уровень и строку «До следующего уровня: N ₽». Предлагаем: 1С передаёт уровень и оборот клиента, а пороги, которые меняются редко, продублированы в админке сайта — по ним сайт и считает «сколько осталось».</p>
+    <div class="fork__q"><svg><use href="#i-help"/></svg><span>Считаем оборот по оплатам или по отгрузкам? Будет ли у клиентов отсрочка платежа? От этого зависит, как 1С считает уровень.</span></div>
+  </article>
+
+  <article class="fork">
+    <div class="fork__head"><span class="fork__num">5.3</span><h3>Статусы заказа и оплата</h3></div>
+    <p>Сайт показывает клиенту шесть статусов. Нужно сопоставить их со статусами «Заказа клиента», которые отдаёт 1С. «Оплачен» в 1С означает, что по заказу нет долга, — как передавать этот признак на сайт?</p>
+    <div class="statuses">
+      <span class="statuses__label">На сайте</span>
+      <div class="chain">
+        <span class="badge badge--warning-plain">Принят</span><span class="chain__arrow">→</span>
+        <span class="badge badge--info">Подтверждён</span><span class="chain__arrow">→</span>
+        <span class="badge badge--success">В работе</span><span class="chain__arrow">→</span>
+        <span class="badge badge--info-outline">Отгружен</span><span class="chain__arrow">→</span>
+        <span class="badge badge--success-outline">Выполнен</span>
+        <span class="badge badge--neutral">Отменён</span>
+      </div>
+      <span class="statuses__label">В 1С</span>
+      <div class="chain">
+        <span class="badge badge--unknown">?</span><span class="chain__arrow">→</span>
+        <span class="badge badge--unknown">?</span><span class="chain__arrow">→</span>
+        <span class="badge badge--unknown">?</span><span class="chain__arrow">→</span>
+        <span class="badge badge--unknown">?</span><span class="chain__arrow">→</span>
+        <span class="badge badge--unknown">?</span>
+        <span class="badge badge--unknown">?</span>
+      </div>
+    </div>
+    <div class="fork__q"><svg><use href="#i-help"/></svg><span>Если менеджер в 1С поменял количество или цену, вернётся ли итоговый состав на сайт штатно?</span></div>
+  </article>
+
+  <article class="fork">
+    <div class="fork__head"><span class="fork__num">5.4</span><h3>Товар «Под заказ»</h3></div>
+    <p>Статус ставится по галочке «есть у поставщика» в номенклатуре — остатков поставщиков в 1С нет. На сайте такая позиция попадает в заказ с пометкой «Под заказ, от N дней».</p>
+    <div class="fork__q"><svg><use href="#i-help"/></svg><span>Что 1С делает с такой строкой: резерв, срок поставки, заказ поставщику?</span></div>
+  </article>
+
+  <article class="fork">
+    <div class="fork__head"><span class="fork__num">5.5</span><h3>Фото и описания</h3></div>
+    <p>Фото и описания есть в 1С, забираем их при первой загрузке. Дальше карточки дополняет менеджер на сайте — и важно, чтобы следующий сеанс обмена не перезаписал его правки.</p>
+    <div class="fork__q"><svg><use href="#i-help"/></svg><span>Можно ли выгрузить фото и описания один раз или только для новых позиций?</span></div>
+  </article>
+</section>
+
+<!-- 06 -->
+<section class="section" id="questions">
+  <div class="section__head">
+    <div class="section__num">06</div>
+    <h2>Вопросы к обсуждению</h2>
+    <p>Отмечайте по ходу разговора — отметки сохраняются в этом браузере.</p>
+  </div>
+
+  <div class="qbar">
+    <span>Обсудили <span class="qbar__count" data-q-count>0 из 0</span></span>
+    <div class="qbar__meter"><div class="qbar__fill" data-q-fill></div></div>
+    <button class="qbar__reset" type="button" data-q-reset>Сбросить отметки</button>
+  </div>
+
+  <div class="qgroup">
+    <div class="qgroup__title">Главное</div>
+    <div class="qlist">
+      <label class="q"><input type="checkbox" data-q="where"><span class="q__num">01</span><span class="q__text"><b>Где работает база 1С?</b> Свой сервер, аренда или облако; есть ли веб-сервер и выход в интернет.<small>Определяет, возможен ли способ «сайт спрашивает 1С».</small></span></label>
+      <label class="q"><input type="checkbox" data-q="prices"><span class="q__num">02</span><span class="q__text"><b>Типы цен и соглашения</b> — когда заведём три типа цен под уровни и соглашения с клиентами?<small>Главное условие старта обмена.</small></span></label>
+      <label class="q"><input type="checkbox" data-q="individual"><span class="q__num">03</span><span class="q__text"><b>Индивидуальные цены и уровень клиента</b> — дописать в выгрузку обмена или отдельным каналом? Сколько это работы?</span></label>
+      <label class="q"><input type="checkbox" data-q="min"><span class="q__num">04</span><span class="q__text"><b>Правило «меньшая из двух»</b> — настраивается ли в 1С штатно, чтобы счёт совпадал с ценой на сайте?</span></label>
+      <label class="q"><input type="checkbox" data-q="turnover"><span class="q__num">05</span><span class="q__text"><b>Оборот</b> — по оплатам или по отгрузкам; будет ли отсрочка платежа?</span></label>
+    </div>
+  </div>
+
+  <div class="qgroup">
+    <div class="qgroup__title">Заказы</div>
+    <div class="qlist">
+      <label class="q"><input type="checkbox" data-q="statuses"><span class="q__num">06</span><span class="q__text"><b>Статусы заказа</b> — какие отдаёт штатный обмен и как передать признак «оплачен»?</span></label>
+      <label class="q"><input type="checkbox" data-q="final"><span class="q__num">07</span><span class="q__text"><b>Итоговый состав</b> — вернётся ли на сайт, если менеджер изменил количество или цену?</span></label>
+      <label class="q"><input type="checkbox" data-q="client"><span class="q__num">08</span><span class="q__text"><b>Новый клиент</b> — поиск по ИНН и КПП делает штатный обмен или нужна доработка? Что делаем с филиалами (несколько КПП)?</span></label>
+      <label class="q"><input type="checkbox" data-q="preorder"><span class="q__num">09</span><span class="q__text"><b>Строка «под заказ»</b> — как 1С её обрабатывает?</span></label>
+    </div>
+  </div>
+
+  <div class="qgroup">
+    <div class="qgroup__title">Каталог и подготовка</div>
+    <div class="qlist">
+      <label class="q"><input type="checkbox" data-q="supplier"><span class="q__num">10</span><span class="q__text"><b>Галочка «есть у поставщика»</b> — заведём реквизит; попадёт ли он в выгрузку?</span></label>
+      <label class="q"><input type="checkbox" data-q="mzp"><span class="q__num">11</span><span class="q__text"><b>Минимальный заказ и кратность</b> — где хранятся в 1С: реквизит, упаковки, единицы измерения?</span></label>
+      <label class="q"><input type="checkbox" data-q="photos"><span class="q__num">12</span><span class="q__text"><b>Фото и описания</b> — выгрузить один раз и не перезаписывать?</span></label>
+      <label class="q"><input type="checkbox" data-q="test"><span class="q__num">13</span><span class="q__text"><b>Тестовая база</b> — когда появится копия для отладки обмена?</span></label>
+      <label class="q"><input type="checkbox" data-q="volume"><span class="q__num">14</span><span class="q__text"><b>Объём</b> — сколько позиций и сколько весят фото? От этого зависят лимиты на сервере.</span></label>
+      <label class="q"><input type="checkbox" data-q="version"><span class="q__num">15</span><span class="q__text"><b>Версия формата CommerceML</b> в вашей «Комплексной автоматизации» — для настройки приёма.</span></label>
+    </div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section class="section" id="road">
+  <div class="section__head">
+    <div class="section__num">07</div>
+    <h2>Порядок работ</h2>
+    <p>Шесть шагов от подготовки 1С до боевого расписания.</p>
+  </div>
+
+  <ol class="road">
+    <li class="road__step"><span class="road__num">1</span><div class="road__body"><b>1С готовит данные</b><span class="badge badge--1c">1С</span><p>Типы цен, соглашения, галочка «есть у поставщика», тестовая база.</p></div></li>
+    <li class="road__step"><span class="road__num">2</span><div class="road__body"><b>Сайт принимает обмен</b><span class="badge badge--site">Сайт</span><p>Приём каталога, цен и остатков; проверка на тестовой базе.</p></div></li>
+    <li class="road__step"><span class="road__num">3</span><div class="road__body"><b>Первая полная выгрузка</b><span class="badge badge--1c">1С</span> <span class="badge badge--site">Сайт</span><p>Фото и описания приходят на сайт; менеджер объединяет фасовки в товары.</p></div></li>
+    <li class="road__step"><span class="road__num">4</span><div class="road__body"><b>Заказы туда и обратно</b><span class="badge badge--1c">1С</span> <span class="badge badge--site">Сайт</span><p>Заказы с сайта в 1С, затем статусы и итоговый состав обратно.</p></div></li>
+    <li class="road__step"><span class="road__num">5</span><div class="road__body"><b>Уровни и индивидуальные цены</b><span class="badge badge--talk">Обсуждаем</span><p>Доработка обмена по итогам созвона. До готовности — вручную в админке сайта.</p></div></li>
+    <li class="road__step"><span class="road__num">6</span><div class="road__body"><b>Боевое расписание</b><span class="badge badge--1c">1С</span><p>Каталог, цены и остатки — раз в час; заказы, статусы и клиенты — раз в 10 минут; полная выгрузка — по запросу.</p></div></li>
+  </ol>
+
+  <div class="prep">
+    <div class="prep__item"><b>Три типа цен</b><p>Базовый, средний и крупный опт</p></div>
+    <div class="prep__item"><b>Соглашения</b><p>Индивидуальные условия клиентов</p></div>
+    <div class="prep__item"><b>Галочка поставщика</b><p>Для статуса «Под заказ»</p></div>
+    <div class="prep__item"><b>Тестовая база</b><p>Копия для отладки обмена</p></div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section class="section" id="glossary">
+  <div class="section__head">
+    <div class="section__num">08</div>
+    <h2>Словарик</h2>
+    <p>Чтобы говорить на одном языке.</p>
+  </div>
+
+  <div class="gloss">
+    <div>
+      <details><summary>Комплексная автоматизация (КА)</summary><p>Конфигурация 1С: склад, продажи, деньги и производство в одной базе.</p></details>
+      <details><summary>Номенклатура</summary><p>Справочник товаров в 1С. Каждая фасовка заведена отдельной позицией.</p></details>
+      <details><summary>Характеристики номенклатуры</summary><p>Способ хранить варианты одного товара внутри одной позиции. У нас не используется — фасовки объединяет сайт.</p></details>
+      <details><summary>Тип цены</summary><p>Именованный прайс в 1С: «Базовый опт», «Средний опт»… У каждого товара своя цена каждого типа.</p></details>
+      <details><summary>Соглашение с клиентом</summary><p>Документ в 1С: какой тип цены и какие скидки действуют для конкретного клиента.</p></details>
+      <details><summary>Контрагент</summary><p>Клиент-организация в справочнике 1С: ИНН, КПП, реквизиты.</p></details>
+      <details><summary>Заказ клиента</summary><p>Документ 1С, в который превращается заказ с сайта.</p></details>
+      <details><summary>УПД</summary><p>Документ отгрузки: счёт-фактура и накладная в одном.</p></details>
+    </div>
+    <div>
+      <details><summary>CommerceML</summary><p>Стандартный формат XML-файлов для обмена 1С с сайтами.</p></details>
+      <details><summary>Обмен с сайтами</summary><p>Штатная обработка в 1С: по расписанию отправляет каталог и забирает заказы.</p></details>
+      <details><summary>import.xml · offers.xml · orders.xml</summary><p>Файлы обмена: товары и группы · цены и остатки · заказы.</p></details>
+      <details><summary>HTTP-сервис, OData</summary><p>«Окно» в 1С, через которое сайт может запросить данные в реальном времени. Нужны веб-сервер и программист 1С.</p></details>
+      <details><summary>Доработка, расширение</summary><p>Изменения 1С поверх типовой конфигурации. Требуют сопровождения при обновлениях.</p></details>
+      <details><summary>Полная и частичная выгрузка</summary><p>Всё целиком или только изменения с прошлого сеанса.</p></details>
+      <details><summary>Тестовая база</summary><p>Копия рабочей базы, на которой безопасно отлаживать обмен.</p></details>
+      <details><summary>ИНН и КПП</summary><p>Ключи, по которым 1С узнаёт уже существующего клиента.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>B2B-портал агробизнеса · b2bzakup.ru · обмен с 1С, материалы к созвону 08.10.2026</span>
+    <span>Страница для согласования. Не для публичного распространения.</span>
+  </div>
+</footer>
+
+<script src="assets/obmen.js"></script>
+</body>
+</html>
