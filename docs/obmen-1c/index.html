@@ -21,6 +21,8 @@
 <symbol id="i-minus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></symbol>
 <symbol id="i-help" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
 <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+<symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
 <symbol id="i-merge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></symbol>
 </svg>
 
@@ -533,13 +535,17 @@
   <div class="section__head">
     <div class="section__num">06</div>
     <h2>Вопросы к обсуждению</h2>
-    <p>Отмечайте по ходу разговора — отметки сохраняются в этом браузере.</p>
+    <p>Отмечайте по ходу разговора и пишите комментарии прямо под вопросами и развилками. Всё сохраняется в этом браузере; кнопка «Скопировать итоги» собирает записи в текст для блокнота.</p>
   </div>
 
   <div class="qbar">
     <span>Обсудили <span class="qbar__count" data-q-count>0 из 0</span></span>
     <div class="qbar__meter"><div class="qbar__fill" data-q-fill></div></div>
-    <button class="qbar__reset" type="button" data-q-reset>Сбросить отметки</button>
+    <div class="qbar__actions">
+      <button class="btn btn--primary btn--sm" type="button" data-copy><svg><use href="#i-copy"/></svg>Скопировать итоги</button>
+      <button class="btn btn--secondary btn--sm" type="button" data-download><svg><use href="#i-download"/></svg>Скачать .md</button>
+      <button class="qbar__reset" type="button" data-q-reset>Стереть всё</button>
+    </div>
   </div>
 
   <div class="qgroup">
@@ -573,6 +579,10 @@
       <label class="q"><input type="checkbox" data-q="volume"><span class="q__num">14</span><span class="q__text"><b>Объём</b> — сколько позиций и сколько весят фото? От этого зависят лимиты на сервере.</span></label>
       <label class="q"><input type="checkbox" data-q="version"><span class="q__num">15</span><span class="q__text"><b>Версия формата CommerceML</b> в вашей «Комплексной автоматизации» — для настройки приёма.</span></label>
     </div>
+  </div>
+  <div class="qgroup">
+    <div class="qgroup__title">Общие заметки</div>
+    <textarea class="memo memo--general" data-note="general" rows="4" placeholder="Договорённости, сроки, кто что делает, что ещё всплыло…" aria-label="Общие заметки"></textarea>
   </div>
 </section>
 
@@ -642,6 +652,9 @@
     <span>Страница для согласования. Не для публичного распространения.</span>
   </div>
 </footer>
+
+<button class="copy-fab btn btn--primary" type="button" data-copy><svg><use href="#i-copy"/></svg>Скопировать итоги</button>
+<div class="toast" role="status" aria-live="polite" data-toast></div>
 
 <script src="assets/obmen.js"></script>
 </body>
